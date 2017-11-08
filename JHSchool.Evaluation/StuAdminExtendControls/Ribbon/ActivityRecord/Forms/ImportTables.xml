@@ -1,0 +1,16 @@
+﻿<ImportRequest>
+	<Table Name="活動表現紀錄">		
+		<Field DataType="String" Indexed="false" Name="單位" />
+		<Field DataType="String" Indexed="false" Name="學年度" />
+		<Field DataType="String" Indexed="false" Name="學期" />
+		<Field DataType="Number" Indexed="true" Name="學生編號" />
+		<Field DataType="String" Indexed="false" Name="細項" />
+		<Field DataType="String" Indexed="false" Name="類別" />
+	</Table>
+	<Table Name="活動表現紀錄對照表">
+		<Field DataType="Datetime" Indexed="true" Name="last_update" />
+		<Field DataType="Number" Indexed="true" Name="uid" />
+		<Field DataType="String" Indexed="false" Name="細項" />
+		<Field DataType="String" Indexed="false" Name="類別" />
+	</Table>
+</ImportRequest>

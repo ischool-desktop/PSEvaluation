@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D4340A77-DF5D-4017-B639-E9A48E169E76}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JHEvaluation.ScoreCalculation</RootNamespace>
+    <AssemblyName>JHEvaluation.ScoreCalculation</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/JHEvaluation.ScoreCalculation/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'LocalDebug|AnyCPU' ">
+    <OutputPath>..\..\..\ischool\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LocalDebug</DefineConstants>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=4.3.0.0, Culture=neutral, PublicKeyToken=9a40d5a4b59e5256, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LibraryProject\CampusLibrary\Aspose.Cells.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=7.9.0.3, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ischool\bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="FISCA">
+      <HintPath>..\..\..\..\..\FiscaRuntime\FiscaOldKernel\FISCA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Authentication">
+      <HintPath>..\..\..\..\..\FiscaRuntime\FiscaOldKernel\FISCA.Authentication.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Deployment">
+      <HintPath>..\..\..\..\..\FiscaRuntime\FiscaOldKernel\FISCA.Deployment.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.LogAgent">
+      <HintPath>..\..\..\..\..\FiscaRuntime\FiscaOldKernel\FISCA.LogAgent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Permission">
+      <HintPath>..\..\..\..\..\FiscaRuntime\FiscaOldKernel\FISCA.Permission.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Presentation">
+      <HintPath>..\..\..\..\..\FiscaRuntime\FiscaOldKernel\FISCA.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Framework">
+      <HintPath>..\..\..\..\..\FiscaRuntime\FiscaAE\modules\JHCore\Framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool">
+      <HintPath>..\..\..\..\..\FiscaRuntime\FiscaAE\modules\JHCore\JHSchool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.Affair">
+      <HintPath>..\..\..\..\..\FiscaRuntime\FiscaAE\modules\JHCore\JHSchool.Affair.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.Data">
+      <HintPath>..\..\..\..\..\FiscaRuntime\FiscaAE\modules\JHCore\JHSchool.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.Evaluation">
+      <HintPath>..\..\..\..\..\FiscaRuntime\FiscaAE\modules\JHEvaluation\JHSchool.Evaluation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K12.Data">
+      <HintPath>..\..\..\..\..\FiscaRuntime\FiscaAE\modules\JHCore\K12.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K12.Presentation">
+      <HintPath>..\..\..\..\..\FiscaRuntime\FiscaAE\modules\JHCore\K12.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\ischool\bin\Debug\System.Core.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BigFunction\AttendScoreSaver.cs" />
+    <Compile Include="BigFunction\CalculationRuleReader.cs" />
+    <Compile Include="BigFunction\SemesterHistoryReader.cs" />
+    <Compile Include="BigFunction\SemestersScoreReader.cs" />
+    <Compile Include="BigFunction\SixSemesterHistoryValidator.cs" />
+    <Compile Include="BigFunction\SixSemesterDomainScoreValidator.cs" />
+    <Compile Include="BigFunction\GradScoreReader.cs" />
+    <Compile Include="BigFunction\GradScoreCalculator.cs" />
+    <Compile Include="BigFunction\GradScoreSaver.cs" />
+    <Compile Include="CalculationException.cs" />
+    <Compile Include="CalculationHelper.cs" />
+    <Compile Include="CalculationTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculationTest.Designer.cs">
+      <DependentUpon>CalculationTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BigFunction\AttendScoreCalculator.cs" />
+    <Compile Include="BigFunction\AttendScoreReader.cs" />
+    <Compile Include="BigFunction\SemesterScoreCalculator.cs" />
+    <Compile Include="BigFunction\SemesterScoreReader.cs" />
+    <Compile Include="BigFunction\SemesterScoreSaver.cs" />
+    <Compile Include="DomainTextScoreSumByGradeyear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DomainTextScoreSumByGradeyear.Designer.cs">
+      <DependentUpon>DomainTextScoreSumByGradeyear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DomainTextScoreSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DomainTextScoreSum.Designer.cs">
+      <DependentUpon>DomainTextScoreSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningDomainScoreCalculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LearningDomainScoreCalculate.Designer.cs">
+      <DependentUpon>LearningDomainScoreCalculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningDomainScoreCalculateByGradeyear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LearningDomainScoreCalculateByGradeyear.Designer.cs">
+      <DependentUpon>LearningDomainScoreCalculateByGradeyear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DomainScoreCalculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DomainScoreCalculate.Designer.cs">
+      <DependentUpon>DomainScoreCalculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DomainScoreCalculateByGradeyear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DomainScoreCalculateByGradeyear.Designer.cs">
+      <DependentUpon>DomainScoreCalculateByGradeyear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EffortMap.cs" />
+    <Compile Include="IStatusReporter.cs" />
+    <Compile Include="LogData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FunctionSpliter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreCalculator.cs" />
+    <Compile Include="ScoreStruct\AttendScore.cs" />
+    <Compile Include="ScoreStruct\ScoreCollections.cs" />
+    <Compile Include="ScoreStruct\GraduateScore.cs" />
+    <Compile Include="ScoreStruct\IScore.cs" />
+    <Compile Include="ScoreStruct\SemesterScore.cs" />
+    <Compile Include="ScoreStruct\SemesterScoreCollection.cs" />
+    <Compile Include="ScoreStruct\SemesterSubjectScore.cs" />
+    <Compile Include="ScoreStruct\SemesterDomainScore.cs" />
+    <Compile Include="SemesterData.cs" />
+    <Compile Include="SemesterHistory\BatchSemesterHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SemesterHistory\BatchSemesterHistory.designer.cs">
+      <DependentUpon>BatchSemesterHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SemesterHistory\DAL\DALTransfer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SemesterHistory\DAL\SemesterHistoryItemEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SemesterHistory\PermRecLogProcess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SemesterSelector.cs" />
+    <Compile Include="StudentScore.cs" />
+    <Compile Include="StudentsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentsView.Designer.cs">
+      <DependentUpon>StudentsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectScoreCalculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectScoreCalculate.Designer.cs">
+      <DependentUpon>SubjectScoreCalculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectScoreCalculateByGradeyear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectScoreCalculateByGradeyear.Designer.cs">
+      <DependentUpon>SubjectScoreCalculateByGradeyear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UniqueSet.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="GraduateScoreCalculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraduateScoreCalculate.Designer.cs">
+      <DependentUpon>GraduateScoreCalculate.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CalculationTest.resx">
+      <DependentUpon>CalculationTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DomainTextScoreSumByGradeyear.resx">
+      <DependentUpon>DomainTextScoreSumByGradeyear.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DomainTextScoreSum.resx">
+      <DependentUpon>DomainTextScoreSum.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningDomainScoreCalculate.resx">
+      <DependentUpon>LearningDomainScoreCalculate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningDomainScoreCalculateByGradeyear.resx">
+      <DependentUpon>LearningDomainScoreCalculateByGradeyear.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DomainScoreCalculate.resx">
+      <DependentUpon>DomainScoreCalculate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DomainScoreCalculateByGradeyear.resx">
+      <DependentUpon>DomainScoreCalculateByGradeyear.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SemesterHistory\BatchSemesterHistory.resx">
+      <DependentUpon>BatchSemesterHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentsView.resx">
+      <DependentUpon>StudentsView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectScoreCalculate.resx">
+      <DependentUpon>SubjectScoreCalculate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectScoreCalculateByGradeyear.resx">
+      <DependentUpon>SubjectScoreCalculateByGradeyear.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraduateScoreCalculate.resx">
+      <DependentUpon>GraduateScoreCalculate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calc_save_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduation_write_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduation_zoom_64.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

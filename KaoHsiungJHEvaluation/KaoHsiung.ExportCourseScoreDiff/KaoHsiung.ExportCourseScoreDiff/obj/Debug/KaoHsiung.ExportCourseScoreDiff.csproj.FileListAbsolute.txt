@@ -1,0 +1,9 @@
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ExportCourseScoreDiff\KaoHsiung.ExportCourseScoreDiff\bin\Debug\KaoHsiung.ExportCourseScoreDiff.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ExportCourseScoreDiff\KaoHsiung.ExportCourseScoreDiff\bin\Debug\KaoHsiung.ExportCourseScoreDiff.pdb
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ExportCourseScoreDiff\KaoHsiung.ExportCourseScoreDiff\obj\Debug\ResolveAssemblyReference.cache
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ExportCourseScoreDiff\KaoHsiung.ExportCourseScoreDiff\obj\Debug\KaoHsiung.ExportCourseScoreDiff.Properties.Resources.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ExportCourseScoreDiff\KaoHsiung.ExportCourseScoreDiff\obj\Debug\GenerateResource.read.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ExportCourseScoreDiff\KaoHsiung.ExportCourseScoreDiff\obj\Debug\GenerateResource.write.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ExportCourseScoreDiff\KaoHsiung.ExportCourseScoreDiff\obj\Debug\KaoHsiung.ExportCourseScoreDiff.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ExportCourseScoreDiff\KaoHsiung.ExportCourseScoreDiff\obj\Debug\KaoHsiung.ExportCourseScoreDiff.pdb
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ExportCourseScoreDiff\KaoHsiung.ExportCourseScoreDiff\obj\Debug\KaoHsiung.ExportCourseScoreDiff.MainForm.resources

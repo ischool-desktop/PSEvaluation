@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="JHEvaluation.ScoreCalculation">
+</Property><Property Name="Solution File" Value="D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHEvaluation.ScoreCalculation\JHEvaluation.ScoreCalculation.sln">
+</Property><Property Name="Date" Value="2012年5月16日">
+</Property><Property Name="Time" Value="下午 14:25">
+</Property></Properties><Event ErrorLevel="0" Project="JHEvaluation.ScoreCalculation" Source="JHEvaluation.ScoreCalculation\JHEvaluation.ScoreCalculation.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="JHEvaluation.ScoreCalculation" Source="JHEvaluation.ScoreCalculation\JHEvaluation.ScoreCalculation.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ClassSemesterScoreReport" Source="..\JHEvaluation.ClassSemesterScoreReport\ClassSemesterScoreReport\ClassSemesterScoreReport.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="ClassSemesterScoreReport" Source="..\JHEvaluation.ClassSemesterScoreReport\ClassSemesterScoreReport\ClassSemesterScoreReport.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="JHEvaluation.StudentScoreSummaryReport" Source="JHEvaluation.StudentScoreSummaryReport\JHEvaluation.StudentScoreSummaryReport.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="JHEvaluation.StudentScoreSummaryReport" Source="JHEvaluation.StudentScoreSummaryReport\JHEvaluation.StudentScoreSummaryReport.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Campus.Report" Source="..\..\..\..\Research\A-Team\CampusLibrary\Campus.Report\Campus.Report.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Campus.Report" Source="..\..\..\..\Research\A-Team\CampusLibrary\Campus.Report\Campus.Report.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Campus" Source="..\..\..\..\Research\A-Team\CampusLibrary\Campus\Campus.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Campus" Source="..\..\..\..\Research\A-Team\CampusLibrary\Campus\Campus.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="JHEvaluation.ScoreCalculation.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="JHEvaluation.ScoreCalculation.sln" Description="Converted">
+</Event></UpgradeLog>

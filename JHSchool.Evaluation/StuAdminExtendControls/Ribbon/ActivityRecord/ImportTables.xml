@@ -1,0 +1,15 @@
+﻿<ImportRequest>
+	<Table Name="活動表現紀錄">
+		<Field DataType="String" Indexed="false" Name="單位" />
+		<Field DataType="String" Indexed="false" Name="學年度" />
+		<Field DataType="String" Indexed="false" Name="學期" />
+		<Field DataType="Number" Indexed="true" Name="學生編號" />
+		<Field DataType="String" Indexed="false" Name="細項" />
+		<Field DataType="String" Indexed="false" Name="類別" />
+	</Table>
+	<Table Name="活動表現紀錄對照表">
+		<Field DataType="String" Indexed="false" Name="細項" />
+		<Field DataType="String" Indexed="false" Name="類別" />
+		<Field DataType="Number" Indexed="false" Name="數量" />
+	</Table>
+</ImportRequest>

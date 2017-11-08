@@ -1,0 +1,11 @@
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ReaderScoreImport\KaoHsiung.ReaderScoreImport\obj\Debug\ResolveAssemblyReference.cache
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ReaderScoreImport\KaoHsiung.ReaderScoreImport\obj\Debug\KaoHsiung.ReaderScoreImport.ClassCodeConfig.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ReaderScoreImport\KaoHsiung.ReaderScoreImport\obj\Debug\KaoHsiung.ReaderScoreImport.ConfigForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ReaderScoreImport\KaoHsiung.ReaderScoreImport\obj\Debug\KaoHsiung.ReaderScoreImport.ExamCodeConfig.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ReaderScoreImport\KaoHsiung.ReaderScoreImport\obj\Debug\KaoHsiung.ReaderScoreImport.SubjectCodeConfig.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ReaderScoreImport\KaoHsiung.ReaderScoreImport\obj\Debug\KaoHsiung.ReaderScoreImport.ImportStartupForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ReaderScoreImport\KaoHsiung.ReaderScoreImport\obj\Debug\KaoHsiung.ReaderScoreImport.Properties.Resources.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ReaderScoreImport\KaoHsiung.ReaderScoreImport\obj\Debug\KaoHsiung.ReaderScoreImport.ValidationErrorViewer.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ReaderScoreImport\KaoHsiung.ReaderScoreImport\obj\Debug\KaoHsiung.ReaderScoreImport.WarningForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ReaderScoreImport\KaoHsiung.ReaderScoreImport\obj\Debug\GenerateResource.read.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.ReaderScoreImport\KaoHsiung.ReaderScoreImport\obj\Debug\GenerateResource.write.1.tlog

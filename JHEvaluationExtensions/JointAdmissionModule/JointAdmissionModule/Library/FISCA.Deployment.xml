@@ -1,0 +1,619 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FISCA.Deployment</name>
+    </assembly>
+    <members>
+        <member name="T:FISCA.Deployment.FileCollection">
+            <summary>
+            代表一組檔案集合。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.FileCollection.TotalSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.FileDownloadException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.FileDownloadException.#ctor(System.String,FISCA.Deployment.File,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="file"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="P:FISCA.Deployment.FileDownloadException.FailureFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.File">
+            <summary>
+            代表一個檔案的相關資訊。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.File.#ctor(System.Xml.XmlElement)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:FISCA.Deployment.File.CheckHash">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Deployment.File.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.File.Folder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.File.FullName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.File.Size">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.File.Version">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.File.Hash">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.File.IsCompressed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.File.CompressAlgorithm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.File.CompressSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.File.Data">
+            <summary>
+            檔案的內容。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.FolderType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.FolderType.TargetFolder">
+            <summary>
+            直接將檔案 Deploy 到此目錄。
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.FolderType.BaseFolder">
+            <summary>
+            此目錄只是基礎目錄，還要加上模組資訊，才是要 Deploy 的目錄。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.DeployFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.DeployFolder.#ctor(System.String,FISCA.Deployment.FolderType)">
+            <summary>
+            
+            </summary>
+            <param name="location"></param>
+            <param name="type"></param>
+        </member>
+        <member name="P:FISCA.Deployment.DeployFolder.Location">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.DeployFolder.Type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.ModuleBuild">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleBuild.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleBuild.#ctor(System.Xml.XmlElement)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleBuild.Null">
+            <summary>
+            代表 Null 的 ModuleBuild。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleBuild.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleBuild.Urls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.FileDictionary">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.FileDictionary.#ctor(FISCA.Deployment.FileCollection)">
+            <summary>
+            
+            </summary>
+            <param name="files"></param>
+        </member>
+        <member name="T:FISCA.Deployment.DeployParameters">
+            <summary>
+            代表要傳入 Module 的參數集合。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.DeployParameters.#ctor">
+            <summary>
+            DeployParameters 建構式。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.DeployParameters.#ctor(System.String)">
+            <summary>
+            DeployParameters 建構式。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.DeployParameters.Contains(System.String)">
+            <summary>
+            取得是否包含了指定的參數。
+            </summary>
+            <param name="paramName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Deployment.DeployParameters.Item(System.String)">
+            <summary>
+            取得參數值，如果 Key 不存在會回傳 string.Empty。
+            </summary>
+            <param name="paramName">參數名稱。</param>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Deployment.DeployParameters.Count">
+            <summary>
+            參數集合的數量。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.DeployCompleteEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.DeployCompleteEventArgs.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.DeployCompleteEventArgs.Success">
+            <summary>
+            取得更新是否成功。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.DeployCompleteEventArgs.Error">
+            <summary>
+            取得更新的錯誤訊息，如果沒有錯誤則此屬性為 Null。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.DeployCompleteEventArgs.Files">
+            <summary>
+            取得更新的檔案資訊。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.DeployCompleteEventArgs.ModuleUrl">
+            <summary>
+            模組的下載路徑。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.DeployCompleteEventArgs.InstallFolder">
+            <summary>
+            模組安裝路徑。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.DeployCompleteEventArgs.Manifest">
+            <summary>
+            模組的 Manifest。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.DeployCompleteEventArgs.Description">
+            <summary>
+            模組的 Deploy.xml 資訊。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.Properties.Resources">
+            <summary>
+              用於查詢當地語系化字串等的強型別資源類別
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.Properties.Resources.ResourceManager">
+            <summary>
+              傳回這個類別使用的快取的 ResourceManager 執行個體。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.Properties.Resources.Culture">
+            <summary>
+              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+              使用這個強型別資源類別的資源查閱。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.ModuleDeployment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleDeployment.#ctor(FISCA.Deployment.ModuleUrl,FISCA.Deployment.DeployFolder,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <param name="folder"></param>
+            <param name="buildName"></param>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleDeployment.Deploy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleDeployment.GetDownloadBasePath">
+            <summary>
+            取得下載檔案的基礎路徑，通常是 Server Manifeat 載入位置的同一層級。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDeployment.IsUpdateRequired">
+            <summary>
+            取得是否需要更新。
+            </summary>
+        </member>
+        <member name="E:FISCA.Deployment.ModuleDeployment.DeployComplete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDeployment.TargetFolder">
+            <summary>
+            真正要存放檔案的路徑。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDeployment.TempFolder">
+            <summary>
+            待刪除檔案的暫存目錄。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDeployment.ModuleUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDeployment.LocalFileSet">
+            <summary>
+            描述在 Local  Manifest 中的檔案清單。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDeployment.DownloadProgress">
+            <summary>
+            取得或設定檔案下載的進度回報介面，注意，回報執行緒將不會是主執行緒，在 UI 顯示上需特別注意。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDeployment.IsWorking">
+            <summary>
+            取得是否正在更新中。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.IgnoreCaseComparer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.IgnoreCaseComparer.Equals(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.IgnoreCaseComparer.GetHashCode(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FISCA.Deployment.IntegerEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.IntegerEventArgs.#ctor(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:FISCA.Deployment.IntegerEventArgs.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.ModuleDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleDescription.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleDescription.GetBuild(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleDescription.Save(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleDescription.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleDescription.Load(FISCA.Deployment.ModuleUrl)">
+            <summary>
+            從 Url 載入部署設定檔。
+            </summary>
+            <param name="url">模組位置。</param>
+            <returns>如果沒有寫 module.xml 會回傳 DeployDescription.Null。</returns>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleDescription.Load(System.String)">
+            <summary>
+            從 Url 直接載入部署設定檔。
+            </summary>
+            <param name="moduleUrl">設定檔的 Url。</param>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleDescription.Load(System.Xml.XmlElement)">
+            <summary>
+            載入部署設定檔。
+            </summary>
+            <param name="data">設定檔資料。</param>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDescription.Null">
+            <summary>
+            代表空的 DeployDescription。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDescription.DeployFolder">
+            <summary>
+            取得設定部署到 Local 時的目錄名稱。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDescription.DisplayName">
+            <summary>
+            取得模組的顯示名稱。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDescription.Description">
+            <summary>
+            取得模組的描述。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDescription.IconUrl">
+            <summary>
+            取得顯示圖示的網址。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDescription.TargetCLR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDescription.DetailInformationUrl">
+            <summary>
+            取得模組詳細說明的位置。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleDescription.RawXml">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.BuildManifest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.BuildManifest.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.BuildManifest.Save(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:FISCA.Deployment.BuildManifest.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.BuildManifest.Load(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.BuildManifest.Load(System.Xml.XmlElement)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Deployment.BuildManifest.Null">
+            <summary>
+            代表 Null 的 ModuleManifest。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.BuildManifest.Files">
+            <summary>
+            Manifest 中的所有檔案資訊，此屬性是唯讀，自行增加資料，將使此類別運作不正常。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.BuildManifest.Version">
+            <summary>
+            取得 Manifest 的版本。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.BuildManifest.Url">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.BuildManifest.RawXml">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.IProgressReceiver">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.IProgressReceiver.ProgressStart(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="max"></param>
+        </member>
+        <member name="M:FISCA.Deployment.IProgressReceiver.ProgressEnd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.IProgressReceiver.ProgressStep(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="progress"></param>
+        </member>
+        <!-- 忽略成員 "T:FISCA.Deployment.ModuleUrl" 中格式錯誤的 XML 註解 -->
+        <member name="M:FISCA.Deployment.ModuleUrl.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="moduleUrl"></param>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleUrl.GetDeployDescriptionUrl">
+            <summary>
+            取得以 ModuleUrl 為基礎的 DeployDescription URL 位置。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ModuleUrl.GetModuleManifestUrl(FISCA.Deployment.ModuleBuild)">
+            <summary>
+            取得以 ModuleUrl 與 Build 運算後的 ModuleManifest URL 位置，如果 Build 參數為 Null，則不會考慮 Build。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleUrl.DefaultDeployFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleUrl.RawUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleUrl.Url">
+            <summary>
+            模組的 Url 基礎位置。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleUrl.UrlTrim">
+            <summary>
+            替 Url 的結尾去除「/」字元。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ModuleUrl.UrlAppend">
+            <summary>
+            替 Url 的結尾加上「/」字元。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.Consts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.Consts.DeployFN">
+            <summary>
+            DeployDescription 檔案名稱。
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.Consts.UrlSourceFN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.Consts.ManifestFN">
+            <summary>
+            Manifest 檔案名稱。
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.Consts.ReleaseBuild">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.Consts.TestBuild">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,21 @@
+﻿<Package Name="活動表現">
+	<Service Enabled="true" Name="取得活動表現紀錄對照表">
+		<Definition Type="udt">
+			<UDTConfig>UDT</UDTConfig>
+			<Action>Select</Action>
+			<TableName>活動表現紀錄對照表</TableName>
+			<ResponseRecordElement>對照表/項目</ResponseRecordElement>
+			<FieldList Source="Field">
+				<Field Mandatory="True" OutputType="attribute" Source="類別" Target="類別" />
+				<Field Mandatory="True" OutputType="attribute" Source="細項" Target="細項" />
+				<Field Mandatory="True" OutputType="attribute" Source="數量" Target="數量" />
+			</FieldList>
+			<Conditions Source="Condition">
+				<Condition Comparer="=" Required="false" Source="類別" Target="類別" />
+			</Conditions>
+			<Orders Source="Order">
+				<Order Source="類別" Target="類別" />
+			</Orders>
+		</Definition>
+	</Service>
+</Package>

@@ -1,0 +1,6 @@
+D:\Documents and Settings\ChenCT\桌面\FiscaAEAlpha\FiscaAE Alpha\addmodules\KaoHsiungJHEvaluation_Beta\KaoHsiung.JHEvaluation.Data.dll
+D:\Documents and Settings\ChenCT\桌面\FiscaAEAlpha\FiscaAE Alpha\addmodules\KaoHsiungJHEvaluation_Beta\KaoHsiung.JHEvaluation.Data.pdb
+D:\Documents and Settings\ChenCT\桌面\FiscaAEAlpha\FiscaAE Alpha\addmodules\KaoHsiungJHEvaluation_Beta\KaoHsiung.JHEvaluation.Data.XML
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.JHEvaluation.Data\KaoHsiung.JHEvaluation.Data\obj\Debug\ResolveAssemblyReference.cache
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.JHEvaluation.Data\KaoHsiung.JHEvaluation.Data\obj\Debug\KaoHsiung.JHEvaluation.Data.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\KaoHsiung.JHEvaluation.Data\KaoHsiung.JHEvaluation.Data\obj\Debug\KaoHsiung.JHEvaluation.Data.pdb

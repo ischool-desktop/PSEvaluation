@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartSchool.ePaper</name>
+    </assembly>
+    <members>
+        <member name="P:SmartSchool.ePaper.PaperItem.Content">
+            <summary>
+            通常是以 Base64 編碼的二進位內容。
+            </summary>
+        </member>
+        <member name="M:SmartSchool.ePaper.DispatcherProvider.Dispatch(SmartSchool.ePaper.ElectronicPaper)">
+            <summary>
+            使用預設的 Dispatcher 傳送資料。
+            </summary>
+        </member>
+        <member name="M:SmartSchool.ePaper.DispatcherProvider.GetDispatcher(System.String)">
+            <summary>
+            跟據特定的識別字串取得 Dispatcher。
+            </summary>
+            <param name="identify"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SmartSchool.ePaper.ElectronicPaper.ProgressReceiver">
+            <summary>
+            如果想要取得處理進度，請實作介面，並指定到此屬性。
+            </summary>
+        </member>
+        <member name="P:SmartSchool.ePaper.ElectronicPaper.Comment">
+            <summary>
+            註解，自動儲存到 Metadata 中。
+            </summary>
+        </member>
+        <member name="P:SmartSchool.ePaper.ElectronicPaper.Metadata">
+            <summary>
+            額外需要儲存的資料。
+            </summary>
+        </member>
+    </members>
+</doc>

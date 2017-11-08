@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>K12.BusinessLogic</name>
+    </assembly>
+    <members>
+        <member name="T:K12.BusinessLogic.AutoSummaryRecord">
+            <summary>
+            自動缺曠統計記錄物件
+            </summary>
+        </member>
+        <member name="M:K12.BusinessLogic.AutoSummaryRecord.#ctor">
+            <summary>
+            初始化AutoSummary結構
+            </summary>
+        </member>
+        <member name="M:K12.BusinessLogic.AutoSummaryRecord.AddInitialSummary(System.Xml.XmlElement,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            將InitialSummary的值複製到AutoSummary當中
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.RefStudentID">
+            <summary>
+            學生編號
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.Student">
+            <summary>
+            所屬學生紀錄物件
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.SchoolYear">
+            <summary>
+            學年度
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.Semester">
+            <summary>
+            學期
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.MeritA">
+            <summary>
+            自動統計之大功數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.InitialMeritA">
+            <summary>
+            非明細統計之大功數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.MeritB">
+            <summary>
+            自動統計之小功數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.InitialMeritB">
+            <summary>
+            非明細統計之小功數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.MeritC">
+            <summary>
+            自動統計之嘉獎數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.InitialMeritC">
+            <summary>
+            非明細統計之嘉獎數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.DemeritA">
+            <summary>
+            自動統計之大過數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.InitialDemeritA">
+            <summary>
+            非明細統計之大過數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.ClearedDemeritA">
+            <summary>
+            銷過大過數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.DemeritB">
+            <summary>
+            自動統計之小過數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.InitialDemeritB">
+            <summary>
+            非明細統計之小過數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.ClearedDemeritB">
+            <summary>
+            銷過小過數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.DemeritC">
+            <summary>
+            自動統計之警告數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.InitialDemeritC">
+            <summary>
+            非明細統計之警告數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.ClearedDemeritC">
+            <summary>
+            銷過警告數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.AbsenceCounts">
+            <summary>
+            自動缺曠統計記錄列表
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.InitialAbsenceCounts">
+            <summary>
+            非明細缺曠統計記錄列表
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.Attendances">
+            <summary>
+            缺曠明細
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.Merits">
+            <summary>
+            獎勵明細
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.Demerits">
+            <summary>
+            懲戒明細，包含已銷過及未銷過
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.AutoSummary">
+            <summary>
+            學期缺曠獎懲統計，為非明細缺曠獎懲統計再加上系統缺曠獎懲紀錄，此屬性為透過AutoSummary取得時自動計算。
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.InitialSummary">
+            <summary>
+            非明細缺曠獎懲統計
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AutoSummaryRecord.MoralScore">
+            <summary>
+            日常生活表現記錄物件
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AbsenceCountRecord.Count">
+            <summary>
+            缺曠次數
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AbsenceCountRecord.PeriodType">
+            <summary>
+            缺曠節次類別
+            </summary>
+        </member>
+        <member name="P:K12.BusinessLogic.AbsenceCountRecord.Name">
+            <summary>
+            缺曠名稱
+            </summary>
+        </member>
+        <member name="T:K12.BusinessLogic.Behavior">
+            <summary>
+            學務模組商業邏輯
+            </summary>
+        </member>
+        <member name="M:K12.BusinessLogic.Behavior.IsDemeritNotExceedMaximum(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            功過相抵未滿三大過判斷，取得學生所有的獎懲記錄，並且用預設的功過換算表。
+            </summary>
+            <param name="StudentIDs">學生系統編號列表</param>
+            <returns>未符合的學生系統編號列表</returns>
+        </member>
+        <member name="M:K12.BusinessLogic.Behavior.IsDemeritNotExceedMaximum(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{K12.Data.SchoolYearSemester},K12.Data.MeritDemeritReduceRecord,System.Int32,System.Boolean)">
+            <summary>
+            功過相抵未滿幾大過判斷
+            </summary>
+            <param name="StudentIDs">指定的學生系統編號列表，若傳入null則取得所有學生。</param>
+            <param name="SchoolYearSemesters">指定的學年度學期，若傳入null則取得所有學年度學期。</param>
+            <param name="reducerecord">指定的功過換算表，若傳入null則使用系統的功過換算表。</param>
+            <param name="MaxDemeritA">指定的大過數目。</param>
+            <param name="IsMeritDemeritSubstract">是否進行功過相抵。</param>
+            <returns>傳回超過標準的學生系統編號清單。</returns>
+        </member>
+        <member name="T:K12.BusinessLogic.AutoSummary">
+            <summary>
+            自動計算學期缺曠獎懲統計
+            </summary>
+        </member>
+        <member name="F:K12.BusinessLogic.AutoSummary.PeriodMappingInfos">
+            <summary>
+            節次對照表
+            </summary>
+        </member>
+        <member name="F:K12.BusinessLogic.AutoSummary.Periods">
+            <summary>
+            節次清單，例如一、二、三
+            </summary>
+        </member>
+        <member name="F:K12.BusinessLogic.AutoSummary.AbsenceMappingInfos">
+            <summary>
+            假別對照表
+            </summary>
+        </member>
+        <member name="F:K12.BusinessLogic.AutoSummary.Absences">
+            <summary>
+            假別清單，例如曠課、事假
+            </summary>
+        </member>
+        <member name="M:K12.BusinessLogic.AutoSummary.CalculateDiscipline(K12.BusinessLogic.AutoSummaryRecord,System.Collections.Generic.IEnumerable{K12.Data.MeritRecord},System.Collections.Generic.IEnumerable{K12.Data.DemeritRecord})">
+            <summary>
+            根據獎勵紀錄及懲戒紀錄統計，將結果放到AutoSummaryRecord紀錄物件當中
+            </summary>
+            <param name="Record">缺曠獎懲自動統計紀錄物件</param>
+            <param name="Merits">獎勵紀錄物件列表</param>
+            <param name="Demerits">懲戒紀錄物件列表</param>
+        </member>
+        <member name="M:K12.BusinessLogic.AutoSummary.CalculateAttendance(K12.BusinessLogic.AutoSummaryRecord,System.Collections.Generic.IEnumerable{K12.Data.AttendanceRecord},System.Boolean)">
+            <summary>
+            根據缺曠紀錄統計，將結果放到AutoSummaryRecord紀錄物件當中
+            </summary>
+            <param name="Record">缺曠獎懲自動統計紀錄物件</param>
+            <param name="Attendances">缺曠紀錄物件列表</param>
+            <param name="IsInMappingInfos">是否要在節次及假別對照表中才列入統計</param>
+        </member>
+        <member name="M:K12.BusinessLogic.AutoSummary.SelectBySummaryType(System.Collections.Generic.IEnumerable{K12.Data.MoralScoreRecord},K12.Data.SummaryType)">
+            <summary>
+            根據SummaryType來篩選日常生活表現紀錄物件列表
+            </summary>
+            <param name="records"></param>
+            <param name="SummaryType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:K12.BusinessLogic.AutoSummary.GetSchoolYearSemester(System.Collections.Generic.IEnumerable{K12.Data.MeritRecord},System.Collections.Generic.IEnumerable{K12.Data.DemeritRecord},System.Collections.Generic.IEnumerable{K12.Data.AttendanceRecord},System.Collections.Generic.IEnumerable{K12.Data.MoralScoreRecord})">
+            <summary>
+            根據缺曠獎懲及日常生活表現紀錄判斷其中的學年度學期聯集
+            </summary>
+            <param name="meritrecords">獎勵紀錄列表</param>
+            <param name="demeritrecords">懲戒紀錄列表</param>
+            <param name="attendancerecords">缺曠紀錄列表</param>
+            <param name="moralscorerecords">日常生活表現紀錄列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:K12.BusinessLogic.AutoSummary.Select(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{K12.Data.SchoolYearSemester})">
+            <summary>
+            根據多筆學生編號及學年度學期取得學期缺曠獎懲結算記錄物件
+            </summary>
+            <param name="StudentIDs">學生編號列表，若傳入null或空集合則會取得所有學生編號列表。</param>
+            <param name="SchoolYearSemesters">學年度學期組合，若傳入null或空集合則會根據缺曠獎懲及日常生活表現紀錄來決定。</param>
+            <returns></returns>
+            <remarks>
+            1.若是所有的條件皆為null或空集合，則會傳回AutoSummary的空集合，不會取得所有學生的所有缺曠獎懲及日常生活表現紀錄。
+            2.應儘量傳入學年度及學期在效率上會好很多。
+            3.只有在節次及假別對照表中的才列入統計。
+            4.會同時統計缺曠及獎懲。 
+            </remarks>
+        </member>
+        <member name="M:K12.BusinessLogic.AutoSummary.Select(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{K12.Data.SchoolYearSemester},K12.Data.SummaryType)">
+            <summary>
+            根據多筆學生編號及學年度學期取得學期缺曠獎懲結算記錄物件
+            </summary>
+            <param name="StudentIDs">學生編號列表，若傳入null或空集合則會取得所有學生編號列表。</param>
+            <param name="SchoolYearSemesters">學年度學期組合，若傳入null或空集合則會根據缺曠獎懲及日常生活表現紀錄來決定。</param>
+            <param name="SummaryType">缺曠獎懲統計類別</param>
+            <returns></returns>
+            <remarks>
+            1.若是所有的條件皆為null或空集合，則會傳回AutoSummary的空集合，不會取得所有學生的所有缺曠獎懲及日常生活表現紀錄。
+            2.應儘量傳入學年度及學期在效率上會好很多。
+            3.只有在節次及假別對照表中的才列入統計。
+            </remarks>
+        </member>
+        <member name="M:K12.BusinessLogic.AutoSummary.Select(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{K12.Data.SchoolYearSemester},K12.Data.SummaryType,System.Boolean)">
+            <summary>
+            根據多筆學生編號及學年度學期取得學期缺曠獎懲結算記錄物件
+            </summary>
+            <param name="StudentIDs">學生編號列表，若傳入null或空集合則會取得所有學生編號列表。</param>
+            <param name="SchoolYearSemesters">學年度學期組合，若傳入null或空集合則會根據缺曠獎懲及日常生活表現紀錄來決定。</param>
+            <param name="SummaryType">缺曠獎懲統計類別</param>
+            <param name="IsInMappingInfos">是否要在節次及假別對照表中才列入統計</param>
+            <returns></returns>
+            <remarks>
+            1.若是所有的條件皆為null或空集合，則會傳回AutoSummary的空集合，不會取得所有學生的所有缺曠獎懲及日常生活表現紀錄。
+            2.應儘量傳入學年度及學期在效率上會好很多。
+            </remarks>
+        </member>
+        <member name="M:K12.BusinessLogic.AutoSummary.SelectBySchoolYearAndSemesterLessEqual(System.Collections.Generic.IEnumerable{System.String},K12.Data.SchoolYearSemester,K12.Data.SummaryType,System.Boolean)">
+            <summary>
+            根據多筆學生編號及學年度學期（小於等於）取得學期缺曠獎懲結算記錄物件
+            </summary>
+            <param name="StudentIDs">學生編號列表，若傳入null或空集合則會取得所有學生編號列表。</param>
+            <param name="SchoolYearSemester">學年度學期（小於等於）</param>
+            <param name="SummaryType">缺曠獎懲統計類別</param>
+            <param name="IsInMappingInfos">是否要在節次及假別對照表中才列入統計</param>
+            <returns></returns>
+            <remarks>
+            1.若是所有的條件皆為null或空集合，則會傳回AutoSummary的空集合，不會取得所有學生的所有缺曠獎懲及日常生活表現紀錄。
+            2.應儘量傳入學年度及學期在效率上會好很多。
+            </remarks>
+        </member>
+        <member name="M:K12.BusinessLogic.AutoSummary.Calculate(System.Collections.Generic.IEnumerable{K12.Data.AttendanceRecord})">
+            <summary>
+            根據缺曠明細計算出缺曠統計值
+            </summary>
+            <param name="attendances"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

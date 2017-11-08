@@ -1,0 +1,32 @@
+D:\FiscaAEAlpha\addmodules\HsinChuJHEvaluation_Beta\HsinChu.ClassExamScoreReportV2.dll
+D:\FiscaAEAlpha\addmodules\HsinChuJHEvaluation_Beta\HsinChu.ClassExamScoreReportV2.pdb
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\ResolveAssemblyReference.cache
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.ConfigForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.MainForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.Prc.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.Properties.Resources.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\GenerateResource.read.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\GenerateResource.write.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.pdb
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\bin\Debug\HsinChu.ClassExamScoreReportV2.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\bin\Debug\HsinChu.ClassExamScoreReportV2.pdb
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\bin\Debug\HsinChu.ClassExamScoreReportV2.dll
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\bin\Debug\HsinChu.ClassExamScoreReportV2.pdb
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.csprojResolveAssemblyReference.cache
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.ConfigForm.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.MainForm.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.Prc.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.Properties.Resources.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.csproj.GenerateResource.Cache
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.dll
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.pdb
+C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\bin\Debug\HsinChu.ClassExamScoreReportV2.dll
+C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\bin\Debug\HsinChu.ClassExamScoreReportV2.pdb
+C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.ConfigForm.resources
+C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.MainForm.resources
+C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.Prc.resources
+C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.Properties.Resources.resources
+C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.csproj.GenerateResource.Cache
+C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.dll
+C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.pdb

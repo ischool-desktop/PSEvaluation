@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HsinChu.JHEvaluation.Data</name>
+    </assembly>
+    <members>
+        <member name="T:HsinChu.JHEvaluation.Data.HC">
+            <summary>
+            新竹
+            </summary>
+            <summary>
+            新竹
+            </summary>
+        </member>
+        <member name="T:HsinChu.JHEvaluation.Data.HC.JHSCETakeRecord">
+            <summary>
+            新竹國中評量成績記錄
+            </summary>
+        </member>
+        <member name="M:HsinChu.JHEvaluation.Data.HC.JHSCETakeRecord.#ctor(JHSchool.Data.JHSCETakeRecord)">
+            <summary>
+            建構子
+            </summary>
+            <param name="record"></param>
+        </member>
+        <member name="M:HsinChu.JHEvaluation.Data.HC.JHSCETakeRecord.AsJHSCETakeRecord">
+            <summary>
+            轉型成JHSCETakeRecord
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHSCETakeRecord.RefStudentID">
+            <summary>
+            取得或設定學生ID
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHSCETakeRecord.RefCourseID">
+            <summary>
+            取得或設定課程ID
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHSCETakeRecord.RefSCAttendID">
+            <summary>
+            取得或設定修課ID
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHSCETakeRecord.RefExamID">
+            <summary>
+            取得或設定試別ID
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHSCETakeRecord.Score">
+            <summary>
+            取得或設定定期分數
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHSCETakeRecord.AssignmentScore">
+            <summary>
+            取得或設定平時分數
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHSCETakeRecord.Text">
+            <summary>
+            取得或設定文字描述
+            </summary>
+        </member>
+        <member name="T:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord">
+            <summary>
+            新竹國中AEIncludeRecord
+            </summary>
+        </member>
+        <member name="M:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord.#ctor(JHSchool.Data.JHAEIncludeRecord)">
+            <summary>
+            建構子
+            </summary>
+            <param name="record"></param>
+        </member>
+        <member name="M:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord.AsJHAEIncludeRecord">
+            <summary>
+            轉型成JHAEIncludeRecord
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord.AssessmentSetup">
+            <summary>
+            取得AssessmentSetupRecord
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord.Exam">
+            <summary>
+            取得ExamRecord
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord.EndTime">
+            <summary>
+            取得或設定結束時間
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord.RefExamID">
+            <summary>
+            取得或設定試別ID
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord.ExamName">
+            <summary>
+            取得或設定試別名稱
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord.RefAssessmentSetupID">
+            <summary>
+            取得或設定評量設定ID
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord.StartTime">
+            <summary>
+            取得或設定開始時間
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord.UseScore">
+            <summary>
+            取得或設定是否需評定期分數
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord.UseAssignmentScore">
+            <summary>
+            取得或設定是否需評平時分數
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord.UseText">
+            <summary>
+            取得或設定是否需評文字描述
+            </summary>
+        </member>
+        <member name="P:HsinChu.JHEvaluation.Data.HC.JHAEIncludeRecord.Weight">
+            <summary>
+            取得或設定權重
+            </summary>
+        </member>
+    </members>
+</doc>

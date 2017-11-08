@@ -1,0 +1,3229 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FISCA.Core</name>
+    </assembly>
+    <members>
+        <member name="T:FISCA.Deployment.AppIdentity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.AppIdentity.ToXml">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.AppIdentity.Parse(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Deployment.AppIdentity.Uri">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.UrlIdentity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.UrlIdentity.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.UrlIdentity.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="P:FISCA.Deployment.UrlIdentity.Uri">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.StrongNameIdentity">
+            <summary>
+            代表應用程式名稱。
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.StrongNameIdentity.Pattern">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.StrongNameIdentity.#ctor">
+            <summary>
+            建立新的應用程式名稱。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.StrongNameIdentity.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strongName"></param>
+        </member>
+        <member name="M:FISCA.Deployment.StrongNameIdentity.GenerateIdentity(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="rsaKey"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Deployment.StrongNameIdentity.Name">
+            <summary>
+            應用程式名稱。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.StrongNameIdentity.PublicKeyToken">
+            <summary>
+            公開金鑰摘要。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.StrongNameIdentity.Uri">
+            <summary>
+            應用程式全名。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.AppIdentityCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.AppIdentityCollection.ToXml(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="rootName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FISCA.Deployment.AppManifest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.AppManifest.StandardFileName">
+            <summary>
+            AppManifest 的標準檔案名稱。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.AppManifest.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.AppManifest.Sign(System.String)">
+            <summary>
+            對目前的物件內容進行數位簽章，並回傳新的執行個體。
+            </summary>
+            <param name="privateKey">數位簽章私密金鑰。</param>
+        </member>
+        <member name="M:FISCA.Deployment.AppManifest.Verify">
+            <summary>
+            驗證目前文件的簽章。
+            </summary>
+            <returns></returns>
+            <exception cref="T:FISCA.Deployment.ManifestInvalidException">當數位簽章無效時。</exception>
+        </member>
+        <member name="M:FISCA.Deployment.AppManifest.GetDigestValue">
+            <summary>
+            取得整份文件的 Digest 值，包含 Signature。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.AppManifest.GetReleaseDigestValue(FISCA.Deployment.VersionOption)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.AppManifest.Load(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="uri"></param>
+        </member>
+        <member name="M:FISCA.Deployment.AppManifest.Parse(System.Xml.Linq.XElement)">
+            <summary>
+            
+            </summary>
+            <param name="appDesc"></param>
+        </member>
+        <member name="M:FISCA.Deployment.AppManifest.Parse(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="xmlData"></param>
+        </member>
+        <member name="M:FISCA.Deployment.AppManifest.Save(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:FISCA.Deployment.AppManifest.ToXml">
+            <summary>
+            將物件內容轉換成 Xml 表示。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.AppManifest.Clone">
+            <summary>
+            複製自已。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Deployment.AppManifest.Redirect">
+            <summary>
+            取得重新導向位置。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.AppManifest.IsRedirectRequired">
+            <summary>
+            取得是否需要重新導向。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.AppManifest.IsContainsIdentity">
+            <summary>
+            取得是否包含了應用程式識別資料。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.AppManifest.Title">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.AppManifest.Identity">
+            <summary>
+            應用程式識別。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.AppManifest.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.AppManifest.AlphaReleaseDigest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.AppManifest.BetaReleaseDigest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.AppManifest.StableReleaseDigest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.AppManifest.MediaMirrors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.AppManifest.PublicKey">
+            <summary>
+            公開金鑰。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.AppManifest.Signature">
+            <summary>
+            應用程式簽章，當您變更物件屬性，此簽章會自動失效。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.EntryPoint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.EntryPoint.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.EntryPoint.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="asmFile"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:FISCA.Deployment.EntryPoint.ToXml">
+            <summary>
+            回傳此物件的 Xml 資料。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Deployment.EntryPoint.AssemblyFile">
+            <summary>
+            應用程式進入點組件檔案名稱。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.EntryPoint.Type">
+            <summary>
+            應用程式進入點型別。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.MediaFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.MediaFile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.MediaFile.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            
+            </summary>
+            <param name="xml"></param>
+        </member>
+        <member name="M:FISCA.Deployment.MediaFile.Parse(System.Xml.Linq.XElement)">
+            <summary>
+            
+            </summary>
+            <param name="xml"></param>
+        </member>
+        <member name="M:FISCA.Deployment.MediaFile.ToXml">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Deployment.MediaFile.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.MediaFile.Folder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.MediaFile.FullName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.MediaFile.UrnFullName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.MediaFile.Size">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.MediaFile.Digest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.MediaFile.Attributes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.MediaMirror">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.MediaMirror.#ctor(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <param name="acceptPing"></param>
+        </member>
+        <member name="M:FISCA.Deployment.MediaMirror.DetectRoundtripTime">
+            <summary>
+            偵測 Mirror 的反應時間。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.MediaMirror.ToXml">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Deployment.MediaMirror.UrlString">
+            <summary>
+            經過處理，合法的 Url 字串。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.MediaMirror.AcceptPing">
+            <summary>
+            是否允許 Ping。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.MediaMirror.RoundtripTime">
+            <summary>
+            代表反應時間。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.MediaMirrorCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.MediaMirrorCollection.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.MediaMirrorCollection.#ctor(System.Collections.Generic.IEnumerable{FISCA.Deployment.MediaMirror})">
+            <summary>
+            
+            </summary>
+            <param name="collection"></param>
+        </member>
+        <member name="M:FISCA.Deployment.MediaMirrorCollection.ToXml">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.MediaMirrorCollection.DetectRoundtripTimeAsync">
+            <summary>
+            非同步偵測所有 Mirror 的反應時間。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.MediaMirrorCollection.WaitDetectComplete">
+            <summary>
+            等待所有偵測完成。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.AppNameResolver">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.ReleaseManifest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.ReleaseManifest.StandardFileName">
+            <summary>
+            ReleaseManifest 的標準檔案名稱。
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.ReleaseManifest.StableFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.ReleaseManifest.BetaFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.ReleaseManifest.AlphaFolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ReleaseManifest.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ReleaseManifest.Sign(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="privateKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.ReleaseManifest.Verify(FISCA.Deployment.RSAPublicKey)">
+            <summary>
+            驗證目前文件的簽章。
+            </summary>
+            <returns></returns>
+            <exception cref="T:FISCA.Deployment.ManifestInvalidException">當數位簽章無效時。</exception>
+        </member>
+        <member name="M:FISCA.Deployment.ReleaseManifest.GetDigestValue">
+            <summary>
+            取得整份文件的 Digest 值，包含 Signature。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.ReleaseManifest.Load(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="uri"></param>
+        </member>
+        <member name="M:FISCA.Deployment.ReleaseManifest.Parse(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:FISCA.Deployment.ReleaseManifest.Parse(System.Xml.Linq.XElement)">
+            <summary>
+            
+            </summary>
+            <param name="xml"></param>
+        </member>
+        <member name="M:FISCA.Deployment.ReleaseManifest.ToXml">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.ReleaseManifest.Save(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:FISCA.Deployment.ReleaseManifest.Clone">
+            <summary>
+            複製自已。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Deployment.ReleaseManifest.EntryPoint">
+            <summary>
+            應用程式進入點。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ReleaseManifest.References">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ReleaseManifest.Version">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ReleaseManifest.Signature">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.RSAPublicKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.RSAPublicKey.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="rsaKeyValue"></param>
+        </member>
+        <member name="M:FISCA.Deployment.RSAPublicKey.ToXml">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Deployment.RSAPublicKey.PublicKeyToken">
+            <summary>
+            公開金鑰代符。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.XmlSignUtil">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.XmlSignUtil.ComputeSignature(System.Security.Cryptography.RSACryptoServiceProvider,System.String)">
+            <summary>
+            對Xml資料進行數簽章。
+            </summary>
+            <param name="privateKey">簽章金鑰。</param>
+            <param name="xmlData">要簽章的資料。</param>
+            <returns>簽章完成的資料(不含原內容)。</returns>
+        </member>
+        <member name="M:FISCA.Deployment.XmlSignUtil.CheckSignature(System.Security.Cryptography.RSACryptoServiceProvider,System.String,System.String)">
+            <summary>
+            驗簽章是否正確。
+            </summary>
+            <param name="publicKey">驗證的公開金鑰。</param>
+            <param name="signature">簽章。</param>
+            <param name="xmlData">要驗證的資料。</param>
+            <returns>正確回傳True。</returns>
+        </member>
+        <member name="T:FISCA.Deployment.FCManifestResolver">
+            <summary>
+            Forward Compatibility。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.ManifestResolver">
+            <summary>
+            1.app.xml、release.xml 簽章驗證。
+            2.app.xml 重新導向。
+            3.Alpha、Beta、Stable 版本選擇。
+            4.下載重試功能。
+            5.最近主機偵測。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ManifestResolver.#ctor(System.String,FISCA.Deployment.VersionOption)">
+            <summary>
+            
+            </summary>
+            <param name="appUrl"></param>
+            <param name="option"></param>
+        </member>
+        <member name="M:FISCA.Deployment.ManifestResolver.Resolve">
+            <summary>
+            搜尋與載入 Manifest 資訊。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ManifestResolver.TrimParametsers(System.String)">
+            <summary>
+            將「#」之後的 Deployment 參數資訊去除。
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.ManifestResolver.ContainsParameters(System.String)">
+            <summary>
+            判斷是否包含了 Deployment 參數。
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.ManifestResolver.GetServerSpeedOrder">
+            <summary>
+            取得依反應速度排序的 Server 清單。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.ManifestResolver.OnProgressMessage(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="P:FISCA.Deployment.ManifestResolver.HttpClient">
+            <summary>
+            Http 連線管理物件。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ManifestResolver.Success">
+            <summary>
+            取得或設定 Manifest 是否已經載入。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ManifestResolver.AppUrl">
+            <summary>
+            應用程式 URL。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ManifestResolver.ResolvedAppUrl">
+            <summary>
+            載入 app.xml 的實際 Url。
+            </summary>
+            <remarks>有可能因為 Redirect 而與 AppUrl 不同。</remarks>
+        </member>
+        <member name="P:FISCA.Deployment.ManifestResolver.ResolvedReleaseUrl">
+            <summary>
+            載入 release.xml 的實際位置。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ManifestResolver.DownloadUrlBase">
+            <summary>
+            檔案下載基礎 Url。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ManifestResolver.VerifySignature">
+            <summary>
+            取得或設定是否要驗證 Manifest 上的簽章。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ManifestResolver.VersionOption">
+            <summary>
+            要更新的本版類型。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ManifestResolver.AppManifest">
+            <summary>
+            應用程式描述。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.ManifestResolver.ReleaseManifest">
+            <summary>
+            應用程式檔案描述。
+            </summary>
+        </member>
+        <member name="E:FISCA.Deployment.ManifestResolver.ProgressMessage">
+            <summary>
+            載入 Manifest  過程式的各類訊息。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.FCManifestResolver.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="moduleUrl"></param>
+        </member>
+        <member name="M:FISCA.Deployment.FCManifestResolver.Resolve">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.InstallDescriptor">
+            <summary>
+            代表本機的安裝資訊。
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.InstallDescriptor.TemporalFolderName">
+            <summary>
+            預設的更新目錄名稱。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.InstallDescriptor.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="installFolder"></param>
+        </member>
+        <member name="M:FISCA.Deployment.InstallDescriptor.EnsureAvailable">
+            <summary>
+            確定安裝目錄與暫存目錄是可用的，如果不存在則建立相關目錄。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.InstallDescriptor.InstallFolder">
+            <summary>
+            儲存應用程式相關檔案的目標路徑。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.InstallDescriptor.TemporalFolder">
+            <summary>
+            取得或設定更新過程中的暫存目錄，如不指定，會在 InstallFolder 使用預設名稱建立。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.InstallDescriptor.AppManifest">
+            <summary>
+            包含 app.xml 資訊。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.InstallDescriptor.ReleaseManifest">
+            <summary>
+            包含 release.xml 資訊。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.UpdateException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.UpdateException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.UpdateException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:FISCA.Deployment.UpdateException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:FISCA.Deployment.UpdateException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="ctx"></param>
+        </member>
+        <member name="M:FISCA.Deployment.UpdateException.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Exception})">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="errors"></param>
+        </member>
+        <member name="P:FISCA.Deployment.UpdateException.Errors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.UpdateHelper">
+            <summary>
+            依據 Url 將程式下載到指定的資料夾。
+            </summary>
+            <remarks>
+            1.下載重試功能。
+            2.非同步批次下載檔案。
+            3.進度回報。
+            </remarks>
+        </member>
+        <member name="M:FISCA.Deployment.UpdateHelper.#ctor">
+            <summary>
+            請將物件建立在 UI 執行緒。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.UpdateHelper.#ctor(FISCA.Deployment.ManifestResolver,FISCA.Deployment.InstallDescriptor)">
+            <summary>
+            請將物件建立在 UI 執行緒。
+            </summary>
+            <param name="resolver"></param>
+            <param name="install"></param>
+        </member>
+        <member name="M:FISCA.Deployment.UpdateHelper.#ctor(System.String,FISCA.Deployment.VersionOption,System.String)">
+            <summary>
+            請將物件建立在 UI 執行緒。
+            </summary>
+            <param name="appUrl">App 所在的 Url。</param>
+            <param name="option">要更新的 Release 版本。</param>
+            <param name="installFolder">本機安裝路徑。</param>
+        </member>
+        <member name="M:FISCA.Deployment.UpdateHelper.CheckUpdate">
+            <summary>
+            檢查是否需要更新。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.UpdateHelper.Update">
+            <summary>
+            更新應用程式。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Deployment.UpdateHelper.Update(FISCA.Deployment.PaddingScript)">
+            <summary>
+            更新應用程式。
+            </summary>
+            <param name="padding">檔案下載之後需要執行的後序動作的命令清單物件。</param>
+        </member>
+        <member name="M:FISCA.Deployment.UpdateHelper.ExecuteScript(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="scriptFile"></param>
+            <param name="async">是否為非同步執行，非同步執行時會進行 Shadow。</param>
+        </member>
+        <member name="P:FISCA.Deployment.UpdateHelper.HttpClient">
+            <summary>
+            Http 連線管理物件。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.UpdateHelper.Resolver">
+            <summary>
+            取得或設定 Manifest 的載入器。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.UpdateHelper.Install">
+            <summary>
+            儲存應用程式相關檔案的目標路徑。
+            </summary>
+        </member>
+        <member name="E:FISCA.Deployment.UpdateHelper.DownloadStarted">
+            <summary>
+            當更新開始時。
+            </summary>
+        </member>
+        <member name="E:FISCA.Deployment.UpdateHelper.DownloadProgressChanged">
+            <summary>
+            當更新進度變更時。
+            </summary>
+        </member>
+        <member name="E:FISCA.Deployment.UpdateHelper.DownloadCompleted">
+            <summary>
+            當更新完成時。
+            </summary>
+        </member>
+        <member name="E:FISCA.Deployment.UpdateHelper.ProgressMessage">
+            <summary>
+            當更新過程中有任何訊息時。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.UpdateHelper.DownloadAction">
+            <summary>
+            負責處理下載作業。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.DownloadProgressEventHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.DownloadProgressEventHandler.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.DownloadProgressEventHandler.ProgressPercentage">
+            <summary>
+            進度百分比。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.DownloadProgressEventHandler.ProgressSize">
+            <summary>
+            目前已下載容量。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.DownloadProgressEventHandler.TotalSize">
+            <summary>
+            總共需下載容量。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.ProgressMessageEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ProgressMessageEventArgs.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="P:FISCA.Deployment.ProgressMessageEventArgs.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Core.Deployment.AppUpdaterCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.ManifestInvalidException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ManifestInvalidException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.ManifestInvalidException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:FISCA.Deployment.ManifestInvalidException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:FISCA.Deployment.ManifestInvalidException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="ctx"></param>
+        </member>
+        <member name="T:FISCA.Deployment.VersionOption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.VersionOption.Alpha">
+            <summary>
+            代表內部測試版。
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.VersionOption.Beta">
+            <summary>
+            代表測試版本。
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.VersionOption.Stable">
+            <summary>
+            代表穩定版本。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.PaddingScript">
+            <summary>
+            封裝可讓 script.exe 執行的命令清單。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.PaddingScript.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.PaddingScript.Add(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:FISCA.Deployment.PaddingScript.Replace(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:FISCA.Deployment.PaddingScript.Delete(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="target"></param>
+        </member>
+        <member name="M:FISCA.Deployment.PaddingScript.OutputTextFile(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="target"></param>
+            <param name="content"></param>
+        </member>
+        <member name="M:FISCA.Deployment.PaddingScript.WaitRelease(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="target"></param>
+        </member>
+        <member name="M:FISCA.Deployment.PaddingScript.StartProcess(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="target"></param>
+        </member>
+        <member name="M:FISCA.Deployment.PaddingScript.DeleteEmpty(System.String)">
+            <summary>
+            刪除所有空目錄。
+            </summary>
+            <param name="basePath"></param>
+        </member>
+        <member name="M:FISCA.Deployment.PaddingScript.Save(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="T:FISCA.Deployment.TaskAction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.TaskAction.Add">
+            <summary>
+            新增檔案，如果檔案已存在，即是衝突。
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.TaskAction.Replace">
+            <summary>
+            取代現有檔案。
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.TaskAction.Delete">
+            <summary>
+            刪除現有檔案
+            </summary>
+        </member>
+        <member name="F:FISCA.Deployment.TaskAction.Download">
+            <summary>
+            從指定的 Url 下載檔案。
+            </summary>
+        </member>
+        <member name="T:FISCA.Deployment.FileTask">
+            <summary>
+            代表更新的動作。
+            </summary>
+        </member>
+        <member name="M:FISCA.Deployment.FileTask.#ctor(FISCA.Deployment.TaskAction)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.FileTask.File">
+            <summary>
+            相關聯的檔案描述。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.FileTask.Action">
+            <summary>
+            對於檔案需要進行的動作，可能包含一個以上。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.FileTask.Data">
+            <summary>
+            如果該檔案是需要下載的，則此屬性用於儲存下載的資料。
+            </summary>
+        </member>
+        <member name="P:FISCA.Deployment.FileTask.Error">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.BasicToken">
+            <summary>
+            代表基本認證的安全代符。
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.SecurityToken">
+            <summary>
+            封裝 DSA 安全代符的基礎類別。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.SecurityToken.TokenType">
+            <summary>
+            SecurityToken 類型。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.SecurityToken.XmlString">
+            <summary>
+            是供 SecurityToken 的完整內容。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.BasicToken.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userName"></param>
+            <param name="password"></param>
+        </member>
+        <member name="P:FISCA.DSA.BasicToken.UserName">
+            <summary>
+            取得使用者名稱。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.BasicToken.TokenType">
+            <summary>
+            SecurityToken 類型。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.BasicToken.XmlString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.BatchManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.BatchManager.#ctor(FISCA.DSA.Connection)">
+            <summary>
+            建立批次呼叫管理物件。
+            </summary>
+            <param name="conn"></param>
+        </member>
+        <member name="M:FISCA.DSA.BatchManager.Cancel">
+            <summary>
+            取消此次 Batch 呼叫，清除 Server 的暫存資料。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.BatchManager.Complete">
+            <summary>
+            完成 Batch 呼叫，Server 將確認所有呼叫。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.BatchManager.AddBatchHeader(FISCA.DSA.Envelope)">
+            <summary>
+            將 Batch 資訊加入到 Header 中。
+            </summary>
+            <param name="env"></param>
+        </member>
+        <member name="M:FISCA.DSA.BatchManager.NextSequence">
+            <summary>
+            取得 Batch 的順序號碼。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.DSA.BatchManager.BatchID">
+            <summary>
+            批次識別號。
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.CommonResources">
+            <summary>
+              用於查詢當地語系化字串等的強型別資源類別
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.CommonResources.ResourceManager">
+            <summary>
+              傳回這個類別使用的快取的 ResourceManager 執行個體。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.CommonResources.Culture">
+            <summary>
+              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+              使用這個強型別資源類別的資源查閱。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.CommonResources.DSNSServerList">
+             <summary>
+               查詢類似 http://dsns1.ischool.com.tw/dsns/dsns
+            http://dsns2.ischool.com.tw/dsns/dsns
+            http://124.219.8.11/dsns/dsns
+            http://dsns-gae.appspot.com/dsns
+            http://dsns.blazer.org.tw/commonserver/dsnameservice/accesspoint.dsa
+            http://203.72.205.3/commonserver/dsnameservice/accesspoint.dsa
+            http://124.219.8.3/commonserver/dsnameservice/accesspoint.dsa 的當地語系化字串。
+             </summary>
+        </member>
+        <member name="P:FISCA.DSA.CommonResources.NameResolveRequest">
+             <summary>
+               查詢類似 &lt;Envelope&gt;
+                &lt;Header&gt;
+                    &lt;TargetContract&gt;&lt;/TargetContract&gt;
+                    &lt;TargetService&gt;DS.NameService.GetDoorwayURL&lt;/TargetService&gt;
+                    &lt;SecurityToken Type=&quot;Basic&quot;&gt;
+                        &lt;UserName&gt;anonymous&lt;/UserName&gt;
+                        &lt;Password&gt;&lt;/Password&gt;
+                    &lt;/SecurityToken&gt;
+                    &lt;Parameter&gt;
+                        &lt;LogID&gt;DSNS-{0}&lt;/LogID&gt;
+                    &lt;/Parameter&gt;
+                &lt;/Header&gt;
+                &lt;Body&gt;
+                    &lt;Name&gt;{1}&lt;/Name&gt;
+                &lt;/Body&gt;
+            &lt;/Envelope&gt; 的當地語系化字串。
+             </summary>
+        </member>
+        <member name="T:FISCA.DSA.EnvelopeProcessEventHandler">
+            <summary>
+            處理 Envelope 事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:FISCA.DSA.EnvelopeProcessEventArgs">
+            <summary>
+            EnvelopeProcess 事件參數。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.EnvelopeProcessEventArgs.#ctor(FISCA.DSA.Envelope,FISCA.DSA.Envelope)">
+            <summary>
+            
+            </summary>
+            <param name="req"></param>
+            <param name="rsp"></param>
+        </member>
+        <member name="P:FISCA.DSA.EnvelopeProcessEventArgs.Request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.EnvelopeProcessEventArgs.Response">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.Connection">
+            <summary>
+            代表 DSA 的連線，可傳送 Request 文件到 DSA Server 。
+            </summary>
+        </member>
+        <member name="F:FISCA.DSA.Connection.ConnectService">
+            <summary>
+            Connect Service Name。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.Connection.#ctor">
+            <summary>
+            建立 Connection 物件的執行個體。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.Connection.Connect(System.String,System.String,System.String,System.String)">
+            <summary>
+            連線到 DSA。
+            </summary>
+            <param name="accessPoint">存取點位置，可以是 DSNS 名稱或是實體 Url。</param>
+            <param name="targetContract">Contract 名稱，如果指定空串字會連到預設 Contract。</param>
+            <param name="userName">使用者名稱。</param>
+            <param name="password">密碼。</param>
+        </member>
+        <member name="M:FISCA.DSA.Connection.Connect(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            使用 Passport 機制連線到 DSA。
+            </summary>
+            <param name="accessPoint">要連線的 DSA 位置。</param>
+            <param name="targetContract">要連線的 Contract 名稱。</param>
+            <param name="passportProvider">Passport 提供者 DSA 位置。</param>
+            <param name="providerContract">Passport 提供者的 Contract 名稱。</param>
+            <param name="userName">使用者名稱。</param>
+            <param name="password">密碼</param>
+        </member>
+        <member name="M:FISCA.DSA.Connection.Connect(System.String,System.String,FISCA.DSA.SecurityToken)">
+            <summary>
+            連線到 DSA。
+            </summary>
+            <param name="accessPoint">存取點位置，可以是 DSNS 名稱或是實體 Url。</param>
+            <param name="targetContract">Contract 名稱，如果指定空串字會連到預設 Contract。</param>
+            <param name="securityToken">安全代符。</param>
+        </member>
+        <member name="M:FISCA.DSA.Connection.Connect(System.String,System.String,System.String,System.String,FISCA.DSA.SecurityToken)">
+            <summary>
+            使用 Passport 機制連線到 DSA。
+            </summary>
+            <param name="accessPoint">要連線的 DSA 位置。</param>
+            <param name="targetContract">要連線的 Contract 名稱。</param>
+            <param name="passportProvider">Passport 提供者 DSA 位置。</param>
+            <param name="providerContract">Passport 提供者的 Contract 名稱。</param>
+            <param name="securityToken">安全代符。</param>
+        </member>
+        <member name="M:FISCA.DSA.Connection.Connect(FISCA.DSA.AccessPoint,System.String,FISCA.DSA.SecurityToken)">
+            <summary>
+            連線到 DSA。
+            </summary>
+            <param name="accessPoint">存取點位置。</param>
+            <param name="targetContract">Contract 名稱，如果指定空串字會連到預設 Contract。</param>
+            <param name="securityToken">安全代符。</param>
+        </member>
+        <member name="M:FISCA.DSA.Connection.AsContract(System.String)">
+            <summary>
+            使用目前的 SecurityToken 切換到指定的 Contract。
+            </summary>
+            <param name="name">Contract 名稱。</param>
+            <returns>已切換到新 Contract 的 Connection 物件。</returns>
+        </member>
+        <member name="M:FISCA.DSA.Connection.AsContract(System.String,FISCA.DSA.SecurityToken)">
+            <summary>
+             切換到指定的 Contract。
+            </summary>
+            <param name="name"></param>
+            <param name="securityToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.DSA.Connection.NewBatchManager">
+            <summary>
+            開始一個 Batch 呼叫。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.DSA.Connection.SendRequest(System.String,FISCA.DSA.Envelope)">
+            <summary>
+            
+            </summary>
+            <param name="srvName"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.DSA.Connection.SendRequest(System.String,FISCA.DSA.Envelope,FISCA.DSA.BatchManager)">
+            <summary>
+            傳送 DSA Request。
+            </summary>
+            <param name="srvName">服務名稱。</param>
+            <param name="request">Request 資料。</param>
+            <param name="batch">指定 BatchManager 之後，此 Request 的資料並不會直接寫入資料庫，直到 BatchManager.Complete() 被呼叫為此。</param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.DSA.Connection.SendRequest(System.String,System.String,System.String,FISCA.DSA.Envelope,FISCA.DSA.SecurityToken,System.Boolean)">
+            <summary>
+            直接傳送 Request 到目標 DSA，不經過 DS.Base.Connect 連線測試。
+            </summary>
+            <param name="accessPoint">目標 DSA 位置。</param>
+            <param name="targetContract">目標 Contract。</param>
+            <param name="srvName">服務名稱。</param>
+            <param name="request">申請文件。</param>
+            <param name="securityToken">安全代符。</param>
+            <param name="transportBySTS">指示是否使用加密通道傳送資料。</param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.DSA.Connection.SendRequest(System.String,FISCA.DSA.Envelope,FISCA.DSA.SecureTunnel,System.Action{FISCA.DSA.Envelope,FISCA.DSA.Envelope},System.Action{FISCA.DSA.Envelope,FISCA.DSA.Envelope},FISCA.Net.HttpClient,FISCA.DSA.BatchManager,FISCA.DSA.Connection)">
+            <summary>
+            傳送 DSA Request。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.Connection.IsSupport(System.String)">
+            <summary>
+            判斷是否支援指定的 Contract。
+            </summary>
+            <param name="contractName">Contract 名稱。</param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.DSA.Connection.OnConnectPreprocess(FISCA.DSA.Envelope,FISCA.DSA.Envelope)">
+            <summary>
+            
+            </summary>
+            <param name="req"></param>
+            <param name="rsp"></param>
+        </member>
+        <member name="M:FISCA.DSA.Connection.OnConnectPostprocess(FISCA.DSA.Envelope,FISCA.DSA.Envelope)">
+            <summary>
+            
+            </summary>
+            <param name="req"></param>
+            <param name="rsp"></param>
+        </member>
+        <member name="M:FISCA.DSA.Connection.InitConnection">
+            <summary>
+            重新設定所有屬性到預設值。
+            </summary>
+        </member>
+        <member name="F:FISCA.DSA.Connection.SyncRoot">
+            <summary>
+            執行緒同步物件。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Connection.DefaultHttpClient">
+            <summary>
+            預設的 HttpClient，所有的 Connection 都預設使用此 HttpClient。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Connection.EnableSession">
+            <summary>
+            取得或設定是否啟用 Session 機制，以加速連線速度與提高安全性。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Connection.EnableSecureTunnel">
+            <summary>
+            取得或設定是否啟用安全資料通道機制，此機制使用公開金鑰(PKI)技術達成。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Connection.HttpClient">
+            <summary>
+            取得或設定 HttpClient，如果此屬性保持 Null，會自動使用 Connection.DefaultHttpClient。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Connection.Http">
+            <summary>
+            取得傳送資料的 HttpClient 物件，此屬性會依據 HttpClient 屬性的設定而自動選擇正確的物件。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Connection.ServerVersion">
+            <summary>
+            取得 DSA Server 的版本。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Connection.AccessPoint">
+            <summary>
+            取得已連線的 DSA 存取點位置。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Connection.SecurityToken">
+            <summary>
+            取得安全代符資訊。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Connection.TargetContract">
+            <summary>
+            取得 Request 傳送的目標 Contract。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Connection.IsConnected">
+            <summary>
+            取得是否已經連線。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Connection.OnConnecting">
+            <summary>
+            當正在連線時。
+            </summary>
+        </member>
+        <member name="E:FISCA.DSA.Connection.ConnectPreprocess">
+            <summary>
+            在 Connection 連線之前。
+            </summary>
+        </member>
+        <member name="E:FISCA.DSA.Connection.ConnectPostprocess">
+            <summary>
+            在 Connection 連線之後。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Connection.TargetUrl">
+            <summary>
+            取得最後要傳送資料的 Url。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Connection.STS">
+            <summary>
+            安全通道服務。
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.Envelope">
+            <summary>
+            代表 DSA 的封包。
+            </summary>
+        </member>
+        <member name="T:FISCA.IXmlable">
+            <summary>
+            代表物件狀態可以轉換成 Xml 資料。
+            </summary>
+        </member>
+        <member name="M:FISCA.IXmlable.WriteTo(System.String)">
+            <summary>
+            將 Xml 資料以 UTF-8 編碼後寫入到指定的檔案。
+            </summary>
+            <param name="fileName">檔案名稱。</param>
+        </member>
+        <member name="P:FISCA.IXmlable.XmlString">
+            <summary>
+            取得代表物件內容的 Xml 字串。
+            </summary>
+            <returns>完整 Xml 字串。</returns>
+        </member>
+        <member name="M:FISCA.DSA.Envelope.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.Envelope.#ctor(FISCA.IXmlable)">
+            <summary>
+            
+            </summary>
+            <param name="bodyContent">Body 的內容，不包含 Body Element。</param>
+        </member>
+        <member name="M:FISCA.DSA.Envelope.Parse(System.String)">
+            <summary>
+            解析 Xml 字串，將狀態寫入到指定的物件中。
+            </summary>
+            <param name="outerXml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.DSA.Envelope.ReadToEnvelope(System.Xml.XmlReader)">
+            <summary>
+            將 Reader 移動到 Envelope 元素，如果找不到則丟出例外。
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:FISCA.DSA.Envelope.ReadToHeader(System.Xml.XmlReader)">
+            <summary>
+            將 Reader 移動到 Header 元素，如果找不到則丟出例外。
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:FISCA.DSA.Envelope.ParseHeader(FISCA.DSA.HeaderCollection,System.Xml.XmlReader)">
+            <summary>
+            解析 Header。
+            </summary>
+            <param name="headers"></param>
+            <param name="xr"></param>
+        </member>
+        <member name="M:FISCA.DSA.Envelope.ReadToBody(System.Xml.XmlReader)">
+            <summary>
+            將 Reader 移動到 Body 元素，如果找不到則丟出例外。
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:FISCA.DSA.Envelope.WriteTo(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="P:FISCA.DSA.Envelope.Headers">
+            <summary>
+            取得 DSA 標頭資料。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Envelope.BodyContent">
+            <summary>
+            取得或設定 DSA Body 內容資料，不包含 Body Element。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Envelope.TransportBySecureTunnel">
+            <summary>
+            取得或設定是否使用安全通道傳送資料。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.Envelope.XmlString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.PassportToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.PassportToken.#ctor(FISCA.IXmlable)">
+            <summary>
+            
+            </summary>
+            <param name="tokenContent"></param>
+        </member>
+        <member name="M:FISCA.DSA.PassportToken.#ctor(FISCA.IXmlable,FISCA.DSA.SecurityToken)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.PassportToken.GetPassport(System.String,System.String,FISCA.DSA.SecurityToken)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.DSA.PassportToken.TokenType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.PassportToken.XmlString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.PassportToken.PassportContent">
+            <summary>
+            Passport 內容。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.PassportToken.OriginToken">
+            <summary>
+            取得換得此 PassportToken 的原始 SecurityToken。
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.DSAMultipleErrorException">
+            <summary>
+            用來表示多個 DSA 失敗。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.DSAMultipleErrorException.#ctor(System.String,System.Collections.Generic.IList{System.Exception})">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="errors"></param>
+        </member>
+        <member name="P:FISCA.DSA.DSAMultipleErrorException.Errors">
+            <summary>
+            包含所有解析錯誤的例外集合。
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.DSAProtocolException">
+            <summary>
+            用來表示 DSA 的 Protocol 錯誤。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.DSAProtocolException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.DSAProtocolException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:FISCA.DSA.DSAProtocolException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:FISCA.DSA.DSAProtocolException.#ctor(System.String,System.String,System.String,System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="request"></param>
+            <param name="response"></param>
+            <param name="accessPoint"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="P:FISCA.DSA.DSAProtocolException.TargetAccessPoint">
+            <summary>
+            取得目標 AccessPoint。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.DSAProtocolException.Request">
+            <summary>
+            取得 Request 資料。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.DSAProtocolException.Response">
+            <summary>
+            取得 Response 資料。
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.DSAServerException">
+            <summary>
+            用來表示 DSA Server 發生錯誤時。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.DSAServerException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.DSAServerException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:FISCA.DSA.DSAServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:FISCA.DSA.DSAServerException.#ctor(System.String,System.String,System.String,System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="status"></param>
+            <param name="msg"></param>
+            <param name="request"></param>
+            <param name="response"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="P:FISCA.DSA.DSAServerException.AccessPoint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.DSAServerException.Status">
+            <summary>
+            DSA Server  的狀態代碼。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.DSAServerException.Request">
+            <summary>
+            Request 資料。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.DSAServerException.Response">
+            <summary>
+            Response  資料
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.DSNameResolveException">
+            <summary>
+            用來表示解析 DSNS 名稱失敗。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.DSNameResolveException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.DSNameResolveException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:FISCA.DSA.DSNameResolveException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:FISCA.DSA.DSNameResolveException.#ctor(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="nameToResolve"></param>
+            <param name="nameServer"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="P:FISCA.DSA.DSNameResolveException.NameServer">
+            <summary>
+            負責解析的主機位置。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.DSNameResolveException.NameToResolve">
+            <summary>
+            解析錯誤的名稱。
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.EnvelopeSpecificationException">
+            <summary>
+            用來表示 Envelop 規格不正確例外。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.EnvelopeSpecificationException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.EnvelopeSpecificationException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:FISCA.DSA.EnvelopeSpecificationException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:FISCA.DSA.EnvelopeSpecificationException.#ctor(System.String,System.Exception,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="innerException"></param>
+            <param name="envelope"></param>
+        </member>
+        <member name="P:FISCA.DSA.EnvelopeSpecificationException.Envelope">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.PassportException">
+            <summary>
+            用來表示 DSA 的 Passport 錯誤。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.PassportException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.PassportException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:FISCA.DSA.PassportException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:FISCA.DSA.PassportException.#ctor(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="passportProvider"></param>
+            <param name="providerContract"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="P:FISCA.DSA.PassportException.PassportProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.PassportException.ProviderContract">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.SecureTunnelException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.SecureTunnelException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="T:FISCA.DSA.HeaderCollection">
+            <summary>
+            代表 DSA 的標頭集合。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.HeaderCollection.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.HeaderCollection.Add(System.String)">
+            <summary>
+            新增標頭資料。
+            </summary>
+            <param name="outerXml">完整的標頭資料。</param>
+        </member>
+        <member name="M:FISCA.DSA.HeaderCollection.Set(System.String)">
+            <summary>
+            設定標頭資料，如果該標頭已存在，則會覆蓋。
+            </summary>
+            <param name="outerXml"></param>
+        </member>
+        <member name="M:FISCA.DSA.HeaderCollection.Add(System.String,System.String)">
+            <summary>
+            新增標頭資料。
+            </summary>
+            <param name="elmName">標頭名稱。</param>
+            <param name="innerXml">標頭內容，可以是單純的字串資料。</param>
+        </member>
+        <member name="M:FISCA.DSA.HeaderCollection.Set(System.String,System.String)">
+            <summary>
+            設定標頭資料，如果該標頭已存在，則會覆蓋。
+            </summary>
+            <param name="elmName"></param>
+            <param name="innerXml"></param>
+        </member>
+        <member name="M:FISCA.DSA.HeaderCollection.Add(FISCA.IXmlable)">
+            <summary>
+            新增標頭資料。
+            </summary>
+            <param name="header"></param>
+        </member>
+        <member name="M:FISCA.DSA.HeaderCollection.Set(FISCA.IXmlable)">
+            <summary>
+             設定標頭資料，如果該標頭已存在，則會覆蓋。
+            </summary>
+            <param name="header"></param>
+        </member>
+        <member name="M:FISCA.DSA.HeaderCollection.Remove(System.String)">
+            <summary>
+            移除指定名稱的標頭。
+            </summary>
+            <param name="elmName"></param>
+        </member>
+        <member name="M:FISCA.DSA.HeaderCollection.Contains(System.String)">
+            <summary>
+            判斷是否包含指定名稱的標頭。
+            </summary>
+            <param name="elmName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.DSA.HeaderCollection.WriteTo(System.String)">
+            <summary>
+            將物件狀態以 Xml 資料儲存到指定檔案。
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:FISCA.DSA.HeaderCollection.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.DSA.HeaderCollection.Item(System.String)">
+            <summary>
+            取得或設定標頭完整內容。
+            </summary>
+            <param name="elmName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.DSA.HeaderCollection.Count">
+            <summary>
+            取得標頭數量。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.HeaderCollection.XmlString">
+            <summary>
+            取得以 Xml 構結表示的物件狀態。
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.AccessPoint">
+            <summary>
+            代表一個 DSA 的存取點。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.AccessPoint.#ctor(System.String,System.String)">
+            <summary>
+            初始化 AccessPoint 的新執行個體。
+            </summary>
+            <param name="name">DSA 的 AccessPoint 名稱。</param>
+            <param name="url">實體位置。</param>
+        </member>
+        <member name="M:FISCA.DSA.AccessPoint.TryParse(System.String,FISCA.DSA.AccessPoint@)">
+            <summary>
+            解析 DSA 的 AccessPoint 名稱。
+            </summary>
+            <param name="accessPoint">要解析的 AccessPoint 名稱或實體位置。</param>
+            <param name="result">AccessPoint 的執行個體。</param>
+            <returns>是否解析成功。</returns>
+        </member>
+        <member name="M:FISCA.DSA.AccessPoint.Parse(System.String)">
+            <summary>
+            解析 DSA 的 AccessPoint 名稱。
+            </summary>
+            <param name="accessPoint">要解析的 AccessPoint 名稱或實體位置。</param>
+            <returns>AccessPoint 的執行個體。</returns>
+        </member>
+        <member name="P:FISCA.DSA.AccessPoint.Name">
+            <summary>
+            DSA 在 DSNS 上的名稱。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.AccessPoint.Url">
+            <summary>
+            AccessPoint 的實體位置。
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.NameResolver">
+            <summary>
+            代表名稱解析邏輯封裝類別。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.NameResolver.#ctor(System.String,System.String)">
+            <summary>
+            建立執行個體。
+            </summary>
+            <param name="nameServer">DSNS Server 實體位置。</param>
+            <param name="nameToResolve">要解析的 DSNS 名稱。</param>
+        </member>
+        <member name="M:FISCA.DSA.NameResolver.Resolve">
+            <summary>
+            執行解析動作。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.NameResolver.DefaultHttpClient">
+            <summary>
+            預設的 HttpClient，所有的 NameResolver 都預設使用此 HttpClient，
+            變更此屬性，只會影響新的執行個體。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.NameResolver.WaitHandle">
+            <summary>
+            取得名稱解析的執行緒同步物件。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.NameResolver.HttpClient">
+            <summary>
+            管理 HTTP 的連線。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.NameResolver.NameServer">
+            <summary>
+            DSNS Server 實體位置。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.NameResolver.NameToResolve">
+            <summary>
+            需要解析的 DSNS 名稱。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.NameResolver.ResolveResult">
+            <summary>
+            解析結果。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.NameResolver.Error">
+            <summary>
+            解析所發生的錯誤，如果沒有錯誤值為 Null。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.NameResolver.Success">
+            <summary>
+            解析動作是否成功。
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.NameService">
+            <summary>
+            代表 Name Server 的功能。此類別有預設一組 Name Server 清單。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.NameService.Resolve(System.String)">
+            <summary>
+            解析 DSNS 名稱。
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+            <exception cref="T:FISCA.DSA.DSAMultipleErrorException">當所有解析動作都失敗時丟出。</exception>
+        </member>
+        <member name="M:FISCA.DSA.NameService.ResolveParallel(System.String)">
+            <summary>
+            平行解析 DSNS 名稱。
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.DSA.NameService.ProviderList">
+            <summary>
+            具有 Name  Service 的 AccessPoint 清單。可透過在應用程式目錄下放置一個「NameServiceProvider.txt」檔案自定清單，
+            裡面列出自定的 AccessPoint 位置清單，每行放置一個 HTTP Url 位置即可。如果無法從自定清單中載入任何 AccessPoint，
+            會自動載入預設清單。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.NameService.ParallelResolve">
+            <summary>
+            取得或設定是否進行平行解析 DSNS 名稱，如果平行解析，則會同時對清單中所有 Name Server 送出解析的 Request，
+            然後將最先回應的結果回傳，非平行解析則會依序送出解析 Request，回傳第一個成功的解析結果，非平行解析
+            適用在不方便建立多執行緒的環境，例如 ASP.NET 網頁，預設值為 False。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.NameService.PrintResolveMessage">
+            <summary>
+            取得或設定是否輸出解析偵錯訊息(詳細資訊請參考 System.Diagnostics.Trace 類別)。
+            預設值為 False。
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.SecureTunnel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:FISCA.DSA.SecureTunnel.TransparentTunnel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.SecureTunnel.#ctor(FISCA.DSA.SecureTunnelService.CriticalKey)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.SecureTunnel.Protect(FISCA.DSA.Envelope)">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.DSA.SecureTunnel.Unprotect(FISCA.DSA.Envelope)">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FISCA.DSA.SecureTunnelService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.SecureTunnelService.#ctor(FISCA.Net.HttpClient)">
+            <summary>
+            
+            </summary>
+            <param name="http"></param>
+        </member>
+        <member name="M:FISCA.DSA.SecureTunnelService.Init(FISCA.DSA.AccessPoint,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="accessPoint"></param>
+            <param name="targetContract"></param>
+        </member>
+        <member name="M:FISCA.DSA.SecureTunnelService.NewTunnel">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:FISCA.DSA.SecureTunnelService.CriticalKey.SyncRoot">
+            <summary>
+            用於執行緒同步。
+            </summary>
+        </member>
+        <member name="T:FISCA.DSA.SessionToken">
+            <summary>
+            代表 Session 的安全代符。
+            </summary>
+        </member>
+        <member name="M:FISCA.DSA.SessionToken.#ctor(System.String,FISCA.DSA.SecurityToken)">
+            <summary>
+            
+            </summary>
+            <param name="sessionId"></param>
+            <param name="originToken"></param>
+        </member>
+        <member name="P:FISCA.DSA.SessionToken.SessionID">
+            <summary>
+            取得 SessionID。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.SessionToken.OriginToken">
+            <summary>
+            取得換得此 Session 的原始 SecurityToken，一般來說 Session 都是用其他的 SecurityToken 換來的。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.SessionToken.TokenType">
+            <summary>
+            SecurityToken 類型。
+            </summary>
+        </member>
+        <member name="P:FISCA.DSA.SessionToken.XmlString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.ApplicationStartupException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.ApplicationStartupException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.ApplicationStartupException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:FISCA.ApplicationStartupException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:FISCA.ApplicationStartupException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="ctx"></param>
+        </member>
+        <member name="T:FISCA.FApplication">
+            <summary>
+            代表 FISCA 應用程式基礎類別。
+            </summary>
+        </member>
+        <member name="M:FISCA.FApplication.Initialize(FISCA.AssemblyResolver)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.FApplication.Run">
+            <summary>
+            由 FISCA 呼叫，開始執行。
+            </summary>
+        </member>
+        <member name="M:FISCA.FApplication.Activate">
+            <summary>
+            當應用程式已經開啟，使用者按下圖示時。
+            </summary>
+        </member>
+        <member name="M:FISCA.FApplication.Shutdown">
+            <summary>
+            由 FISCA 呼叫，結束應用程式時。
+            </summary>
+        </member>
+        <member name="P:FISCA.FApplication.Current">
+            <summary>
+            目前正在執行的應用程式。
+            </summary>
+        </member>
+        <member name="P:FISCA.FApplication.ServiceProvider">
+            <summary>
+            提供與 FISCA 核心溝通的相關服務機制。
+            </summary>
+        </member>
+        <member name="P:FISCA.FApplication.StartupPath">
+            <summary>
+            應用程式啟動目錄。
+            </summary>
+        </member>
+        <member name="E:FISCA.FApplication.AssemblyResolve">
+            <summary>
+            當組件解析失敗時。
+            </summary>
+        </member>
+        <member name="P:FISCA.AssemblyConflictDetector.DuplicateLoadAssemblies">
+            <summary>
+            重複載入的組件清單。
+            </summary>
+        </member>
+        <member name="P:FISCA.AssemblyConflictDetector.HasConflict">
+            <summary>
+            是否包含組件衝突。
+            </summary>
+        </member>
+        <member name="T:FISCA.AssemblyResolver">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.AssemblyResolver.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.AssemblyResolver.#ctor(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="searchPaths"></param>
+        </member>
+        <member name="M:FISCA.AssemblyResolver.Resolve(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="assemblyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.AssemblyResolver.Resolve(System.Object,System.ResolveEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.AssemblyResolver.IsSameName(System.Reflection.AssemblyName,System.Reflection.AssemblyName)">
+            <summary>
+            判斷組件是否相同。
+            </summary>
+            <param name="asm1"></param>
+            <param name="asm2"></param>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.AssemblyResolver.SearchPaths">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.InteropServiceProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.InteropServiceProvider.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.InteropServiceProvider.GetService(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.InteropServiceProvider.Register(System.String,System.MarshalByRefObject)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="service"></param>
+        </member>
+        <member name="T:FISCA.Net.HttpClient">
+            <summary>
+            負責管理 Http 要求、Http 取消、傳送接收進度、失敗重新要求(Retry)、取消重新要求、
+            Timeout 相關工作。此類別執行緒安全。
+            使用此類別的相關「事件」必需要處理多執行緒問題，因為此類別最重要的方法「Send」，可能會
+            在不同執行緒同時叫用，而事件引發會在叫用的執行緒上，所以封鎖事件執行，會停止該 Trip 執行。
+            此類別預設會由所有 Connection 共用一個實體，但也可個別指定。
+            </summary>
+        </member>
+        <member name="M:FISCA.Net.HttpClient.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Net.HttpClient.Get(System.String)">
+            <summary>
+            傳送 Request 到指定的 Url，並取得 Response，並在過程中引發相關事件。
+            </summary>
+            <param name="url">目標 Url。</param>
+            <returns>Response 資料。</returns>
+            <exception cref="T:FISCA.Net.TripCancelledException">當 Client 端取消 Trip 時發生。</exception>
+        </member>
+        <member name="M:FISCA.Net.HttpClient.Post(System.String,System.Byte[])">
+            <summary>
+            傳送 Request 到指定的 Url，並取得 Response，並在過程中引發相關事件。
+            </summary>
+            <param name="url">目標 Url。</param>
+            <param name="request">Request 資料。</param>
+            <returns>Response 資料。</returns>
+            <exception cref="T:FISCA.Net.TripCancelledException">當 Client 端取消 Trip 時發生。</exception>
+        </member>
+        <member name="M:FISCA.Net.HttpClient.OnTripStarting(FISCA.Net.HttpTrip)">
+            <summary>
+            當 Trip 要開始之前。
+            </summary>
+            <param name="trip"></param>
+        </member>
+        <member name="M:FISCA.Net.HttpClient.OnTripProgressChanged(FISCA.Net.HttpTrip)">
+            <summary>
+            當 Trip 進度變更時。
+            </summary>
+            <param name="trip"></param>
+        </member>
+        <member name="M:FISCA.Net.HttpClient.OnTripRetryOccurring(FISCA.Net.HttpTrip)">
+            <summary>
+            當準備重試之前。
+            </summary>
+            <param name="trip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Net.HttpClient.OnTripStatusChanged(FISCA.Net.HttpTrip)">
+            <summary>
+            當 Trip 狀態變更時。
+            </summary>
+            <param name="trip"></param>
+        </member>
+        <member name="M:FISCA.Net.HttpClient.OntripCompleted(FISCA.Net.HttpTrip)">
+            <summary>
+            當 Trip 完成時。
+            </summary>
+            <param name="trip"></param>
+        </member>
+        <member name="P:FISCA.Net.HttpClient.MaxRetryCount">
+            <summary>
+            當 HttpTrip 失敗時，最大重試次數，預設值為 0 次。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpClient.CurrentTrips">
+            <summary>
+            正在執行的 Trip 清單。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpClient.HttpSetup">
+            <summary>
+            取得或設定 Http 的相關設定。更改此設定只會影響新的 HttpTrip。
+            </summary>
+        </member>
+        <member name="E:FISCA.Net.HttpClient.TripStarting">
+            <summary>
+            當 Trip 開始之前，此事件可能會由數個不同的執行緒上同時發生。
+            </summary>
+        </member>
+        <member name="E:FISCA.Net.HttpClient.TripProgressChanged">
+            <summary>
+            當 Trip 的處理進度變更時，此事件可能會由數個不同的執行緒上同時發生。
+            </summary>
+        </member>
+        <member name="E:FISCA.Net.HttpClient.TripRetryOccurring">
+            <summary>
+            當 Trip 失敗，重試發生之前，事件參數中的 Trip 代表的是失敗的 Trip，此事件可能會由數個不同的執行緒上同時發生。
+            </summary>
+        </member>
+        <member name="E:FISCA.Net.HttpClient.TripStatusChanged">
+            <summary>
+            當 Trip 狀態變更時，此事件可能會由數個不同的執行緒上同時發生。
+            </summary>
+        </member>
+        <member name="E:FISCA.Net.HttpClient.TripCompleted">
+            <summary>
+            當 Trip 結束時，不管是否成功，所有 HttpTrip 最後都會引發此事件，此事件可能會由數個不同的執行緒上同時發生。
+            </summary>
+        </member>
+        <member name="T:FISCA.Net.HttpTripEventArgs">
+            <summary>
+            HttpTrip 事件參數。
+            </summary>
+        </member>
+        <member name="M:FISCA.Net.HttpTripEventArgs.#ctor(FISCA.Net.HttpTrip)">
+            <summary>
+            
+            </summary>
+            <param name="trip"></param>
+        </member>
+        <member name="P:FISCA.Net.HttpTripEventArgs.Trip">
+            <summary>
+            相關聯的 Trip 物件。
+            </summary>
+        </member>
+        <member name="T:FISCA.Net.HttpTripRetryEventArgs">
+            <summary>
+            HttpTrip 重試事件參數。
+            </summary>
+        </member>
+        <member name="M:FISCA.Net.HttpTripRetryEventArgs.#ctor(FISCA.Net.HttpTrip)">
+            <summary>
+            
+            </summary>
+            <param name="trip"></param>
+        </member>
+        <member name="P:FISCA.Net.HttpTripRetryEventArgs.Cancel">
+            <summary>
+            取得或設定是否取消 HttpTrip 重試。
+            </summary>
+        </member>
+        <member name="T:FISCA.Net.HttpTripStartingEventArgs">
+            <summary>
+            HttpTrip Starting 事件參數。
+            </summary>
+        </member>
+        <member name="M:FISCA.Net.HttpTripStartingEventArgs.#ctor(FISCA.Net.HttpTrip)">
+            <summary>
+            
+            </summary>
+            <param name="trip"></param>
+        </member>
+        <member name="P:FISCA.Net.HttpTripStartingEventArgs.HttpSetupOverridden">
+            <summary>
+            取得或設定 HTTP 設定，如果未指定，會使用 HttpClient 的預設值執行 HttpTrip。
+            </summary>
+        </member>
+        <member name="T:FISCA.Net.HttpSetup">
+            <summary>
+            代表 Http 要求的相關設定。
+            </summary>
+        </member>
+        <member name="M:FISCA.Net.HttpSetup.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpSetup.DataBlockSize">
+            <summary>
+            每次傳送/接收資料的大小，以 Byte 為單位設定，預設為 100 KB (1024 * 100)，注意：此數值會影響 ProgressChanged 事件頻率，
+            如果設定的較小，將會提升事件引發頻率。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpSetup.KeepAlive">
+            <summary>
+            取得或設定是否啟用 Http 的 KeepAlive 機制，預設值為不啟用。啟用此機制會增加效能，但是連線數多時
+            可能會造成 Server 負擔，另外啟用的狀況下有如果有防火牆在中間問題會比較多。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpSetup.ContentType">
+            <summary>
+            取得或設定 HTTP  Content-Type 標頭的值。預設為值「text/xml」(image/file)。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpSetup.WebProxy">
+            <summary>
+            取得或設定 HTTP 要求的 Proxy 資訊。預設值為不使用任何 Proxy。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpSetup.Timeout">
+            <summary>
+            取得或設定 Timeout 時間，以亳秒為單位，預設為 100 秒(100,000 亳秒)。
+            此屬性會被每個新建立的 HttpTrip 使用，如果 HttpTrip 已經在執行
+            才修改此屬性，該 HttpTrip不受影響。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpSetup.AllowCompression">
+            <summary>
+            取得或設定 HTTP Response 是否可接受壓縮編碼，預設值是 True。
+            如果允許 Response 壓縮編碼，會加速網路傳輸效率。此屬性設定為「True」時會
+            傳送「AcceptEncoding:gzip」的 HTTP 標頭，但 Server 會不會回傳壓縮編碼資料則看 Server 設定，
+            一但 Response 是壓縮編碼，則進度處理無法取得確切的 Response 大小。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpSetup.Headers">
+            <summary>
+            取得 HTTP Headers 物件，並可加入自定 Header 資訊，
+            在每個 Request  送出之前，會加入到 HttpWebRequest.Headers 屬性中。
+            </summary>
+        </member>
+        <member name="T:FISCA.Net.HttpHeaderCollection">
+            <summary>
+            代表 Http Header 資訊。
+            </summary>
+        </member>
+        <member name="M:FISCA.Net.HttpHeaderCollection.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.Net.HttpHeaderCollection.Set(System.String,System.String)">
+            <summary>
+            設定或取代 Header。
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:FISCA.Net.HttpHeaderCollection.Remove(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:FISCA.Net.HttpHeaderCollection.Contains(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.Net.HttpHeaderCollection.Clear">
+            <summary>
+            清空項目。
+            </summary>
+        </member>
+        <member name="M:FISCA.Net.HttpHeaderCollection.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.Net.HttpHeaderCollection.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpHeaderCollection.Item(System.String)">
+            <summary>
+            取得 Header 值。
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FISCA.Net.TripStatus">
+            <summary>
+            代表 Http 目前狀態。
+            </summary>
+        </member>
+        <member name="F:FISCA.Net.TripStatus.Padding">
+            <summary>
+            正在等待執行。
+            </summary>
+        </member>
+        <member name="F:FISCA.Net.TripStatus.Running">
+            <summary>
+            正在執行。
+            </summary>
+        </member>
+        <member name="F:FISCA.Net.TripStatus.Success">
+            <summary>
+            執行完成。
+            </summary>
+        </member>
+        <member name="F:FISCA.Net.TripStatus.Cancelled">
+            <summary>
+            工作被取消。
+            </summary>
+        </member>
+        <member name="F:FISCA.Net.TripStatus.Retry">
+            <summary>
+            工作已失敗，執行重試。
+            </summary>
+        </member>
+        <member name="F:FISCA.Net.TripStatus.Failure">
+            <summary>
+            執行失敗。
+            </summary>
+        </member>
+        <member name="T:FISCA.Net.HttpTrip">
+            <summary>
+            代表一個 Http 傳送/接收動作，每次 Request 都會建立新 Trip，包含 Retry 也會建立新的 Trip。
+            </summary>
+        </member>
+        <member name="M:FISCA.Net.HttpTrip.ResetResponseTime">
+            <summary>
+            重設最後回應時間。
+            </summary>
+        </member>
+        <member name="M:FISCA.Net.HttpTrip.Cancel">
+            <summary>
+            取消 Http 要求。
+            </summary>
+        </member>
+        <member name="M:FISCA.Net.HttpTrip.RaiseProgressChanged">
+            <summary>
+            發出 ProgressChanged 事件。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.RequestHeaders">
+            <summary>
+            取得 Request Http Header 資訊。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.ResponseHeaders">
+            <summary>
+            取得 Response Http Header 資訊。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.Request">
+            <summary>
+            Request Data。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.Response">
+            <summary>
+            Response Data。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.TargetUrl">
+            <summary>
+            Target Url。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.Manager">
+            <summary>
+            Manager。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.BytesSend">
+            <summary>
+            取得傳送的位元組數目，-1代表未知狀態。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.TotalSpendTime">
+            <summary>
+            從資料傳送完成到主機第一次回應時間(亳秒)。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.TotalBytesToSend">
+            <summary>
+            取得要傳送的位元組總數，-1代表未知狀態。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.BytesReceived">
+            <summary>
+            取得接收的位元組數目，-1代表未知狀態。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.TotalBytesToReceive">
+            <summary>
+            總共接收位元組。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.LastResponseTime">
+            <summary>
+            主機的最後回應時間。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.IsWaitFirstResponse">
+            <summary>
+            是否在等待主機的第一個回應。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.RelatedTrip">
+            <summary>
+            取得與此 Trip 相關聯的 Trip，由 HttpClient 管理其值。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.Error">
+            <summary>
+            取得此 Trip 發生的錯誤，Null 代表沒有錯誤。
+            由 HttpClient 管理其值。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.Status">
+            <summary>
+            取得工作目前的執行狀態。
+            由 HttpClient 管理其值。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.RunningThread">
+            <summary>
+            取得執行 Trip 的執行緒。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.HttpMethod">
+            <summary>
+            所使用的 HttpMethod。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.CancellationRequested">
+            <summary>
+            取得或設定是否要取消工作。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTrip.BeginTimestamp">
+            <summary>
+            取得此 Trip 的開始時間。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.HttpTripExecutor.ForceDisableCompression">
+            <summary>
+            是否強制關閉壓縮功能。
+            </summary>
+        </member>
+        <member name="T:FISCA.Net.RetryRequiredException">
+            <summary>
+            用來表示 HttpTrip 失敗，需要重新再試一次的例外狀況。
+            </summary>
+        </member>
+        <member name="T:FISCA.Net.CancelType">
+            <summary>
+            取消的動作類型。
+            </summary>
+        </member>
+        <member name="F:FISCA.Net.CancelType.Trip">
+            <summary>
+            取消工作本身，例如 HttpTrip 進行之前或進行到一半，使用者取消了。
+            </summary>
+        </member>
+        <member name="F:FISCA.Net.CancelType.Retry">
+            <summary>
+            取消重試。
+            </summary>
+        </member>
+        <member name="T:FISCA.Net.TripCancelledException">
+            <summary>
+            表示用來傳達 HttpTrip 被取消的例外狀況。
+            </summary>
+        </member>
+        <member name="M:FISCA.Net.TripCancelledException.#ctor(FISCA.Net.HttpTrip,FISCA.Net.CancelType,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="trip"></param>
+            <param name="type"></param>
+            <param name="message"></param>
+        </member>
+        <member name="P:FISCA.Net.TripCancelledException.Trip">
+            <summary>
+            相關聯的 Trip 物件。
+            </summary>
+        </member>
+        <member name="P:FISCA.Net.TripCancelledException.Type">
+            <summary>
+            取消的動作類型。
+            </summary>
+        </member>
+        <member name="T:FISCA.WinFormApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.WinFormApplication.GetMainForm">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.WinFormApplication.Run">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.WinFormApplication.Activate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.WinFormApplication.Shutdown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.WinFormApplication.MainForm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.WinFormApplication.LastWindowState">
+            <summary>
+            視窗的最後狀態。
+            </summary>
+        </member>
+        <member name="T:FISCA.WpfApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.WpfApplication.GetWpfApplication">
+            <summary>
+            回傳 Wpf 應用程式的主要 Application 物件，如果未提供實作，預設實作將會掃描整個組件找到 Application 物件。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.WpfApplication.Run">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.WpfApplication.Activate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.WpfApplication.Shutdown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FISCA.WpfApplication.WpfApp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.XExtenstions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.XExtenstions.ElementText(System.Xml.Linq.XElement,System.Xml.Linq.XName)">
+            <summary>
+            取得 Element 的字串值，如果該 Element 不存在，則回傳 string.Emtpy。
+            </summary>
+            <param name="xml"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.ElementText(System.Xml.Linq.XElement,System.Xml.Linq.XName[])">
+            <summary>
+            取得 Element 的字串值，如果該 Element 不存在，則回傳 string.Emtpy。
+            </summary>
+            <param name="xml"></param>
+            <param name="path">各階層的名稱，例如：new XName[]{"Student","SeatNo"}</param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.ElementText(System.Xml.Linq.XElement,System.Xml.Linq.XName,System.String)">
+            <summary>
+            取得 Element 的字串值。
+            </summary>
+            <param name="xml"></param>
+            <param name="name"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.ElementInt(System.Xml.Linq.XElement,System.Xml.Linq.XName,System.Int32)">
+            <summary>
+            取得 Element 的數字值。
+            </summary>
+            <param name="xml"></param>
+            <param name="name"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.ElementBool(System.Xml.Linq.XElement,System.Xml.Linq.XName,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="xml"></param>
+            <param name="name"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.AttributeText(System.Xml.Linq.XElement,System.Xml.Linq.XName)">
+            <summary>
+            取得 Attribute 的字串值，如果該 Attribute 不存在，則回傳 string.Empty。
+            </summary>
+            <param name="xml"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.AttributeText(System.Xml.Linq.XElement,System.Xml.Linq.XName,System.String)">
+            <summary>
+            取得 Attribute 的字串值。
+            </summary>
+            <param name="xml"></param>
+            <param name="name"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.AttributeInt(System.Xml.Linq.XElement,System.Xml.Linq.XName,System.Int32)">
+            <summary>
+            取得 Attribute 的數字值。
+            </summary>
+            <param name="xml"></param>
+            <param name="name"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.AttributeBool(System.Xml.Linq.XElement,System.Xml.Linq.XName,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="xml"></param>
+            <param name="name"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.GetThenAction(System.Xml.Linq.XElement,System.Xml.Linq.XName,System.Action{System.Xml.Linq.XElement})">
+            <summary>
+            取得指定名稱的 Element，如果該 Element 存在，則執行 action 所指定的方法。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.SelectElement(System.Xml.Linq.XElement,System.Xml.Linq.XName,System.String)">
+            <summary>
+            取得指定 Xml Namespace 的 Element。
+            </summary>
+            <param name="xml"></param>
+            <param name="name"></param>
+            <param name="ns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.ToXmlElement(System.Xml.Linq.XElement)">
+            <summary>
+            將 XElement 轉換成 XmlElement。
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.ToXmlElement(System.Xml.Linq.XElement,System.Boolean)">
+            <summary>
+            將 XElement 轉換成 XmlElement。
+            </summary>
+            <param name="xml"></param>
+            <param name="preserveWhitespace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.ToDom(System.String)">
+            <summary>
+            將字串轉換成 Dom 物件。
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.ToXLinq(System.String)">
+            <summary>
+            將字串轉換成 XLinq 物件。
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XExtenstions.ToXmlable(System.String)">
+            <summary>
+            將字串轉換成 IXmlable 預設實作。
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FISCA.XHelper">
+            <summary>
+            協助建立 Xml 文件的輔助類別。
+            </summary>
+        </member>
+        <member name="M:FISCA.XHelper.Format(System.String)">
+            <summary>
+            格式化 Xml 內容。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XHelper.ReadToFollowing(System.Xml.XmlReader,System.String)">
+            <summary>
+            讀取到指定路徑上，用「~」分隔。例：Envelope~Header、Header、Header~Body，
+            第一個的意思是先讀到 Envelope 再到 Header，第二個是直接到 Header，
+            第三個是先到 Header 再到 Body。「~」的意思是接下來到哪裡。
+            </summary>
+            <param name="reader">XmlReader。</param>
+            <param name="path">路徑，不支援 XPath。</param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XHelper.ReadToElement(System.Xml.XmlReader)">
+            <summary>
+            讀取到是 Element 為止。
+            </summary>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XHelper.ParseAsDOM(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="outerxml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XHelper.ParseAsHelper(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="outerxml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XHelper.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.XHelper.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="outerXml"></param>
+        </member>
+        <member name="M:FISCA.XHelper.#ctor(System.Xml.XmlElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:FISCA.XHelper.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:FISCA.XHelper.#ctor(FISCA.IXmlable)">
+            <summary>
+            
+            </summary>
+            <param name="xml"></param>
+        </member>
+        <member name="M:FISCA.XHelper.AddElement(System.String)">
+            <summary>
+            新增空白元素(Empyt Element)到文件中
+            </summary>
+            <param name="newName">新元素名稱。</param>
+            <returns>代表在<see cref="T:FISCA.XHelper"/>物件中新元素的實體。</returns>
+        </member>
+        <member name="M:FISCA.XHelper.AddElement(System.String,System.Xml.XmlElement)">
+            <summary>
+            在指定的元素下，新增空白子元素。
+            </summary>
+            <param name="xpath">要新增「空白子元素」的「父元素」路徑</param>
+            <param name="newElement">要新增的元素物件</param>
+            <returns>代表在<see cref="T:FISCA.XHelper"/>物件中新元素的實體。</returns>
+        </member>
+        <member name="M:FISCA.XHelper.AddElement(System.String,FISCA.IXmlable)">
+            <summary>
+            在指定的元素下，新增子元素。
+            </summary>
+            <param name="xpath"></param>
+            <param name="child"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XHelper.AddElement(System.String,System.String)">
+            <summary>
+            在指定的元素下，新增空白子元素。
+            </summary>
+            <param name="xpath">要新增「空白子元素」的「父元素」路徑。</param>
+            <param name="newName">空白子元素名稱。</param>
+            <returns>代表在<see cref="T:FISCA.XHelper"/>物件中新元素的實體。</returns>
+        </member>
+        <member name="M:FISCA.XHelper.AddElement(System.String,System.String,System.String)">
+            <summary>
+            在指定的元素下，新增子元素，並指定文字資料。
+            </summary>
+            <param name="xpath">要新增「子元素」的「父元素」路徑。</param>
+            <param name="newName">子元素名稱。</param>
+            <param name="text">子元素文字資料。</param>
+            <returns>代表在<see cref="T:FISCA.XHelper"/>物件中新元素的實體。</returns>
+        </member>
+        <member name="M:FISCA.XHelper.AddElement(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            在指定的元素下，新增子元素，並指定文字資料。
+            </summary>
+            <param name="xpath">要新增「子元素」的「父元素」路徑。</param>
+            <param name="newName">子元素名稱。</param>
+            <param name="text">子元素文字資料。</param>
+            <param name="isXmlContent">文字資料是否為 Xml 字串，可以是單一 Node 或 NodeList。</param>
+            <returns>代表在<see cref="T:FISCA.XHelper"/>物件中新元素的實體。</returns>
+            <remarks>其他AddElement範例可參考<see cref="M:FISCA.XHelper.AddElement(System.String,System.String)">
+            DSXmlHelper.AddElement</see>方法說明。</remarks>
+        </member>
+        <member name="M:FISCA.XHelper.SetInnerXml(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="xpath"></param>
+            <param name="content"></param>
+        </member>
+        <member name="M:FISCA.XHelper.SetAttribute(System.String,System.String,System.String)">
+            <summary>
+            在指定的元素下，新增屬性，並指定值。
+            </summary>
+            <param name="xpath">要新增屬性的元素路徑。</param>
+            <param name="name">屬性名稱。</param>
+            <param name="value">屬性值。</param>
+            <returns>XmlAttribute的新實體。</returns>
+        </member>
+        <member name="M:FISCA.XHelper.GetElement(System.String)">
+            <summary>
+            取得元素物件，但僅取得符合「元素路徑」的第一個元素。
+            </summary>
+            <param name="xpath">元素路徑。</param>
+            <returns>回傳的XmlElement實體。</returns>
+            <exception cref="T:System.Exception">發生再xpath取出的物件不是元素(Element)時。</exception>
+        </member>
+        <member name="M:FISCA.XHelper.GetElements(System.String)">
+            <summary>
+            取得元素物件陣列，將會取得所有符合「元素路徑」的所有元素。
+            </summary>
+            <param name="xpath">元素路徑。</param>
+            <returns>XmlElement的陣列。</returns>
+        </member>
+        <member name="M:FISCA.XHelper.RemoveElement(System.String)">
+            <summary>
+            移除元素。
+            </summary>
+            <param name="xpath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XHelper.TryGetInteger(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="xpath"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XHelper.TryGetFloat(System.String,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="xpath"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XHelper.TryGetDecimal(System.String,System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="xpath"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XHelper.TryGetBoolean(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="xpath"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XHelper.TryGetString(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="xpath"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.XHelper.GetText(System.String)">
+            <summary>
+            取得指定元素下的文字資料。
+            </summary>
+            <param name="xpath">元素路徑。</param>
+            <returns>元素下的文字資料，如果指定的元素不存在則回傳String.Emtpy(空字串)。</returns>
+        </member>
+        <member name="M:FISCA.XHelper.WriteTo(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="P:FISCA.XHelper.Data">
+            <summary>
+            Helper 基礎物件。
+            </summary>
+        </member>
+        <member name="P:FISCA.XHelper.XmlString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:FISCA.XStringHolder">
+            <summary>
+            負責持有 Xml 的資料，此類別不會對 Xml 進行任何解析動作
+            </summary>
+        </member>
+        <member name="M:FISCA.XStringHolder.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FISCA.XStringHolder.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="outerXml"></param>
+        </member>
+        <member name="M:FISCA.XStringHolder.#ctor(System.Xml.XmlElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:FISCA.XStringHolder.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:FISCA.XStringHolder.WriteTo(System.String)">
+            <summary>
+            將 Xml 資料寫入到指定的檔案。
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="P:FISCA.XStringHolder.XmlString">
+            <summary>
+            取得或設定 Xml 資料。
+            </summary>
+        </member>
+    </members>
+</doc>

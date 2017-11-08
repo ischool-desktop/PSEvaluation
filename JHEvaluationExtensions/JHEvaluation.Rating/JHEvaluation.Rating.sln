@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHEvaluation.Rating", "JHEvaluation.Rating\JHEvaluation.Rating.csproj", "{8B43DC1E-1C72-4CCA-ADE7-7ABCB3B19017}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Campus", "..\..\..\..\Research\A-Team\CampusLibrary\Campus\Campus.csproj", "{01192844-00CA-4126-85EC-D72A72821F70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Campus.Report", "..\..\..\..\Research\A-Team\CampusLibrary\Campus.Report\Campus.Report.csproj", "{6475E15E-4BE7-47E9-A7B4-0014E6670F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHSchool", "..\..\JHSchool\JHSchool.csproj", "{6029FAB1-A62F-4FC0-A206-CE73AB9344DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "..\..\Framework\Framework.csproj", "{8CDD2105-17D3-4620-8EF6-65CB41E8DBCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHSchool.Evaluation", "..\..\JHSchool.Evaluation\JHSchool.Evaluation.csproj", "{948FE24F-E461-4D7B-91D5-A4E8332A2AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHSchool.Rating", "..\..\..\ischool_Senior with FISCA\Modules\SHSchool.Rating\SHSchool.Rating.csproj", "{433A8BCB-F837-499A-BF10-0B9ED6865715}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfserver.ischool.com.tw:8080/tfs/tfs2008
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\..\\..\\..\\Research\\A-Team\\CampusLibrary\\Campus\\Campus.csproj
+		SccProjectName1 = ../../../../Research/A-Team/CampusLibrary/Campus
+		SccLocalPath1 = ..\\..\\..\\..\\Research\\A-Team\\CampusLibrary\\Campus
+		SccProjectUniqueName2 = ..\\..\\..\\..\\Research\\A-Team\\CampusLibrary\\Campus.Report\\Campus.Report.csproj
+		SccProjectName2 = ../../../../Research/A-Team/CampusLibrary/Campus.Report
+		SccLocalPath2 = ..\\..\\..\\..\\Research\\A-Team\\CampusLibrary\\Campus.Report
+		SccProjectUniqueName3 = ..\\..\\JHSchool\\JHSchool.csproj
+		SccProjectName3 = ../../JHSchool
+		SccLocalPath3 = ..\\..\\JHSchool
+		SccProjectUniqueName4 = JHEvaluation.Rating\\JHEvaluation.Rating.csproj
+		SccProjectName4 = JHEvaluation.Rating
+		SccLocalPath4 = JHEvaluation.Rating
+		SccProjectUniqueName5 = ..\\..\\Framework\\Framework.csproj
+		SccProjectName5 = ../../Framework
+		SccLocalPath5 = ..\\..\\Framework
+		SccProjectUniqueName6 = ..\\..\\JHSchool.Evaluation\\JHSchool.Evaluation.csproj
+		SccProjectName6 = ../../JHSchool.Evaluation
+		SccLocalPath6 = ..\\..\\JHSchool.Evaluation
+		SccProjectUniqueName7 = ..\\..\\..\\ischool_Senior\u0020with\u0020FISCA\\Modules\\SHSchool.Rating\\SHSchool.Rating.csproj
+		SccProjectName7 = ../../../ischool_Senior\u0020with\u0020FISCA/Modules/SHSchool.Rating
+		SccLocalPath7 = ..\\..\\..\\ischool_Senior\u0020with\u0020FISCA\\Modules\\SHSchool.Rating
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B43DC1E-1C72-4CCA-ADE7-7ABCB3B19017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B43DC1E-1C72-4CCA-ADE7-7ABCB3B19017}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B43DC1E-1C72-4CCA-ADE7-7ABCB3B19017}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B43DC1E-1C72-4CCA-ADE7-7ABCB3B19017}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01192844-00CA-4126-85EC-D72A72821F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01192844-00CA-4126-85EC-D72A72821F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01192844-00CA-4126-85EC-D72A72821F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01192844-00CA-4126-85EC-D72A72821F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6475E15E-4BE7-47E9-A7B4-0014E6670F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6475E15E-4BE7-47E9-A7B4-0014E6670F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6475E15E-4BE7-47E9-A7B4-0014E6670F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6475E15E-4BE7-47E9-A7B4-0014E6670F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6029FAB1-A62F-4FC0-A206-CE73AB9344DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6029FAB1-A62F-4FC0-A206-CE73AB9344DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6029FAB1-A62F-4FC0-A206-CE73AB9344DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6029FAB1-A62F-4FC0-A206-CE73AB9344DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CDD2105-17D3-4620-8EF6-65CB41E8DBCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CDD2105-17D3-4620-8EF6-65CB41E8DBCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CDD2105-17D3-4620-8EF6-65CB41E8DBCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CDD2105-17D3-4620-8EF6-65CB41E8DBCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{948FE24F-E461-4D7B-91D5-A4E8332A2AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{948FE24F-E461-4D7B-91D5-A4E8332A2AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{948FE24F-E461-4D7B-91D5-A4E8332A2AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{948FE24F-E461-4D7B-91D5-A4E8332A2AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{433A8BCB-F837-499A-BF10-0B9ED6865715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{433A8BCB-F837-499A-BF10-0B9ED6865715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{433A8BCB-F837-499A-BF10-0B9ED6865715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{433A8BCB-F837-499A-BF10-0B9ED6865715}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

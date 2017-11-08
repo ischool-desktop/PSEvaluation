@@ -1,0 +1,7 @@
+<EffortList>
+	<Effort Code="5" Name="表現優異" Score="90"></Effort>
+	<Effort Code="4" Name="表現良好" Score="80"></Effort>
+	<Effort Code="3" Name="表現尚可" Score="70"></Effort>
+	<Effort Code="2" Name="需在加油" Score="60"></Effort>
+	<Effort Code="1" Name="有待改進" Score=""></Effort>
+</EffortList>

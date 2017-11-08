@@ -1,0 +1,23 @@
+﻿<Ordinal>
+	<Subjects>
+		<Subject Name="國語文" EnglishName=""/>
+		<Subject Name="國文" EnglishName=""/>
+		<Subject Name="英文" EnglishName=""/>
+		<Subject Name="英語" EnglishName=""/>
+		<Subject Name="數學" EnglishName=""/>
+		<Subject Name="歷史" EnglishName=""/>
+		<Subject Name="地理" EnglishName=""/>
+		<Subject Name="公民" EnglishName=""/>
+		<Subject Name="理化" EnglishName=""/>
+		<Subject Name="生物" EnglishName=""/>
+	</Subjects>
+	<Domains>
+		<Domain Name="語文" EnglishName="" Group=""/>
+		<Domain Name="數學" EnglishName="" Group=""/>
+		<Domain Name="社會" EnglishName="" Group=""/>
+		<Domain Name="自然與生活科技" EnglishName="" Group=""/>
+		<Domain Name="藝術與人文" EnglishName="" Group=""/>
+		<Domain Name="健康與體育" EnglishName="" Group=""/>
+		<Domain Name="綜合活動" EnglishName="" Group=""/>
+	</Domains>
+</Ordinal>

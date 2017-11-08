@@ -1,0 +1,43 @@
+D:\bin\debug\JHEvaluation.AssignmentScore.dll
+D:\bin\debug\JHEvaluation.AssignmentScore.pdb
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHEvaluation.Extensions\JHEvaluationAssignmentScore\bin\Debug\JHEvaluation.AssignmentScore.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHEvaluation.Extensions\JHEvaluationAssignmentScore\bin\Debug\JHEvaluation.AssignmentScore.pdb
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHEvaluation.Extensions\JHEvaluationAssignmentScore\obj\Debug\ResolveAssemblyReference.cache
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHEvaluation.Extensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.CourseScoreStatusForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHEvaluation.Extensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.MainFormScoreInput.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHEvaluation.Extensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.Properties.Resources.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHEvaluation.Extensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.Resource1.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHEvaluation.Extensions\JHEvaluationAssignmentScore\obj\Debug\GenerateResource.read.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHEvaluation.Extensions\JHEvaluationAssignmentScore\obj\Debug\GenerateResource.write.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHEvaluation.Extensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\JHEvaluation.Extensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.pdb
+D:\GitProjModules\ischoolDesktop\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\bin\Debug\JHEvaluation.AssignmentScore.dll
+D:\GitProjModules\ischoolDesktop\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\bin\Debug\JHEvaluation.AssignmentScore.pdb
+D:\GitProjModules\ischoolDesktop\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.CourseScoreStatusForm.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.MainFormScoreInput.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.Properties.Resources.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.Resource1.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.csproj.GenerateResource.Cache
+D:\GitProjModules\ischoolDesktop\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.dll
+D:\GitProjModules\ischoolDesktop\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.pdb
+C:\Users\ED\Documents\ischool_github\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\bin\Debug\JHEvaluation.AssignmentScore.dll
+C:\Users\ED\Documents\ischool_github\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\bin\Debug\JHEvaluation.AssignmentScore.pdb
+C:\Users\ED\Documents\ischool_github\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.CourseScoreStatusForm.resources
+C:\Users\ED\Documents\ischool_github\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.MainFormScoreInput.resources
+C:\Users\ED\Documents\ischool_github\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.Properties.Resources.resources
+C:\Users\ED\Documents\ischool_github\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.Resource1.resources
+C:\Users\ED\Documents\ischool_github\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.csproj.GenerateResource.Cache
+C:\Users\ED\Documents\ischool_github\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.dll
+C:\Users\ED\Documents\ischool_github\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.pdb
+D:\Users\小金\Documents\github_ischool\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\bin\Debug\JHEvaluation.AssignmentScore.dll
+D:\Users\小金\Documents\github_ischool\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\bin\Debug\JHEvaluation.AssignmentScore.pdb
+D:\Users\小金\Documents\github_ischool\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\bin\Debug\DevComponents.DotNetBar2.dll
+D:\Users\小金\Documents\github_ischool\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\bin\Debug\DevComponents.DotNetBar2.xml
+D:\Users\小金\Documents\github_ischool\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.CourseScoreStatusForm.resources
+D:\Users\小金\Documents\github_ischool\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.MainFormScoreInput.resources
+D:\Users\小金\Documents\github_ischool\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.Properties.Resources.resources
+D:\Users\小金\Documents\github_ischool\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.Resource1.resources
+D:\Users\小金\Documents\github_ischool\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.csproj.GenerateResource.Cache
+D:\Users\小金\Documents\github_ischool\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.csproj.CoreCompileInputs.cache
+D:\Users\小金\Documents\github_ischool\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.dll
+D:\Users\小金\Documents\github_ischool\JHEvaluation\JHEvaluationExtensions\JHEvaluationAssignmentScore\obj\Debug\JHEvaluation.AssignmentScore.pdb

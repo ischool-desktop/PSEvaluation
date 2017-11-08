@@ -1,0 +1,15 @@
+<DomainList>
+	<Domain Type="General">語文</Domain>
+	<Domain Type="General">數學</Domain>
+	<Domain Type="General">社會</Domain>
+	<Domain Type="General">自然與生活科技</Domain>
+	<Domain Type="General">健康與體育</Domain>
+	<Domain Type="General">藝術與人文</Domain>
+	<Domain Type="General">綜合活動</Domain>
+	<!-- <Domain Type="Special">實用語文</Domain>
+	<Domain Type="Special">實用數學</Domain>
+	<Domain Type="Special">社會適應</Domain>
+	<Domain Type="Special">生活教育</Domain>
+	<Domain Type="Special">休閒教育</Domain>
+	<Domain Type="Special">職業教育</Domain> -->
+</DomainList>

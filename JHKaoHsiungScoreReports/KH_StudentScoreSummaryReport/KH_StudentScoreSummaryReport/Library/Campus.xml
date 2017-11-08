@@ -1,0 +1,1315 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Campus</name>
+    </assembly>
+    <members>
+        <member name="T:Campus.MultiThreadWorker`1">
+            <summary>
+            切割封包並以多執行緒模式逐一處理各個封包
+            </summary>
+        </member>
+        <member name="M:Campus.MultiThreadWorker`1.Run(System.Collections.Generic.IEnumerable{`0},System.Object)">
+            <summary>
+            執行
+            </summary>
+            <param name="list">要處理的資料</param>
+            <param name="argument">額外的參數</param>
+        </member>
+        <member name="M:Campus.MultiThreadWorker`1.Run(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            執行
+            </summary>
+            <param name="list">要處理的資料</param>
+        </member>
+        <member name="P:Campus.MultiThreadWorker`1.PackageSize">
+            <summary>
+            每個封包的最大容量
+            </summary>
+        </member>
+        <member name="P:Campus.MultiThreadWorker`1.MaxThreads">
+            <summary>
+            同時執行的最大執行緒數量
+            </summary>
+        </member>
+        <member name="E:Campus.MultiThreadWorker`1.PackageWorker">
+            <summary>
+            處理單一封包
+            </summary>
+        </member>
+        <member name="T:Campus.PackageWorkEventArgs`1">
+            <summary>
+            處理單一封包事件傳遞
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Campus.PackageWorkEventArgs`1.HasException">
+            <summary>
+            是否發生錯誤
+            </summary>
+        </member>
+        <member name="P:Campus.PackageWorkEventArgs`1.Exception">
+            <summary>
+            發生錯誤時的錯誤內容
+            </summary>
+        </member>
+        <member name="P:Campus.PackageWorkEventArgs`1.List">
+            <summary>
+            封包內容
+            </summary>
+        </member>
+        <member name="P:Campus.PackageWorkEventArgs`1.Result">
+            <summary>
+            回傳
+            </summary>
+        </member>
+        <member name="P:Campus.PackageWorkEventArgs`1.Argument">
+            <summary>
+            額外的參數
+            </summary>
+        </member>
+        <member name="T:Campus.MultiThreadLoading">
+            <summary>
+            負載
+            </summary>
+        </member>
+        <member name="T:Campus.MultiThreadBackgroundWorker`1">
+            <summary>
+            自動分包多續執行的BackgroundWorker
+            </summary>
+        </member>
+        <member name="M:Campus.MultiThreadBackgroundWorker`1.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.MultiThreadBackgroundWorker`1.RunWorkerAsync">
+            <summary>
+            開始執行背景作業。 
+            </summary>
+        </member>
+        <member name="M:Campus.MultiThreadBackgroundWorker`1.RunWorkerAsync(System.Object)">
+            <summary>
+            開始執行背景作業。 
+            </summary>
+        </member>
+        <member name="M:Campus.MultiThreadBackgroundWorker`1.RunWorkerAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            開始執行背景作業。 
+            </summary>
+        </member>
+        <member name="M:Campus.MultiThreadBackgroundWorker`1.RunWorkerAsync(System.Collections.Generic.IEnumerable{`0},System.Object)">
+            <summary>
+            開始執行背景作業。 
+            </summary>
+        </member>
+        <member name="P:Campus.MultiThreadBackgroundWorker`1.AutoReportsProgress">
+            <summary>
+            是否自動依完成的封包數與總封包數計算及回報進度
+            </summary>
+        </member>
+        <member name="P:Campus.MultiThreadBackgroundWorker`1.Loading">
+            <summary>
+            負載
+            </summary>
+        </member>
+        <member name="P:Campus.MultiThreadBackgroundWorker`1.PackageSize">
+            <summary>
+            分割時每個封包的大小
+            </summary>
+        </member>
+        <member name="E:Campus.MultiThreadBackgroundWorker`1.DoWork">
+            <summary>
+            當任何一個封包被處理時發生 
+            </summary>
+        </member>
+        <member name="T:Campus.PackageDoWorkEventArgs`1">
+            <summary>
+            提供 DoWork 事件處理常式的資料。 並提供此封包的內容。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Campus.PackageDoWorkEventArgs`1.Items">
+            <summary>
+            封包的內容
+            </summary>
+        </member>
+        <member name="M:Campus.FunctionSpliter`2.Execute(System.Collections.Generic.List{`0})">
+            <summary>
+            執行方法，內部會以多執行緒執行，但是只有當所有執行緒完成時，才會回傳。
+            </summary>
+            <param name="parameters">參數。</param>
+            <returns>執行結果。</returns>
+        </member>
+        <member name="P:Campus.FunctionSpliter`2.Function">
+            <summary>
+            要分批執行的動作。
+            </summary>
+        </member>
+        <member name="P:Campus.FunctionSpliter`2.ProgressChange">
+            <summary>
+            分批執行進度，以每完成一個執行緒為單位回報。
+            </summary>
+        </member>
+        <member name="T:Campus.Conf.ConfigProvider_User">
+            <summary>
+            實作組態存取介面，核心會透過此類別存取組態資料。
+            </summary>
+        </member>
+        <member name="T:Campus.Conf.IConfigurationProvider">
+            <summary>
+            負責提供組態(Configuration)的讀取與儲存功能。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.IConfigurationProvider.GetAllConfiguration">
+            <summary>
+            取得所有組態資料物件。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Conf.IConfigurationProvider.GetConfiguration(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            取得指定的組態資料物件。
+            </summary>
+            <param name="configNames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Conf.IConfigurationProvider.SaveConfiguration(System.Collections.Generic.IEnumerable{Campus.Conf.ConfigurationRecord})">
+            <summary>
+            儲存組態資料物件，實作時請使同步執行緒(完成儲存動作時才回傳)。
+            </summary>
+            <param name="configurations"></param>
+        </member>
+        <member name="T:Campus.Conf.ConfigData">
+            <summary>
+            代表一組的組態資料，使用「Key、Value」的方式取存。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.ConfigData.Contains(System.String)">
+            <summary>
+            判斷指定的名稱是否已經存在於組態中。
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Conf.ConfigData.Save">
+            <summary>
+            儲存組態資料，會一併更新相同 Namespace 的組態實體資料。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.ConfigData.Async">
+            <summary>
+            取得一個非同步版本的組態資料。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Campus.Conf.ConfigData.Record">
+            <summary>
+            取得或設定組態記錄資料。
+            </summary>
+        </member>
+        <member name="P:Campus.Conf.ConfigData.Namespace">
+            <summary>
+            取得組態的名稱空間。
+            </summary>
+        </member>
+        <member name="P:Campus.Conf.ConfigData.Item(System.String)">
+            <summary>
+            取得或設定指定的組態資料。
+            </summary>
+            <param name="name">組態 key 名稱，名稱中不可以包含特殊符號。(將值指定為「空字串」或是「Null」代表移除該設定，不過此行為在資料同步模式下無作用。)</param>
+            <returns></returns>
+        </member>
+        <member name="P:Campus.Conf.ConfigData.PreviousData">
+            <summary>
+            前版的組態資料，這是為了相容舊的資料而提供的成員，在一般情況是 Null。
+            </summary>
+        </member>
+        <member name="P:Campus.Conf.ConfigData.Count">
+            <summary>
+            取得組態數量。
+            </summary>
+        </member>
+        <member name="P:Campus.Conf.ConfigData.Sync">
+            <summary>
+            指示是否只要有人更新相同 Namespace 的資料，一併同步資料。
+            </summary>
+        </member>
+        <member name="P:Campus.Conf.ConfigData.Manager">
+            <summary>
+            管理此 Configuration 的類別。
+            </summary>
+        </member>
+        <member name="T:Campus.Conf.ConfigurationRecord">
+            <summary>
+            負責包存 Configuration 的原始資料。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.ConfigurationRecord.#ctor(System.String)">
+            <summary>
+            建立新增的「組態記錄」。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.ConfigurationRecord.#ctor(System.String,System.Xml.XmlElement)">
+            <summary>
+            建立可更新的「組態記錄」。
+            </summary>
+            <param name="data">組態的  Xml 資料。</param>
+        </member>
+        <member name="M:Campus.Conf.ConfigurationRecord.Clone">
+            <summary>
+            複製一份資料。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Conf.ConfigurationRecord.GetXml">
+            <summary>
+            取得用於儲存的 Xml 資料。
+            </summary>
+            <returns>合法的 Xml 資料。</returns>
+        </member>
+        <member name="P:Campus.Conf.ConfigurationRecord.EditAction">
+            <summary>
+            儲存動作(1:新增,2:修改,3:刪除)。
+            </summary>
+        </member>
+        <member name="P:Campus.Conf.ConfigurationRecord.Namespace">
+            <summary>
+            取得組態名稱。
+            </summary>
+        </member>
+        <member name="P:Campus.Conf.ConfigurationRecord.PreviousData">
+            <summary>
+            前版的組態資料，這是為了相容舊的資料而提供的成員，在一般情況是 Null。
+            </summary>
+        </member>
+        <member name="T:Campus.Rating.Place">
+            <summary>
+            代表名次資訊。
+            </summary>
+        </member>
+        <member name="M:Campus.Rating.Place.GetPercentage">
+            <summary>
+            取得百分名次，計算到整數位。
+            </summary>
+        </member>
+        <member name="M:Campus.Rating.Place.GetPercentage(System.Int32)">
+            <summary>
+            取得百分名次。
+            </summary>
+            <param name="digits">小數精確度。</param>
+        </member>
+        <member name="P:Campus.Rating.Place.Level">
+            <summary>
+            取得名次。
+            </summary>
+        </member>
+        <member name="P:Campus.Rating.Place.Percentage">
+            <summary>
+            百分排名。
+            </summary>
+        </member>
+        <member name="P:Campus.Rating.Place.Score">
+            <summary>
+            取得成績。
+            </summary>
+        </member>
+        <member name="P:Campus.Rating.Place.Radix">
+            <summary>
+            取得排名的基數(僅包含有成績的人)。
+            </summary>
+        </member>
+        <member name="P:Campus.Rating.Place.TotalRadix">
+            <summary>
+            取得排名的基數(包含所有範圍(RatingScope)內的人)。
+            </summary>
+        </member>
+        <member name="T:Campus.Rating.IScoreParser`1">
+            <summary>
+            代表成績資料的取得方法。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Campus.Rating.IScoreParser`1.GetScore(`0)">
+            <summary>
+            取得成績資料，如果回傳 Null 代表該學生沒有該項成績。
+            </summary>
+            <param name="student">要取得成績資料的學生。</param>
+            <returns></returns>
+        </member>
+        <member name="P:Campus.Rating.IScoreParser`1.Name">
+            <summary>
+            成績資料的名稱，例如：國文。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.ConfigurationManager.NamespacePreprocess(System.String)">
+            <summary>
+            提供一個時機，處理當使用者要求指定的 Namespace 組態資料時，可以變更實際傳送到底層的 Namespace 名稱。
+            </summary>
+            <param name="configNamespace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Conf.ConfigurationManager.Sync(System.String)">
+            <summary>
+            向主機同步組態資料。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.ConfigurationManager.Remove(Campus.Conf.ConfigData)">
+            <summary>
+            刪除指定的組態。
+            </summary>
+            <param name="conf"></param>
+        </member>
+        <member name="M:Campus.Conf.ConfigurationManager.#ctor(Campus.Conf.IConfigurationProvider)">
+            <summary>
+            建立實體。
+            </summary>
+            <param name="provider"></param>
+        </member>
+        <member name="P:Campus.Conf.ConfigurationManager.Cache">
+            <summary>
+            Configuration 的快取。
+            </summary>
+        </member>
+        <member name="P:Campus.Conf.ConfigurationManager.Provider">
+            <summary>
+            負責提供 Configuration 的資料。
+            </summary>
+        </member>
+        <member name="P:Campus.Conf.ConfigurationManager.Readonly">
+            <summary>
+            指示此組態是否為可讀寫的。
+            </summary>
+        </member>
+        <member name="P:Campus.Conf.ConfigurationManager.Item(System.String)">
+            <summary>
+            取得組態資料，如果指定的名稱存在則回傳資料，不存在則自動建立新的組態。
+            </summary>
+            <param name="configName"></param>
+            <returns></returns>
+        </member>
+        <member name="E:Campus.Conf.ConfigurationManager.ConfigurationUpdated">
+            <summary>
+            當組態被更新時引發，參數中的「PrimaryKeys」是被更新的組態名稱清單。
+            </summary>
+        </member>
+        <member name="T:Campus.Conf.ConfigProvider_Global">
+            <summary>
+            實作組態存取介面，核心會透過此類別存取組態資料。
+            </summary>
+        </member>
+        <member name="T:Campus.Conf.ConfigProvider_App">
+            <summary>
+            實作組態存取介面，核心會透過此類別存取組態資料。
+            </summary>
+        </member>
+        <member name="T:Campus.CacheManager`1">
+            <summary>
+            提供可被索引的強型別資料的快取管理
+            </summary>
+            <typeparam name="T">快取管理的型別</typeparam>
+        </member>
+        <member name="M:Campus.CacheManager`1.GetAllData">
+            <summary>
+            一次取得所有資料項目
+            </summary>
+            <returns>傳回索引鍵跟快取資料的查詢</returns>
+        </member>
+        <member name="M:Campus.CacheManager`1.GetData(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            一次取得部份指定鍵值的資料。
+            </summary>
+            <param name="primaryKeys">要取得的鍵值</param>
+            <returns>傳回索引鍵跟快取資料的查詢</returns>
+        </member>
+        <member name="M:Campus.CacheManager`1.ValidateKey(System.String)">
+            <summary>
+            驗證輸入的鍵值是否合法，當要求查尋資料時若鍵值不合法則不進行查尋
+            預設驗證方法為是否可轉化為int
+            </summary>
+            <param name="key">鍵值</param>
+            <returns>是否合法</returns>
+        </member>
+        <member name="M:Campus.CacheManager`1.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:Campus.CacheManager`1.SyncAllBackground">
+            <summary>
+            取得所有資料，此方法將於背景執行續進行，並於完成後引發ItemLoaded事件
+            </summary>
+        </member>
+        <member name="M:Campus.CacheManager`1.SyncData(System.String[])">
+            <summary>
+            更新快取資料，更新後將會引發ItemUpdated事件
+            </summary>
+            <param name="primaryKeys">要更新資料的鍵值</param>
+        </member>
+        <member name="M:Campus.CacheManager`1.SyncData(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            更新快取資料，更新後將會引發ItemUpdated事件
+            </summary>
+            <param name="primaryKeys">要更新資料的鍵值</param>
+        </member>
+        <member name="M:Campus.CacheManager`1.SyncDataBackground(System.String[])">
+            <summary>
+            更新快取資料，此方法將於背景執行續進行，並於完成後引發ItemUpdated事件
+            </summary>
+            <param name="primaryKeys">要更新資料的鍵值</param>
+        </member>
+        <member name="M:Campus.CacheManager`1.SyncDataBackground(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            更新快取資料，此方法將於背景執行續進行，並於完成後引發ItemUpdated事件
+            </summary>
+            <param name="primaryKeys">要更新資料的鍵值</param>
+        </member>
+        <member name="M:Campus.CacheManager`1.OnItemUpdated(Campus.ItemUpdatedEventArgs)">
+            <summary>
+            引發ItemUpdated事件。
+            </summary>
+            <param name="itemUpdatedEventArgs">包含事件資料的ItemUpdatedEventArgs</param>
+        </member>
+        <member name="M:Campus.CacheManager`1.OnItemLoaded(System.EventArgs)">
+            <summary>
+            引發ItemLoaded事件。
+            </summary>
+            <param name="eventArgs">包含事件資料的EventArgs</param>
+        </member>
+        <member name="M:Campus.CacheManager`1.SortItems">
+            <summary>
+            重新排序快取資料，快取的資料型別若為IComparable則將自動進行排序
+            不需呼叫此方法也會維持順序，唯有當IComparable.CompareTo實作變更時使用此方法重新排序
+            </summary>
+        </member>
+        <member name="M:Campus.CacheManager`1.QuickCompare(System.String,System.String)">
+            <summary>
+            取得資料順序
+            </summary>
+            <param name="primaryKey1">第一個項目的鍵值</param>
+            <param name="primaryKey2">第二個項目的鍵值</param>
+            <returns>
+            小於零：primaryKey1的項目小於 primaryKey2的項目 
+            等於零：primaryKey1的項目等於 primaryKey2的項目 
+            大於零：primaryKey1的項目大於 primaryKey2的項目 
+            </returns>
+        </member>
+        <member name="P:Campus.CacheManager`1.Item(System.String)">
+            <summary>
+            取得指定索引的項目，若指定的鍵值不存在則會先嚐試進行查尋。Indexer。
+            </summary>
+            <param name="primaryKey">取得項目的鍵值</param>
+            <returns>該鍵值的項目，若傳入鍵值沒有對應項目則傳回default(T)</returns>
+        </member>
+        <member name="P:Campus.CacheManager`1.Items">
+            <summary>
+            取得管理項目的集合
+            </summary>
+        </member>
+        <member name="E:Campus.CacheManager`1.ItemLoaded">
+            <summary>
+            當SyncAllBackground完成時
+            </summary>
+        </member>
+        <member name="E:Campus.CacheManager`1.ItemUpdated">
+            <summary>
+            當快取資料變更時
+            </summary>
+        </member>
+        <member name="P:Campus.CacheManager`1.Loaded">
+            <summary>
+            取得是否已經載入(SyncAllBackground)
+            </summary>
+        </member>
+        <member name="T:Campus.CacheManager`1.CacheItemCollection">
+            <summary>
+            快取資料的集合
+            </summary>
+        </member>
+        <member name="M:Campus.CacheManager`1.CacheItemCollection.ContainsKey(System.String)">
+            <summary>
+            查尋是否已快取此鍵值的項目
+            </summary>
+            <param name="key">要查尋的鍵值</param>
+            <returns>是否已在快取中</returns>
+        </member>
+        <member name="M:Campus.CacheManager`1.CacheItemCollection.ContainsValue(`0)">
+            <summary>
+            查尋是否快取此項目
+            </summary>
+            <param name="value">要查尋的項目</param>
+            <returns>是否在快取資料中</returns>
+        </member>
+        <member name="P:Campus.CacheManager`1.CacheItemCollection.Item(System.String)">
+            <summary>
+            取得指定索引的項目，若指定的鍵值不存在則會先嚐試進行查尋
+            </summary>
+            <param name="primaryKey">取得項目的鍵值</param>
+            <returns>該鍵值的項目，若傳入鍵值沒有對應項目則傳回default(T)</returns>
+        </member>
+        <member name="P:Campus.CacheManager`1.CacheItemCollection.Count">
+            <summary>
+            取得項目總數
+            </summary>
+        </member>
+        <member name="P:Campus.CacheManager`1.CacheItemCollection.Values">
+            <summary>
+            取得包含的值
+            </summary>
+        </member>
+        <member name="P:Campus.CacheManager`1.CacheItemCollection.Keys">
+            <summary>
+            取得包含的索引鍵
+            </summary>
+        </member>
+        <member name="T:Campus.ItemUpdatedEventArgs">
+            <summary>
+            提供 ItemUpdated事件的資料
+            </summary>
+        </member>
+        <member name="P:Campus.ItemUpdatedEventArgs.PrimaryKeys">
+            <summary>
+            取得被更新資料的鍵值清單
+            </summary>
+        </member>
+        <member name="T:Campus.SemesterData">
+            <summary>
+            代表年級、學期。
+            </summary>
+        </member>
+        <member name="M:Campus.SemesterData.#ctor(System.Int32,System.Int32)">
+            <summary>
+            建構式。
+            </summary>
+            <param name="schoolyear">學年度。</param>
+            <param name="semester">學期。</param>
+            <remarks>參數可傳「0」。</remarks>
+        </member>
+        <member name="M:Campus.SemesterData.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            建構式。
+            </summary>
+            <param name="gradeYear">年級。</param>
+            <param name="schoolyear">學年度。</param>
+            <param name="semester">學期。</param>
+            <remarks>參數可傳「0」。</remarks>
+        </member>
+        <member name="M:Campus.SemesterData.Next">
+            <summary>
+            計算下一個學期。
+            </summary>
+            <param name="semester"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.SemesterData.DistinctGradeYear(Campus.SemesterData[])">
+            <summary>
+            群組各年級的學期，如果有重覆學期以較新的為主(通常發生在重讀狀況)。
+            </summary>
+            <returns></returns>
+            <remarks>
+            資料：
+            98,1 一年級
+            98,2 一年級
+            99,2 一年級
+            結果：
+            98,1 一年級
+            99,2 一年級
+            </remarks>
+        </member>
+        <member name="M:Campus.SemesterData.Generate(System.Int32,System.Int32)">
+            <summary>
+            產生學年度、學期資料。
+            </summary>
+            <param name="schoolYears"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Campus.SemesterData.SchoolYear">
+            <summary>
+            學年度。
+            </summary>
+        </member>
+        <member name="P:Campus.SemesterData.Semester">
+            <summary>
+            學期。
+            </summary>
+        </member>
+        <member name="P:Campus.SemesterData.GradeYear">
+            <summary>
+            年級。
+            </summary>
+        </member>
+        <member name="P:Campus.SemesterData.Order">
+            <summary>
+            順序。
+            </summary>
+        </member>
+        <member name="P:Campus.SemesterData.ToStringFormatter">
+            <summary>
+            提供 ToString 方法呼叫。
+            </summary>
+        </member>
+        <member name="P:Campus.SemesterData.SemesterCount">
+            <summary>
+            取得或設定系統的學期數，預設值為「2」。
+            </summary>
+        </member>
+        <member name="T:Campus.SemesterData_Extens">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Campus.SemesterData_Extens.SetToStringFormatter(System.Collections.Generic.IEnumerable{Campus.SemesterData},System.Func{Campus.SemesterData,System.String})">
+            <summary>
+            設定每一個 SemesterData 的 ToStringFormatProvider 屬性。
+            </summary>
+            <param name="semesters"></param>
+            <param name="formatter"></param>
+        </member>
+        <member name="T:Campus.Conf.AutoDictionary">
+            <summary>
+            神奇的自動字典，在取值或寫值時，不會產生錯誤，會自動增加 Key 到字典中，但 ContainsKey 不會自動增加 Key。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.AutoDictionary.#ctor(System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean)">
+            <summary>
+            用指定的 Dictionary 當作基底資料。
+            </summary>
+            <param name="copySource"></param>
+            <param name="readOnly">資料是否可寫入。</param>
+        </member>
+        <member name="M:Campus.Conf.AutoDictionary.#ctor(System.Xml.XmlElement,System.Boolean)">
+            <summary>
+            解析 Xml 內容到 Dictionary 中，如果有重覆的 Element 資料，會產生 Exception。
+            </summary>
+            <param name="data">Xml 資料，用 Element.LocalName 當作 Key， InnerXml 當作 Value。</param>
+            <param name="readOnly">資料是否可寫入。</param>
+        </member>
+        <member name="M:Campus.Conf.AutoDictionary.#ctor(System.Xml.XmlNodeList,System.String,System.Boolean)">
+            <param name="data">Xml 資料，用指定的屬性值當作 Key，InnerText 當作 Value。</param>
+            <param name="keyAttName">屬性名稱，該屬性的值會被當作是 Dictionary 的 Key，如果該屬性不存在會產生 Exception。</param>
+            <param name="readOnly">資料是否可寫入。</param>
+        </member>
+        <member name="M:Campus.Conf.AutoDictionary.#ctor(System.Xml.XmlNodeList,System.String,System.String,System.Boolean)">
+            <param name="data">Xml 資料，使用指定的屬性值當作 Key 與 Value。</param>
+            <param name="keyAttName">屬性名稱，該屬性的值會被當作 Dictionary 的 Key，如果該屬性不存在會產生 Exception。</param>
+            <param name="valueAttName">屬性名稱，該屬性的值會被當作 Dictionary 的 Value，如果該屬性不存在會產生 Exception。</param>
+            <param name="readOnly">資料是否可寫入。</param>
+        </member>
+        <member name="M:Campus.Conf.AutoDictionary.Add(System.String)">
+            <summary>
+            新增 Key 到 Dictionary 中，值為 string.Empty，如果已經存在該 Key 會產生 Exception。
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:Campus.Conf.AutoDictionary.Equals(Campus.Conf.AutoDictionary)">
+            <summary>
+            比較兩個 AutoDictionary 是否相同。
+            </summary>
+            <param name="obj">要比較的 AutoDictionary。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Conf.AutoDictionary.Clone">
+            <summary>
+            複製一份相同資料並且可讀寫的 AutoDictioanry。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Campus.Properties.Resources">
+            <summary>
+              用於查詢當地語系化字串等的強型別資源類別
+            </summary>
+        </member>
+        <member name="P:Campus.Properties.Resources.ResourceManager">
+            <summary>
+              傳回這個類別使用的快取的 ResourceManager 執行個體。
+            </summary>
+        </member>
+        <member name="P:Campus.Properties.Resources.Culture">
+            <summary>
+              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+              使用這個強型別資源類別的資源查閱。
+            </summary>
+        </member>
+        <member name="T:Campus.Conf.Typed_Extends">
+            <summary>
+            延伸 ConfigData 有關型別處理的功能。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.Typed_Extends.GetBoolean(Campus.Conf.ConfigData,System.String,System.Boolean)">
+            <summary>
+            取得 Boolean 資料。如果資料不存在會回傳「defaultValue」，如果資料存在會轉型成 Boolean。轉型失敗會產生 Exception。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.Typed_Extends.SetBoolean(Campus.Conf.ConfigData,System.String,System.Boolean)">
+            <summary>
+            設定 Boolean 資料。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.Typed_Extends.GetInteger(Campus.Conf.ConfigData,System.String,System.Int32)">
+            <summary>
+            取得 Integer 資料。如果資料不存在會回傳「defaultValue」，如果資料存在會轉型成 Integer。轉型失敗會產生 Exception。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.Typed_Extends.SetInteger(Campus.Conf.ConfigData,System.String,System.Int32)">
+            <summary>
+            設定 Integer 資料。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.Typed_Extends.GetXml(Campus.Conf.ConfigData,System.String,System.Xml.XmlElement)">
+            <summary>
+            取得 Xml 資料。如果資料不存在會回傳「defaultValue」，如果資料存在會轉型成 XmlElement。轉型失敗會產生 Exception。
+            </summary>
+        </member>
+        <member name="M:Campus.Conf.Typed_Extends.SetXml(Campus.Conf.ConfigData,System.String,System.Xml.XmlElement)">
+            <summary>
+            設定 Xml 資料。
+            </summary>
+        </member>
+        <member name="T:Campus.Conf.Config">
+            <summary>
+            代表系統提供的所有組態資料。
+            </summary>
+        </member>
+        <member name="P:Campus.Conf.Config.User">
+            <summary>
+            取得使用者的個人組態資料，每個使用者都不同。
+            </summary>
+        </member>
+        <member name="P:Campus.Conf.Config.App">
+            <summary>
+            取得應用程式的組態資料，每個資料庫不同。
+            </summary>
+        </member>
+        <member name="P:Campus.Conf.Config.Global">
+            <summary>
+            取的全域的組態資料，全世界都一樣。
+            </summary>
+        </member>
+        <member name="T:Campus.Rating.PlaceOptions">
+            <summary>
+            排名選項。
+            </summary>
+        </member>
+        <member name="F:Campus.Rating.PlaceOptions.Sequence">
+            <summary>
+            接序排名，例如：1,2,3,3,4...
+            </summary>
+        </member>
+        <member name="F:Campus.Rating.PlaceOptions.Unsequence">
+            <summary>
+            不接序排名，例如：1,2,3,3,5...
+            </summary>
+        </member>
+        <member name="T:Campus.Rating.PlaceCollection">
+            <summary>
+            代表名次資料的集合。
+            </summary>
+        </member>
+        <member name="M:Campus.Rating.PlaceCollection.NS(System.String)">
+            <summary>
+            取得特定 Namespace 的排名資料。
+            </summary>
+            <param name="ns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Rating.PlaceCollection.Add(System.String,Campus.Rating.Place)">
+            <summary>
+            新增排名資料。
+            </summary>
+            <param name="name">排名名稱。</param>
+            <param name="place">排名資料。</param>
+        </member>
+        <member name="M:Campus.Rating.PlaceCollection.Remove(System.String)">
+            <summary>
+            移除指定的排名資料。
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Campus.Rating.PlaceCollection.Contains(System.String)">
+            <summary>
+            檢查是否包含指定排名。
+            </summary>
+            <param name="name">排名名稱。</param>
+            <returns></returns>
+        </member>
+        <member name="P:Campus.Rating.PlaceCollection.Item(System.String)">
+            <summary>
+            取得指定排名的名次。
+            </summary>
+            <param name="name">排名的名稱。</param>
+            <returns>名次資料。</returns>
+        </member>
+        <member name="P:Campus.Rating.PlaceCollection.Count">
+            <summary>
+            取得排名資料的計數。
+            </summary>
+        </member>
+        <member name="T:Campus.ErrorTip">
+            <summary>
+            錯誤檢查。
+            </summary>
+        </member>
+        <member name="T:Campus.XmlObject">
+            <summary>
+            提供動態的 Xml 資料產生機制。
+            </summary>
+        </member>
+        <member name="M:Campus.XmlObject.Name">
+            <summary>
+            取得代表這個物件所屬的 Element 或 Attribute 名稱。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.XmlObject.ToDuplicateMode">
+            <summary>
+            轉換為 Duplicate 模式。
+            </summary>
+        </member>
+        <member name="M:Campus.XmlObject.Parse(System.String)">
+            <summary>
+            產生 XData 物件。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.XmlObject.Parse(System.Xml.Linq.XElement)">
+            <summary>
+            產生 XData 物件。
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.XmlObject.#ctor(System.String)">
+            <summary>
+            建立。
+            </summary>
+            <param name="name">Element 名稱。</param>
+        </member>
+        <member name="M:Campus.XmlObject.IntVal">
+            <summary>
+            取得數字資料。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.XmlObject.IntVal(System.Int32)">
+            <summary>
+            取得數字資料，如果處理失敗則回傳預設值。
+            </summary>
+            <param name="defValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.XmlObject.IntVal(System.String)">
+            <summary>
+            取得數字資料，如果處理失敗則回傳預設值。
+            </summary>
+            <param name="defValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.XmlObject.ToString">
+            <summary>
+            將資料轉換成 Xml，並格式化輸出。 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.XmlObject.Write(System.Xml.XmlWriter)">
+            <summary>
+            將資料轉換成 XLinq 格式。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Campus.XmlObject.UniqueMode">
+            <summary>
+            是否允許同樣元素重複出現，例如多個同名的 Element。
+            </summary>
+        </member>
+        <member name="M:Campus.StringUtil.ReplaceList(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            提供功能將變數取代為 Id 清單，例：'1','2','3'。
+            </summary>
+            <param name="src"></param>
+            <param name="paramName"></param>
+            <param name="idList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.StringUtil.ReplaceList(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            提供功能將變數取代為 Id 清單，quote 預設為「'」，例：'1','2','3'。
+            </summary>
+            <param name="src"></param>
+            <param name="paramName"></param>
+            <param name="idList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Campus.DynamicCache">
+            <summary>
+            代表一種 Value Object 的資料快取機制。
+            </summary>
+        </member>
+        <member name="F:Campus.DynamicCache.IdProperty">
+            <summary>
+            每個 Value Object 的 Id 欄位名稱。
+            </summary>
+        </member>
+        <member name="F:Campus.DynamicCache.ValueStatus">
+            <summary>
+            Property -> (ID -> IsOutOfDate)
+            </summary>
+        </member>
+        <member name="M:Campus.DynamicCache.Contains(System.String)">
+            <summary>
+            是否包含了某 Value Object。
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.DynamicCache.Clear">
+            <summary>
+            清除所有快取資料。
+            </summary>
+        </member>
+        <member name="M:Campus.DynamicCache.SetOutOfDate(System.Collections.Generic.IEnumerable{System.String},System.String[])">
+            <summary>
+            將指定屬性設定為已經不是最新狀態。
+            </summary>
+            <param name="propertyNames"></param>
+        </member>
+        <member name="M:Campus.DynamicCache.SetOutOfDate(System.String[])">
+            <summary>
+            將指定屬性設定為已經不是最新狀態。
+            </summary>
+            <param name="propertyNames"></param>
+        </member>
+        <member name="M:Campus.DynamicCache.GetOutOfDate(System.Collections.Generic.IEnumerable{System.String},System.String[])">
+            <summary>
+            取的屬性資料是否在最新狀態。
+            </summary>
+            <param name="propertyNames"></param>
+        </member>
+        <member name="M:Campus.DynamicCache.GetOutOfDate(System.String[])">
+            <summary>
+            取的屬性資料是否在最新狀態。
+            </summary>
+            <param name="propertyNames"></param>
+        </member>
+        <member name="M:Campus.DynamicCache.FillProperty(System.String,System.String,System.Object)">
+            <summary>
+            填入欄位資料。
+            </summary>
+        </member>
+        <member name="M:Campus.DynamicCache.GetProperty(System.String,System.String)">
+            <summary>
+            填入欄位資料。
+            </summary>
+        </member>
+        <member name="M:Campus.DynamicCache.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.DynamicCache.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Campus.DynamicCache.CurrentProperties">
+            <summary>
+            取得目前已包含的屬性清單。
+            </summary>
+        </member>
+        <member name="P:Campus.DynamicCache.PrimaryKeys">
+            <summary>
+            取得 Key 清單。
+            </summary>
+        </member>
+        <member name="P:Campus.DynamicCache.Item(System.String)">
+            <summary>
+            依編號取得 Value Object。
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <!-- 忽略成員 "T:Campus.CustomStringComparer" 中格式錯誤的 XML 註解 -->
+        <member name="M:Campus.CustomStringComparer.Comparer(System.String,System.String)">
+            <summary>
+            使用預設字根比較字串
+            </summary>
+        </member>
+        <member name="M:Campus.CustomStringComparer.Comparer(System.String,System.String,System.String[])">
+            <summary>
+            使用自訂字根比較字串
+            </summary>
+            <param name="keys">使用字根</param>
+        </member>
+        <member name="M:Campus.CustomStringComparer.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:Campus.CustomStringComparer.#ctor(System.String[])">
+            <summary>
+            建構子，傳入自訂的字根
+            </summary>
+            <param name="keys">使用字根</param>
+        </member>
+        <member name="M:Campus.CustomStringComparer.Compare(System.String,System.String)">
+            <summary>
+            比較
+            </summary>
+        </member>
+        <member name="T:Campus.Rating.StandardPercentage">
+            <summary>
+            教育部公佈的標準百分排名算法。
+            </summary>
+        </member>
+        <member name="F:Campus.Rating.StandardPercentage.Levels">
+            <summary>
+            百分排名空間。
+            </summary>
+        </member>
+        <member name="M:Campus.Rating.StandardPercentage.Initital(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="radix"></param>
+        </member>
+        <member name="M:Campus.Rating.StandardPercentage.NextPercentage(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="place"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Conf.Behavior_Extends.SaveAsync(Campus.Conf.ConfigData)">
+            <summary>
+            非同步儲存資料，適用於不希望擋住畫面運作...。
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:Campus.Rating.RatingScope`1">
+            <summary>
+            代表排名範圍。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Campus.Rating.RatingScope`1.#ctor(System.String)">
+            <summary>
+            建構式。
+            </summary>
+            <param name="name">名次範圍名稱，例如：101、102、一年級...</param>
+        </member>
+        <member name="M:Campus.Rating.RatingScope`1.#ctor(System.String,System.String)">
+            <summary>
+            建構式。
+            </summary>
+            <param name="name">名次範圍名稱，例如：101、102、一年級...</param>
+            <param name="placeNS">名次分類名稱，例如：班排名、年排名。</param>
+        </member>
+        <member name="M:Campus.Rating.RatingScope`1.Rank(Campus.Rating.IScoreParser{`0},Campus.Rating.PlaceOptions)">
+            <summary>
+            進行排名。
+            </summary>
+            <param name="scoreParser">要被排名的成績計算邏輯。</param>
+            <param name="option">排名選項，接序 or 不接序排名。</param>
+            <param name="provider">當相同名次時決定先後成績資料，所有排名範圍內的學生都應該供相同順序與數量的成績資料，否則會產生無法預期的結果。</param>
+        </member>
+        <member name="M:Campus.Rating.RatingScope`1.GetTopPlaces(System.String,System.Int32)">
+            <summary>
+            取得前 n 名次的學生。
+            </summary>
+            <param name="ratingName">排名的名稱，例如：國文。(與IScoreParser 實作之實體 Name 屬性值相同)</param>
+            <param name="top">要取得名次。</param>
+            <param name="placeNamespace">名次存放的 Namespace。</param>
+        </member>
+        <member name="M:Campus.Rating.RatingScope`1.GetLastPlaces(System.String,System.Int32)">
+            <summary>
+            取得後 n 名次的學生。
+            </summary>
+            <param name="ratingName">排名的名稱，例如：國文。(與IScoreParser 實作之實體 Name 屬性值相同)</param>
+            <param name="last">要取得名次。</param>
+        </member>
+        <member name="M:Campus.Rating.RatingScope`1.GetTopPercentage(System.String,System.Int32)">
+            <summary>
+            使用舊的方式取得前百分之的學生。
+            </summary>
+            <param name="scoreName"></param>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Rating.RatingScope`1.GetLastPercentage(System.String,System.Int32)">
+            <summary>
+            使用舊的方式取得後百分之的學生。
+            </summary>
+            <param name="scoreName"></param>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.Rating.RatingScope`1.GetScoredStudents(Campus.Rating.IScoreParser{`0})">
+            <summary>
+            取得有成績的學生清單，並且轉型成 ScoredStudent。
+            </summary>
+            <returns></returns>
+            <remarks>如果該學生沒有成績，就不會列入排名。</remarks>
+        </member>
+        <member name="P:Campus.Rating.RatingScope`1.Name">
+            <summary>
+            名次範圍名稱，例如：101、102、一年級...
+            </summary>
+        </member>
+        <member name="P:Campus.Rating.RatingScope`1.PlaceNamespace">
+            <summary>
+            名次分類名稱，例如：班排名、年排名。
+            </summary>
+        </member>
+        <member name="T:Campus.Rating.RatingScope`1.ScoredStudent">
+            <summary>
+            代表有指定成績的學生。
+            </summary>
+        </member>
+        <member name="P:Campus.Rating.RatingScope`1.ScoredStudent.Id">
+            <summary>
+            相關聯的學生編號。
+            </summary>
+        </member>
+        <member name="P:Campus.Rating.RatingScope`1.ScoredStudent.Score">
+            <summary>
+            要排名的成績。
+            </summary>
+        </member>
+        <member name="P:Campus.Rating.RatingScope`1.ScoredStudent.SecondScores">
+            <summary>
+            同名時，第二排序成績清單。
+            </summary>
+        </member>
+        <member name="P:Campus.Rating.RatingScope`1.ScoredStudent.Source">
+            <summary>
+            排名成績的來源。
+            </summary>
+        </member>
+        <member name="T:Campus.Rating.RatingScope`1.Unsequence">
+            <summary>
+            不接序排名法。
+            </summary>
+        </member>
+        <member name="T:Campus.Rating.RatingScope`1.Sequence">
+            <summary>
+            接序排名法。
+            </summary>
+        </member>
+        <member name="T:Campus.Rating.IStudent">
+            <summary>
+            代表要排名的學生資訊。
+            </summary>
+        </member>
+        <member name="P:Campus.Rating.IStudent.Id">
+            <summary>
+            唯一識別編號。
+            </summary>
+        </member>
+        <member name="P:Campus.Rating.IStudent.Places">
+            <summary>
+            取得排名資料集合。
+            </summary>
+        </member>
+        <member name="T:Campus.Rating.IScoresParser`1">
+            <summary>
+            提供同名次進階比較功能。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Campus.Rating.IScoresParser`1.GetSecondScores(`0)">
+            <summary>
+            取得當成績相同時，額外的比較成績清單。
+            </summary>
+            <param name="student">原學生資料。</param>
+            <returns></returns>
+        </member>
+        <member name="T:Campus.GradeYear">
+            <summary>
+            代表年級資訊
+            </summary>
+        </member>
+        <member name="M:Campus.GradeYear.#ctor(System.Int32)">
+            <summary>
+            建立年級物件。
+            </summary>
+            <param name="number">年級等級，小於0一律會變成未分年級。</param>
+        </member>
+        <member name="M:Campus.GradeYear.ToString">
+            <summary>
+            取得中文的年級標題。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.GradeYear.ToString(System.Nullable{System.Int32})">
+            <summary>
+            取得中文的年級標題，小於0全都視為「未分年級」。
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.GradeYear.ToGradeYear(System.Nullable{System.Int32})">
+            <summary>
+            將數字轉換為 GradeYear 結構，小於0全都視為「未分年級」。
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.GradeYear.ToGradeYear(System.String)">
+            <summary>
+            將數字轉換為 GradeYear 結構，空字串、不合法字串、小於0全都視為「未分年級」。
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Campus.GradeYear.ToGradeYears(System.Int32[])">
+            <summary>
+            將一系列數字轉換為 GradeYear 結構，小於0全都視為「未分年級」。
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Campus.GradeYear.Number">
+            <summary>
+            取得年級，例：1、2、3。
+            </summary>
+        </member>
+        <member name="P:Campus.GradeYear.ChineseNumber">
+            <summary>
+            取得中文的年級數字，例：一、二、三。
+            </summary>
+        </member>
+        <member name="P:Campus.GradeYear.ChineseTitle">
+            <summary>
+            取得中文的年級標題，例：一年級、二年級、三年級。
+            </summary>
+        </member>
+        <member name="P:Campus.GradeYear.ToStringFormatter">
+            <summary>
+            提供 ToString 方法呼叫。
+            </summary>
+        </member>
+        <member name="P:Campus.GradeYear.Defaults">
+            <summary>
+            取得或設定系統中預設的年級個數。
+            </summary>
+        </member>
+        <member name="P:Campus.GradeYear.Undefined">
+            <summary>
+            取得未分年級。
+            </summary>
+        </member>
+        <member name="M:Campus.GradeYear_Extens.SetToStringFormatter(System.Collections.Generic.IEnumerable{Campus.GradeYear},System.Func{Campus.GradeYear,System.String})">
+            <summary>
+            設定每一個 SemesterData 的 ToStringFormatProvider 屬性。
+            </summary>
+            <param name="gradeYears"></param>
+            <param name="formatter"></param>
+        </member>
+        <member name="M:Campus.Conf.Configuration_ExtendMethods.SaveAll(System.Collections.Generic.IEnumerable{Campus.Conf.ConfigData})">
+            <summary>
+            儲存所有組態資料。
+            </summary>
+        </member>
+    </members>
+</doc>

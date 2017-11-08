@@ -1,0 +1,7 @@
+﻿<ScoreMappingList>
+	<ScoreMapping Name="優" EngName="A" Score="90"></ScoreMapping>
+	<ScoreMapping Name="甲" EngName="B" Score="80"></ScoreMapping>
+	<ScoreMapping Name="乙" EngName="C" Score="70"></ScoreMapping>
+	<ScoreMapping Name="丙" EngName="D" Score="60"></ScoreMapping>
+	<ScoreMapping Name="丁" EngName="E" Score=""></ScoreMapping>
+</ScoreMappingList>

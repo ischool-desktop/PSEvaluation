@@ -1,0 +1,809 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FISCA.LogAgent</name>
+    </assembly>
+    <members>
+        <member name="T:FISCA.LogAgent.LogFinder">
+            <summary>
+            查詢紀錄資料物件。為多執行緒查詢。
+            </summary>
+        </member>
+        <member name="M:FISCA.LogAgent.LogFinder.#ctor(FISCA.LogAgent.AccessLayer.ILogAccessLayer)">
+            <summary>
+            建構子
+            </summary>
+            <param name="logDAL">存取資料方法層</param>
+        </member>
+        <member name="M:FISCA.LogAgent.LogFinder.FindActorLog(System.DateTime,System.DateTime,System.String)">
+            <summary>
+            查詢指定使用者之操作紀錄。
+            查詢完成將觸發 ActorLogFound 事件。
+            查詢失敗將觸發 FindActorLogError 事件。
+            </summary>
+            <param name="from">開始時間</param>
+            <param name="to">結束時間</param>
+            <param name="actor">操作人帳號</param>
+            <example>示範如何查詢指定使用者之操作紀錄
+            <code>
+            <![CDATA[
+            using FISCA;
+            
+            class TestClass
+            {
+                  private LogFinder _logFinder;
+                  
+                  void DoSomething()
+                  {
+                      _logFinder = Application.CreateLogFinderInstance();
+                      _logFinder.ActorLogFound += new LogFinderEventHandler(LogFinder_ActorLogFound);
+                      _logFinder.FindActorLogError += new LogErrorEventHandler(LogFinder_FindActorLogError)
+                      
+                      _logFinder.FindActorLog(DateTime.MinValue, DateTime.MaxValue, "UserAccount");
+                  }
+                  
+                  void LogFinder_ActorLogFound(object sender, LogFinderEventArgs e)
+                  {
+                          string text = "";
+                          foreach(ActionRecord record in e.ActionRecords)
+                          {
+                              text += "操作者:" + record.Actor + "\n時間:" + record.ServerTime + "\n描述:" + record.Description;
+                          }
+                         MessageBox.Show(text);
+                   }
+                   
+                  void LogFinder_FindActorLogError(object sender, LogErrorEventArgs e)
+                  {
+                       MessageBox.Show("紀錄失敗 : " + e.ErrorMessage);
+                  }
+             }
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:FISCA.LogAgent.LogFinder.FindTargetLog(System.DateTime,System.DateTime,System.String,System.String)">
+            <summary>
+            查詢指定標的紀錄。
+            查詢完成將觸發 TargetLogFound 事件。
+            查詢失敗將觸發 FindTargetLogError 事件。
+            </summary>
+            <param name="from">開始時間</param>
+            <param name="to">結束時間</param>
+            <param name="targetCategory">標的分類</param>
+            <param name="targetID">標的識別碼</param>
+        </member>
+        <member name="M:FISCA.LogAgent.LogFinder.FindActionByLog(System.DateTime,System.DateTime,System.String)">
+            <summary>
+             查詢指定動作物件之紀錄。
+            查詢完成將觸發 ActionByLogFound 事件。
+            查詢失敗將觸發 ActionByLogError 事件。
+            </summary>
+            <param name="from">開始時間</param>
+            <param name="to">結束時間</param>
+            <param name="actionBy">動作物件名稱(Ex : "社團活動模組.會員管理")</param>
+        </member>
+        <member name="E:FISCA.LogAgent.LogFinder.ActorLogFound">
+            <summary>
+            查詢指定使用者之操作紀錄完成事件。
+            </summary>
+        </member>
+        <member name="E:FISCA.LogAgent.LogFinder.ActionByLogFound">
+            <summary>
+            查詢指定動作物作之紀錄完成事件。
+            </summary>
+        </member>
+        <member name="E:FISCA.LogAgent.LogFinder.TargetLogFound">
+            <summary>
+            查詢指定標的之紀錄完成事件。
+            </summary>
+        </member>
+        <member name="E:FISCA.LogAgent.LogFinder.FindActorLogError">
+            <summary>
+            查詢指定使用者之操作紀錄失敗事件。
+            </summary>
+        </member>
+        <member name="E:FISCA.LogAgent.LogFinder.FindActionByLogError">
+            <summary>
+            查詢指定動作物作之紀錄失敗事件。
+            </summary>
+        </member>
+        <member name="E:FISCA.LogAgent.LogFinder.FindTargetLogError">
+            <summary>
+            查詢指定標的之紀錄失敗事件。
+            </summary>
+        </member>
+        <member name="T:FISCA.LogAgent.LogFinder.LogFinderEventHandler">
+            <summary>
+            委派, 處理取回紀錄完成事件用。
+            </summary>
+            <param name="sender">觸發者，為LogFinder物件</param>
+            <param name="e">LogFinderEventArgs物件參數</param>
+        </member>
+        <member name="T:FISCA.LogAgent.LogFinder.LogErrorEventHandler">
+            <summary>
+            委派, 處理取回紀錄失敗事件用。
+            </summary>
+            <param name="sender">觸發者，為LogFinder物件</param>
+            <param name="e">LogErrorEventArgs 物件參數</param>
+        </member>
+        <member name="T:FISCA.LogAgent.LogFinderEventArgs">
+            <summary>
+            取得紀錄完成事件參數
+            </summary>
+        </member>
+        <member name="P:FISCA.LogAgent.LogFinderEventArgs.ActionRecords">
+            <summary>
+            紀錄集合物件
+            </summary>
+        </member>
+        <member name="T:FISCA.LogAgent.LogErrorEventArgs">
+            <summary>
+            記錄失敗事件參數
+            </summary>
+        </member>
+        <member name="P:FISCA.LogAgent.LogErrorEventArgs.ErrorMessage">
+            <summary>
+            取得錯誤訊息
+            </summary>
+        </member>
+        <member name="P:FISCA.LogAgent.LogErrorEventArgs.Exception">
+            <summary>
+            取得錯誤Exception
+            </summary>
+        </member>
+        <member name="T:FISCA.LogAgent.LogSaver">
+            <summary>
+            記錄器
+            </summary>
+        </member>
+        <member name="M:FISCA.LogAgent.LogSaver.#ctor(System.String,FISCA.LogAgent.AccessLayer.ILogAccessLayer)">
+            <summary>
+            建構子
+            </summary>
+            <param name="actor">動作人帳號</param>
+            <param name="logDAL">資料存取層物件</param>
+        </member>
+        <member name="M:FISCA.LogAgent.LogSaver.Log(System.String,System.String,System.String)">
+            <summary>
+            記錄(無特定目標之紀錄)。
+            </summary>
+            <param name="actionBy">動作物件名稱(Ex : "社團活動模組.會員管理")</param>
+            <param name="action">動作分類，如新增/修改/匯入資料。</param>
+            <param name="description">詳細描述。</param>
+            <example>示範如何使用LogSaver.Log 方法來記錄
+            <code>
+            using FISCA;
+            
+            class TestClass
+            {
+                  private LogSaver _logSaver;
+                  
+                  void DoSomething()
+                  {
+                      _logSaver = Application.CreateLogSaverInstance();
+                      _logSaver.LogCompleted += new EventHandler(LogSaver_LogCompleted);
+                      _logSaver.LogFailure += new LogErrorEventHandler(LogSaver_LogFailure)
+                      _logSaver.Log("社團活動模組.會員管理", "刪除", "刪除所有會員資料。");
+                  }
+                  
+                  void LogSaver_LogCompleted(object sender, EventArgs e)
+                  {
+                         MessageBox.Show("紀錄完成");
+                   }
+                   
+                  void LogSaver_LogFailure(object sender, LogErrorEventArgs e)
+                  {
+                       MessageBox.Show("紀錄失敗 : " + e.ErrorMessage);
+                  }
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:FISCA.LogAgent.LogSaver.Log(System.String,System.String)">
+            <summary>
+            記錄(無動作分類與特定目標之記錄)。
+            </summary>
+            <param name="actionBy">動作物件名稱(Ex : "社團活動模組.會員管理")</param>
+            <param name="description">詳細描述。</param>
+            <example>示範如何使用LogSaver.Log 方法來記錄
+            <code>
+            using FISCA;
+            
+            class TestClass
+            {
+                  private LogSaver _logSaver;
+                  
+                  void DoSomething()
+                  {
+                      _logSaver = Application.CreateLogSaverInstance();
+                      _logSaver.LogCompleted += new EventHandler(LogSaver_LogCompleted);
+                      _logSaver.LogFailure += new LogErrorEventHandler(LogSaver_LogFailure)
+                      _logSaver.Log("社團活動模組.會員管理", "刪除所有會員資料。");
+                  }
+                  
+                  void LogSaver_LogCompleted(object sender, EventArgs e)
+                  {
+                         MessageBox.Show("紀錄完成");
+                   }
+                   
+                  void LogSaver_LogFailure(object sender, LogErrorEventArgs e)
+                  {
+                       MessageBox.Show("紀錄失敗 : " + e.ErrorMessage);
+                  }
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:FISCA.LogAgent.LogSaver.Log(System.String,System.String,System.String,System.String)">
+            <summary>
+            記錄(不記錄動作分類)
+            </summary>
+            <param name="actionBy">動作物件名稱(Ex : "社團活動模組.會員管理")</param>
+            <param name="targetCategory">目標分類, 如 student/teacher/class .....</param>
+            <param name="targetID">目標識別碼</param>
+            <param name="description">詳細描述</param>
+            <example>示範如何使用LogSaver.Log 方法來記錄
+            <code>
+            using FISCA;
+            
+            class TestClass
+            {
+                  private LogSaver _logSaver;
+                  
+                  void DoSomething()
+                  {
+                      _logSaver = Application.CreateLogSaverInstance();
+                      _logSaver.LogCompleted += new EventHandler(LogSaver_LogCompleted);
+                      _logSaver.LogFailure += new LogErrorEventHandler(LogSaver_LogFailure)
+                      _logSaver.Log("社團活動模組.會員管理","會員","21","會員『尤小志』於2009/7/22 18:11:21 繳納會費費500元。");
+                  }
+                  
+                  void LogSaver_LogCompleted(object sender, EventArgs e)
+                  {
+                         MessageBox.Show("紀錄完成");
+                   }
+                   
+                  void LogSaver_LogFailure(object sender, LogErrorEventArgs e)
+                  {
+                       MessageBox.Show("紀錄失敗 : " + e.ErrorMessage);
+                  }
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:FISCA.LogAgent.LogSaver.Log(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            記錄
+            </summary>
+            <param name="actionBy">動作物件名稱(Ex : "社團活動模組.會員管理")</param>
+            <param name="action">動作分類，如新增/修改/匯入資料, 由模組自行定義。</param>
+            <param name="targetCategory">目標分類, 如 student/teacher/class .....</param>
+            <param name="targetID">目標識別碼</param>
+            <param name="description">詳細描述</param>
+            <example>示範如何使用LogSaver.Log 方法來記錄
+            <code>
+            using FISCA;
+            
+            class TestClass
+            {
+                  private LogSaver _logSaver;
+                  
+                  void DoSomething()
+                  {
+                      _logSaver = Application.CreateLogSaverInstance();
+                      _logSaver.LogCompleted += new EventHandler(LogSaver_LogCompleted);
+                      _logSaver.LogFailure += new LogErrorEventHandler(LogSaver_LogFailure)
+                      _logSaver.Log("社團活動模組.會員管理","繳費","會員","21","會員『尤小志』於2009/7/22 18:11:21 繳納會費費500元。");
+                  }
+                  
+                  void LogSaver_LogCompleted(object sender, EventArgs e)
+                  {
+                         MessageBox.Show("紀錄完成");
+                   }
+                   
+                  void LogSaver_LogFailure(object sender, LogErrorEventArgs e)
+                  {
+                       MessageBox.Show("紀錄失敗 : " + e.ErrorMessage);
+                  }
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:FISCA.LogAgent.LogSaver.AddBatch(System.String,System.String,System.String)">
+            <summary>
+            加入批次記錄, 用於批次匯入資料時(無特定目標之紀錄)。
+            </summary>
+            <param name="actionBy">動作物件名稱(Ex : "社團活動模組.會員管理")</param>
+            <param name="action">動作分類，如新增/修改/匯入資料。</param>
+            <param name="description">詳細描述。</param>
+        </member>
+        <member name="M:FISCA.LogAgent.LogSaver.AddBatch(System.String,System.String)">
+            <summary>
+            加入批次記錄, 用於批次匯入資料時(無動作分類與特定目標之記錄)。
+            </summary>
+            <param name="actionBy">動作物件名稱(Ex : "社團活動模組.會員管理")</param>
+            <param name="description">詳細描述</param>
+        </member>
+        <member name="M:FISCA.LogAgent.LogSaver.AddBatch(System.String,System.String,System.String,System.String)">
+            <summary>
+            加入批次記錄, 用於批次匯入資料時(不記錄動作分類)
+            </summary>
+            <param name="actionBy">動作物件名稱(Ex : "社團活動模組.會員管理")</param>
+            <param name="targetCategory">目標分類, 如 student/teacher/class .....</param>
+            <param name="targetID">目標識別碼</param>
+            <param name="description">詳細描述</param>
+        </member>
+        <member name="M:FISCA.LogAgent.LogSaver.AddBatch(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+             加入批次記錄, 用於批次匯入資料時。
+            </summary>
+            <param name="actionBy">動作物件名稱(Ex : "社團活動模組.會員管理")</param>
+            <param name="action">動作分類，如新增/修改/匯入資料, 由模組自行定義。</param>
+            <param name="targetCategory">目標分類, 如 student/teacher/class .....</param>
+            <param name="targetID">目標識別碼</param>
+            <param name="description">詳細描述</param>
+        </member>
+        <member name="M:FISCA.LogAgent.LogSaver.ClearBatch">
+            <summary>
+            清除目前此物件中已加入之所有未上傳批次紀錄。
+            </summary>
+        </member>
+        <member name="M:FISCA.LogAgent.LogSaver.LogBatch">
+            <summary>
+            上傳目前此物件中所有的批次匯入紀錄。上傳完畢後將自動清空目前物件中的所有紀錄。預設非同步匯入紀錄。
+            </summary>
+            <example>示範如何紀錄匯入資料
+            <code>
+            <![CDATA[
+            using FISCA;
+            
+            class TestClass
+            {
+                  private LogSaver _logSaver;
+                  
+                  void DoSomething()
+                  {
+                      _logSaver = Application.CreateLogSaverInstance();
+                      _logSaver.BatchLogCompleted += new EventHandler(LogSaver_BatchLogCompleted);
+                      _logSaver.LogFailure += new LogErrorEventHandler(LogSaver_BatchLogFailure)
+                      
+                      for(int i=0;i<100;i++)
+                      {
+                          //執行紀錄動作
+                          string id = i.ToString();
+                          _logSaver.AddBatch("社團活動模組.會員管理","匯入會員","會員",id ,"匯入會員資訊, 編號 :" + i);
+                      }
+                      
+                      _logSaver.LogBatch();
+                      _logSaver.Log("社團活動模組.會員管理","匯入會員","匯入100筆會員資料");
+                  }
+                  
+                  void LogSaver_BatchLogCompleted(object sender, EventArgs e)
+                  {
+                         MessageBox.Show("紀錄完成");
+                   }
+                   
+                  void LogSaver_BatchLogFailure(object sender, LogErrorEventArgs e)
+                  {
+                       MessageBox.Show("紀錄失敗 : " + e.ErrorMessage);
+                  }
+             }
+             ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:FISCA.LogAgent.LogSaver.LogBatch(System.Boolean)">
+            <summary>
+            上傳目前此物件中所有的批次匯入紀錄。上傳完畢後將自動清空目前物件中的所有紀錄。
+            </summary>
+            <param name="sync">是否要非同步批次匯入。</param>
+        </member>
+        <member name="E:FISCA.LogAgent.LogSaver.LogCompleted">
+            <summary>
+            記錄完成事件, 將於Log完畢後觸發
+            </summary>
+        </member>
+        <member name="E:FISCA.LogAgent.LogSaver.BatchLogCompleted">
+            <summary>
+            批次匯入記錄完成事件, 將於LogBatch方法完成後觸發。
+            </summary>
+        </member>
+        <member name="E:FISCA.LogAgent.LogSaver.LogFailure">
+            <summary>
+            記錄失敗事件, 將於Log方法執行失敗時觸發。
+            </summary>
+        </member>
+        <member name="E:FISCA.LogAgent.LogSaver.BatchLogFailure">
+            <summary>
+              批次匯入記錄失敗事件, 將於LogBatch方法執行失敗時觸發
+            </summary>
+        </member>
+        <member name="T:FISCA.LogAgent.LogSaver.LogErrorEventHandler">
+            <summary>
+            委派 : 存入紀錄失敗處理用
+            </summary>
+            <param name="sender">LogSaver 物件</param>
+            <param name="e">LogErrorEventArgs 參數</param>
+        </member>
+        <member name="T:FISCA.LogAgent.ActionTypeEnum">
+            <summary>
+            紀錄方式, 分為單筆紀錄與匯入紀錄
+            </summary>
+        </member>
+        <member name="F:FISCA.LogAgent.ActionTypeEnum.Record">
+            <summary>
+            單筆紀錄
+            </summary>
+        </member>
+        <member name="F:FISCA.LogAgent.ActionTypeEnum.Import">
+            <summary>
+            匯入紀錄
+            </summary>
+        </member>
+        <member name="T:FISCA.LogAgent.ActionRecord">
+            <summary>
+            表示一筆紀錄的物件
+            </summary>
+        </member>
+        <member name="P:FISCA.LogAgent.ActionRecord.ID">
+            <summary>
+            紀錄編號
+            </summary>
+        </member>
+        <member name="P:FISCA.LogAgent.ActionRecord.Actor">
+            <summary>
+            操作者
+            </summary>
+        </member>
+        <member name="P:FISCA.LogAgent.ActionRecord.Action">
+            <summary>
+            動作分類
+            </summary>
+        </member>
+        <member name="P:FISCA.LogAgent.ActionRecord.TargetCategory">
+            <summary>
+            標的分類
+            </summary>
+        </member>
+        <member name="P:FISCA.LogAgent.ActionRecord.TargetID">
+            <summary>
+            標的識別碼
+            </summary>
+        </member>
+        <member name="P:FISCA.LogAgent.ActionRecord.ServerTime">
+            <summary>
+            伺服器時間
+            </summary>
+        </member>
+        <member name="P:FISCA.LogAgent.ActionRecord.ActionBy">
+            <summary>
+            動作物件
+            </summary>
+        </member>
+        <member name="P:FISCA.LogAgent.ActionRecord.Description">
+            <summary>
+            詳細描述
+            </summary>
+        </member>
+        <member name="P:FISCA.LogAgent.ActionRecord.ClientInfo">
+            <summary>
+            客戶端資訊
+            </summary>
+        </member>
+        <member name="P:FISCA.LogAgent.ActionRecord.ActionType">
+            <summary>
+            動作類型, 分為Import(此紀錄來自於批次匯入動作)與Record(此紀錄來自於單筆記錄)兩種。
+            </summary>
+        </member>
+        <member name="T:FISCA.LogAgent.AccessLayer.FiscaAccessLayer">
+            <summary>
+            FISCA 專用資料存取層物件
+            </summary>
+        </member>
+        <member name="T:FISCA.LogAgent.AccessLayer.ILogAccessLayer">
+            <summary>
+            紀錄資料存取層
+            </summary>
+        </member>
+        <member name="M:FISCA.LogAgent.AccessLayer.ILogAccessLayer.GetActorLog(System.DateTime,System.DateTime,System.String)">
+            <summary>
+            查詢指定使用者之操作紀錄。
+            </summary>
+            <param name="from">開始時間</param>
+            <param name="to">結束時間</param>
+            <param name="actor">操作人帳號</param>
+            <returns>紀錄資料集</returns>
+        </member>
+        <member name="M:FISCA.LogAgent.AccessLayer.ILogAccessLayer.GetTargetLog(System.DateTime,System.DateTime,System.String,System.String)">
+            <summary>
+            查詢指定標的之資料紀錄。
+            </summary>
+            <param name="from">開始時間</param>
+            <param name="to">結束時間</param>
+            <param name="TargetCategory">標的分類</param>
+            <param name="TargetID">標的識別碼</param>
+            <returns>紀錄資料集</returns>
+        </member>
+        <member name="M:FISCA.LogAgent.AccessLayer.ILogAccessLayer.GetActionByLog(System.DateTime,System.DateTime,System.String)">
+            <summary>
+            查詢指定動作物件之操作紀錄。
+            </summary>
+            <param name="from">開始時間</param>
+            <param name="to">結束時間</param>
+            <param name="actionBy">動作物件名稱</param>
+            <returns>紀錄資料集</returns>
+        </member>
+        <member name="M:FISCA.LogAgent.AccessLayer.ILogAccessLayer.Log(FISCA.LogAgent.ActionRecord)">
+            <summary>
+            紀錄單筆資料
+            </summary>
+            <param name="record">紀錄資料</param>
+        </member>
+        <member name="M:FISCA.LogAgent.AccessLayer.ILogAccessLayer.BatchLog(System.Collections.Generic.IEnumerable{FISCA.LogAgent.ActionRecord})">
+            <summary>
+            匯入紀錄資料
+            </summary>
+            <param name="records">紀錄資料集</param>
+        </member>
+        <member name="M:FISCA.LogAgent.AccessLayer.FiscaAccessLayer.GetActorLog(System.DateTime,System.DateTime,System.String)">
+            <summary>
+            查詢指定使用者之操作紀錄。
+            </summary>
+            <param name="from">開始時間</param>
+            <param name="to">結束時間</param>
+            <param name="actor">操作人帳號</param>
+            <returns>紀錄資料集</returns>
+        </member>
+        <member name="M:FISCA.LogAgent.AccessLayer.FiscaAccessLayer.GetTargetLog(System.DateTime,System.DateTime,System.String,System.String)">
+            <summary>
+            查詢指定標的之資料紀錄。
+            </summary>
+            <param name="from">開始時間</param>
+            <param name="to">結束時間</param>
+            <param name="TargetCategory">標的分類</param>
+            <param name="TargetID">標的識別碼</param>
+            <returns>紀錄資料集</returns>
+        </member>
+        <member name="M:FISCA.LogAgent.AccessLayer.FiscaAccessLayer.GetActionByLog(System.DateTime,System.DateTime,System.String)">
+            <summary>
+            查詢指定動作物件之操作紀錄。
+            </summary>
+            <param name="from">開始時間</param>
+            <param name="to">結束時間</param>
+            <param name="actionBy">動作物件名稱</param>
+            <returns>紀錄資料集</returns>
+        </member>
+        <member name="M:FISCA.LogAgent.AccessLayer.FiscaAccessLayer.Log(FISCA.LogAgent.ActionRecord)">
+            <summary>
+            紀錄單筆資料
+            </summary>
+            <param name="record">紀錄資料</param>
+        </member>
+        <member name="M:FISCA.LogAgent.AccessLayer.FiscaAccessLayer.BatchLog(System.Collections.Generic.IEnumerable{FISCA.LogAgent.ActionRecord})">
+            <summary>
+            匯入紀錄資料
+            </summary>
+            <param name="records">紀錄資料集</param>
+        </member>
+        <member name="T:FISCA.LogAgent.ActionRecordCollection">
+            <summary>
+            紀錄集合物件
+            </summary>
+        </member>
+        <member name="M:FISCA.LogAgent.ActionRecordCollection.#ctor(System.Collections.Generic.IEnumerable{FISCA.LogAgent.ActionRecord})">
+            <summary>
+            建構子
+            </summary>
+            <param name="records">物件集合</param>
+        </member>
+        <member name="M:FISCA.LogAgent.ActionRecordCollection.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:FISCA.LogAgent.ActionRecordCollection.Add(FISCA.LogAgent.ActionRecord)">
+            <summary>
+            新增紀錄(僅在此物件中)
+            </summary>
+            <param name="record">紀錄</param>
+        </member>
+        <member name="M:FISCA.LogAgent.ActionRecordCollection.Filter(FISCA.LogAgent.IFilter)">
+            <summary>
+            過濾。
+            用戶端可自行實作 IFilter 介面來決定如何在用戶端篩選自己所要的資料。
+            如以用戶端資訊來過濾。
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.LogAgent.ActionRecordCollection.GetEnumerator">
+            <summary>
+            繼承來的
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:FISCA.LogAgent.IFilter">
+            <summary>
+            過濾器
+            </summary>
+        </member>
+        <member name="M:FISCA.LogAgent.IFilter.Valid(FISCA.LogAgent.ActionRecord)">
+            <summary>
+            判斷該筆資料是否通過篩選
+            </summary>
+            <param name="record">欲篩選的資料</param>
+            <returns>是否通過篩選</returns>
+        </member>
+        <member name="T:FISCA.LogAgent.ApplicationLog">
+            <summary>
+            FISCA 專用ApplicationLog物件, 用來存取應用程式操件紀錄。
+            </summary>
+        </member>
+        <member name="M:FISCA.LogAgent.ApplicationLog.Log(System.String,System.String)">
+            <summary>
+            記錄(無動作分類與特定目標之記錄)。
+            </summary>
+            <param name="actionBy">動作物件名稱(Ex : "社團活動模組.會員管理")</param>
+            <param name="description">詳細描述。</param>
+            <example>示範如何使用Log 方法來記錄
+            <code>
+            using FISCA;
+            
+            class TestClass
+            {
+                  void DoSomething()
+                  {
+                      Application.Log("社團活動模組.會員管理","刪除所有會員資料。");
+                  }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:FISCA.LogAgent.ApplicationLog.Log(System.String,System.String,System.String)">
+            <summary>
+            記錄(無特定目標之紀錄)。
+            </summary>
+            <param name="actionBy">動作物件名稱(Ex : "社團活動模組.會員管理")</param>
+            <param name="action">動作分類，如新增/修改/匯入資料。</param>
+            <param name="description">詳細描述。</param>
+            <example>示範如何使用Log 方法來記錄
+            <code>
+            using FISCA;
+            
+            class TestClass
+            {
+                  void DoSomething()
+                  {
+                      Application.Log("社團活動模組.會員管理","變更會員","刪除所有會員資料。");
+                  }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:FISCA.LogAgent.ApplicationLog.Log(System.String,System.String,System.String,System.String)">
+            <summary>
+            記錄(不記錄動作分類)
+            </summary>
+            <param name="actionBy">動作物件名稱(Ex : "社團活動模組.會員管理")</param>
+            <param name="targetCategory">目標分類, 如 student/teacher/class .....</param>
+            <param name="targetID">目標識別碼</param>
+            <param name="description">詳細描述</param>
+            <example>示範如何使用Log 方法來記錄
+            <code>
+            using FISCA;
+            
+            class TestClass
+            {
+                  void DoSomething()
+                  {
+                      Application.Log("社團活動模組.會員管理","會員","21","會員『尤小志』於2009/7/22 18:11:21 繳納會費費500元。");
+                  }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:FISCA.LogAgent.ApplicationLog.Log(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            記錄
+            </summary>
+            <param name="actionBy">動作物件名稱(Ex : "社團活動模組.會員管理")</param>
+            <param name="action">動作分類，如新增/修改/匯入資料, 由模組自行定義。</param>
+            <param name="targetCategory">目標分類, 如 student/teacher/class .....</param>
+            <param name="targetID">目標識別碼</param>
+            <param name="description">詳細描述</param>
+            <example>示範如何使用Log 方法來記錄
+            <code>
+            using FISCA;
+            
+            class TestClass
+            {
+                  void DoSomething()
+                  {
+                      Application.Log("社團活動模組.會員管理","繳費","會員","21","會員『尤小志』於2009/7/22 18:11:21 繳納會費費500元。");
+                  }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:FISCA.LogAgent.ApplicationLog.CreateLogFinderInstance">
+            <summary>
+            建立LogFinder的實體物件。
+            此物件可輔助以多執行緒之方式取出紀錄資料。
+            </summary>
+            <returns>LogFinder的實體物件</returns>
+            <example>示範如何使用Log 方法來記錄
+            <code>
+            using FISCA;
+            
+            class TestClass
+            {
+                  private LogFinder _logFinder;
+                  
+                  void DoSomething()
+                  {
+                      _logFinder = Application.CreateLogFinderInstance();
+                      _logFinder.FindActorLog(DateTime.MinValue,DateTime.MaxValue, "UserAccount");
+                  }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:FISCA.LogAgent.ApplicationLog.CreateLogSaverInstance">
+            <summary>
+            建立LogSaver的實體物件。
+            此物建將輔助以多執緒之方式記錄資料。
+            並可處理批次匯入記錄處理。
+            </summary>
+            <returns>LogSaver的實體物件</returns>
+            <example>示範如何使用Log 方法來記錄
+            <code>
+            using FISCA;
+            
+            class TestClass
+            {
+                  private LogSaver _logSaver;
+                  
+                  void DoSomething()
+                  {
+                      _logSaver = Application.CreateLogSaverInstance();
+                      _logSaver.Log("社團活動模組.會員管理","刪除所有會員資料。");
+                  }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:FISCA.LogAgent.ClientInfo">
+            <summary>
+            取得用戶端資訊物件
+            </summary>
+        </member>
+        <member name="M:FISCA.LogAgent.ClientInfo.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:FISCA.LogAgent.ClientInfo.#ctor(System.Xml.XmlElement)">
+            <summary>
+            建構子
+            </summary>
+            <param name="element">含有符合Client規格之Xml節點</param>
+        </member>
+        <member name="M:FISCA.LogAgent.ClientInfo.OutputResult">
+            <summary>
+            將取得資訊輸出成XML節點
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FISCA.LogAgent.ClientInfo.GetCurrentClientInfo">
+            <summary>
+            取得目前用戶端資訊
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FISCA.LogAgent.ClientInfo.HostName">
+            <summary>
+            主機名稱
+            </summary>
+        </member>
+    </members>
+</doc>

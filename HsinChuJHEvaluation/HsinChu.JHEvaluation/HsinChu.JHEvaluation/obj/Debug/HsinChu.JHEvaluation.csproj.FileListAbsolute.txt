@@ -1,0 +1,69 @@
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\ResolveAssemblyReference.cache
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.AssessmentSetupManager.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.AssessmentSetupManagerControls.AssessmentNameEditor.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.CheckSaveForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.CourseScoreInputForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.EduAdminExtendControls.Ribbon.CourseScoreStatusForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.Properties.Resources.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.CourseScoreItem.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.CourseScoreItemRelated.CreateForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.CourseScoreItemRelated.ScoreInputForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.SemesterScoreItemRelated.QuickInputSemesterScoreForm.resources
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\GenerateResource.read.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\GenerateResource.write.1.tlog
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\ischool\bin\Debug\HsinChu.JHEvaluation.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\ischool\bin\Debug\HsinChu.JHEvaluation.pdb
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.pdb
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\bin\Debug\HsinChu.JHEvaluation.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation\HsinChu.JHEvaluation\bin\Debug\HsinChu.JHEvaluation.pdb
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\bin\Debug\HsinChu.JHEvaluation.dll
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\bin\Debug\HsinChu.JHEvaluation.pdb
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.AssessmentSetupManager.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.AssessmentSetupManagerControls.AssessmentNameEditor.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.CheckSaveForm.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.CourseScoreInputForm.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.EduAdminExtendControls.Ribbon.CourseScoreStatusForm.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.Properties.Resources.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.CourseScoreItem.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.CourseScoreItemRelated.CreateForm.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.CourseScoreItemRelated.ScoreInputForm.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.SemesterScoreItemRelated.QuickInputSemesterScoreForm.resources
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.csproj.GenerateResource.Cache
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.dll
+D:\GitProjModules\ischoolDesktop\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.pdb
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\bin\Debug\HsinChu.JHEvaluation.dll
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\bin\Debug\HsinChu.JHEvaluation.pdb
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\bin\Debug\K12.Data.dll
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\bin\Debug\K12.Data.pdb
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\bin\Debug\K12.Data.xml
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.csprojResolveAssemblyReference.cache
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.AssessmentSetupManager.resources
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.AssessmentSetupManagerControls.AssessmentNameEditor.resources
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.CheckSaveForm.resources
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.CourseScoreInputForm.resources
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.EduAdminExtendControls.Ribbon.CourseScoreStatusForm.resources
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.Properties.Resources.resources
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.CourseScoreItem.resources
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.CourseScoreItemRelated.CreateForm.resources
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.CourseScoreItemRelated.ScoreInputForm.resources
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.SemesterScoreItemRelated.QuickInputSemesterScoreForm.resources
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.csproj.GenerateResource.Cache
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.dll
+F:\WindowsData\Git\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.pdb
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\bin\Debug\HsinChu.JHEvaluation.dll
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\bin\Debug\HsinChu.JHEvaluation.pdb
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.csprojResolveAssemblyReference.cache
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.AssessmentSetupManager.resources
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.AssessmentSetupManagerControls.AssessmentNameEditor.resources
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.CheckSaveForm.resources
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.CourseScoreInputForm.resources
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.EduAdminExtendControls.Ribbon.CourseScoreStatusForm.resources
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.Properties.Resources.resources
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.CourseScoreItem.resources
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.CourseScoreItemRelated.CreateForm.resources
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.CourseScoreItemRelated.ScoreInputForm.resources
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.StudentExtendControls.SemesterScoreItemRelated.QuickInputSemesterScoreForm.resources
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.csproj.GenerateResource.Cache
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.dll
+D:\GitHub2\國中成績系統\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.pdb

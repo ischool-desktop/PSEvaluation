@@ -1,0 +1,6 @@
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation.Data\HsinChu.JHEvaluation.Data\obj\Debug\ResolveAssemblyReference.cache
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\ischool\bin\Debug\HsinChu.JHEvaluation.Data.xml
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\ischool\bin\Debug\HsinChu.JHEvaluation.Data.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\ischool\bin\Debug\HsinChu.JHEvaluation.Data.pdb
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation.Data\HsinChu.JHEvaluation.Data\obj\Debug\HsinChu.JHEvaluation.Data.dll
+D:\TFS2010\ischoolteam\ischool_Junior with FISCA\Modules\HsinChu.JHEvaluation.Data\HsinChu.JHEvaluation.Data\obj\Debug\HsinChu.JHEvaluation.Data.pdb
