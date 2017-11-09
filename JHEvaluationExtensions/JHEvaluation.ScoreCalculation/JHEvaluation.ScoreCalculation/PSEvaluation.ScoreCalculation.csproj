@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D4340A77-DF5D-4017-B639-E9A48E169E76}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JHEvaluation.ScoreCalculation</RootNamespace>
+    <AssemblyName>PSEvaluation.ScoreCalculation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/JHEvaluation.ScoreCalculation/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'LocalDebug|AnyCPU' ">
+    <OutputPath>..\..\..\ischool\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LocalDebug</DefineConstants>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.BarCode">
+      <HintPath>Library\Aspose.BarCode.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aspose.Cells, Version=4.3.0.0, Culture=neutral, PublicKeyToken=9a40d5a4b59e5256, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Aspose.Cells.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>Library\Aspose.Words.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Campus.Configuration">
+      <HintPath>Library\Campus.Configuration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Campus.Report">
+      <HintPath>Library\Campus.Report.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DataRationality">
+      <HintPath>Library\DataRationality.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="FISCA, Version=2.5.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Authentication, Version=1.9.0.18, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.Authentication.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Data, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Deployment, Version=1.0.0.13, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.Deployment.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Deployment.Administration, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.Deployment.Administration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAClient, Version=1.0.1.16, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.DSAClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAUtil, Version=3.9.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.DSAUtil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.LogAgent, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.LogAgent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Permission, Version=1.2.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.Permission.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Presentation, Version=1.1.0.19, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.UDT">
+      <HintPath>Library\FISCA.UDT.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Framework, Version=1.0.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IntelliSchool.DSA.ClientFramework">
+      <HintPath>Library\IntelliSchool.DSA.ClientFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool, Version=1.0.3.15, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\JHSchool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.Affair, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\JHSchool.Affair.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.Behavior">
+      <HintPath>Library\JHSchool.Behavior.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.Data, Version=2.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\JHSchool.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K12.Data, Version=2.0.0.8, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\K12.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K12.Presentation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\K12.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PSSchool.Evaluation">
+      <HintPath>Library\PSSchool.Evaluation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.API.PlugIn">
+      <HintPath>Library\SmartSchool.API.PlugIn.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.Common.DotNetBar">
+      <HintPath>Library\SmartSchool.Common.DotNetBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.Customization.PlugIn">
+      <HintPath>Library\SmartSchool.Customization.PlugIn.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.ErrorReporting">
+      <HintPath>Library\SmartSchool.ErrorReporting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\ischool\bin\Debug\System.Core.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BigFunction\AttendScoreSaver.cs" />
+    <Compile Include="BigFunction\CalculationRuleReader.cs" />
+    <Compile Include="BigFunction\SemesterHistoryReader.cs" />
+    <Compile Include="BigFunction\SemestersScoreReader.cs" />
+    <Compile Include="BigFunction\SixSemesterHistoryValidator.cs" />
+    <Compile Include="BigFunction\SixSemesterDomainScoreValidator.cs" />
+    <Compile Include="BigFunction\GradScoreReader.cs" />
+    <Compile Include="BigFunction\GradScoreCalculator.cs" />
+    <Compile Include="BigFunction\GradScoreSaver.cs" />
+    <Compile Include="CalculationException.cs" />
+    <Compile Include="CalculationHelper.cs" />
+    <Compile Include="CalculationTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculationTest.Designer.cs">
+      <DependentUpon>CalculationTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BigFunction\AttendScoreCalculator.cs" />
+    <Compile Include="BigFunction\AttendScoreReader.cs" />
+    <Compile Include="BigFunction\SemesterScoreCalculator.cs" />
+    <Compile Include="BigFunction\SemesterScoreReader.cs" />
+    <Compile Include="BigFunction\SemesterScoreSaver.cs" />
+    <Compile Include="Calculation\ErrorViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculation\ErrorViewer.designer.cs">
+      <DependentUpon>ErrorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calculation\GraduationConditions\AbsenceAmountAllEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\AbsenceAmountAllFractionEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\AbsenceAmountEachEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\AbsenceAmountEachFractionEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\AbsenceAmountGraduateFractionEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\AbsenceAmountLastEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\AbsenceAmountLastFractionEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\AndEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\DailyBehaviorAllEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\DailyBehaviorEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\DailyBehaviorLastEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\DemeritAmountAllEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\DemeritAmountEachEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\DemeritAmountGraduateEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\DemeritAmountLastEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\GraduateDomainEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\GraduateDomainEval_backup.cs" />
+    <Compile Include="Calculation\GraduationConditions\LearnDomainAllEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\LearnDomainEachEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\LearnDomainLastEval.cs" />
+    <Compile Include="Calculation\GraduationConditions\OrEval.cs" />
+    <Compile Include="Calculation\HelperClass\DespToDegree.cs" />
+    <Compile Include="Calculation\HelperClass\Graduation.cs" />
+    <Compile Include="Calculation\HelperClass\InnerScoreCalculator.cs" />
+    <Compile Include="Calculation\HelperClass\ScoreCalculator.cs" />
+    <Compile Include="Calculation\Interface\EvaluateFactory.cs" />
+    <Compile Include="Calculation\Interface\EvaluationResult.cs" />
+    <Compile Include="Calculation\Interface\IEvaluateFactory.cs" />
+    <Compile Include="Calculation\Interface\IEvaluative.cs" />
+    <Compile Include="Calculation\Interface\ResultDetail.cs" />
+    <Compile Include="DomainTextScoreSumByGradeyear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DomainTextScoreSumByGradeyear.Designer.cs">
+      <DependentUpon>DomainTextScoreSumByGradeyear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DomainTextScoreSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DomainTextScoreSum.Designer.cs">
+      <DependentUpon>DomainTextScoreSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicatedSubjectException.cs" />
+    <Compile Include="DuplicatedSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DuplicatedSubject.Designer.cs">
+      <DependentUpon>DuplicatedSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningDomainScoreCalculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LearningDomainScoreCalculate.Designer.cs">
+      <DependentUpon>LearningDomainScoreCalculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LearningDomainScoreCalculateByGradeyear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LearningDomainScoreCalculateByGradeyear.Designer.cs">
+      <DependentUpon>LearningDomainScoreCalculateByGradeyear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DomainScoreCalculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DomainScoreCalculate.Designer.cs">
+      <DependentUpon>DomainScoreCalculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DomainScoreCalculateByGradeyear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DomainScoreCalculateByGradeyear.Designer.cs">
+      <DependentUpon>DomainScoreCalculateByGradeyear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EffortMap.cs" />
+    <Compile Include="IStatusReporter.cs" />
+    <Compile Include="LogData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FunctionSpliter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreStruct\AttendScore.cs" />
+    <Compile Include="ScoreStruct\ScoreCollections.cs" />
+    <Compile Include="ScoreStruct\GraduateScore.cs" />
+    <Compile Include="ScoreStruct\IScore.cs" />
+    <Compile Include="ScoreStruct\SemesterScore.cs" />
+    <Compile Include="ScoreStruct\SemesterScoreCollection.cs" />
+    <Compile Include="ScoreStruct\SemesterSubjectScore.cs" />
+    <Compile Include="ScoreStruct\SemesterDomainScore.cs" />
+    <Compile Include="SemesterData.cs" />
+    <Compile Include="SemesterHistory\BatchSemesterHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SemesterHistory\BatchSemesterHistory.designer.cs">
+      <DependentUpon>BatchSemesterHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SemesterHistory\DAL\DALTransfer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SemesterHistory\DAL\SemesterHistoryItemEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SemesterHistory\PermRecLogProcess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SemesterSelector.cs" />
+    <Compile Include="StudentExtendControls\CourseScoreItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentExtendControls\CourseScoreItem.Designer.cs">
+      <DependentUpon>CourseScoreItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentExtendControls\CourseScoreItemControls\CreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentExtendControls\CourseScoreItemControls\CreateForm.Designer.cs">
+      <DependentUpon>CreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentExtendControls\CourseScoreItemControls\ScoreInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentExtendControls\CourseScoreItemControls\ScoreInputForm.Designer.cs">
+      <DependentUpon>ScoreInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentExtendControls\GraduationScoreItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentExtendControls\GraduationScoreItem.Designer.cs">
+      <DependentUpon>GraduationScoreItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentExtendControls\Ribbon\CheckStudentSemHistoryScoreRAT.cs" />
+    <Compile Include="StudentExtendControls\Ribbon\Config.cs" />
+    <Compile Include="StudentExtendControls\Ribbon\GraduationInspectWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentExtendControls\Ribbon\GraduationInspectWizard.Designer.cs">
+      <DependentUpon>GraduationInspectWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentExtendControls\Ribbon\GraduationPredictReport.cs" />
+    <Compile Include="StudentExtendControls\Ribbon\GraduationPredictReportControls\ConditionalEvaluateFactory.cs" />
+    <Compile Include="StudentExtendControls\Ribbon\GraduationPredictReportControls\GraduationPredictReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentExtendControls\Ribbon\GraduationPredictReportControls\GraduationPredictReportForm.Designer.cs">
+      <DependentUpon>GraduationPredictReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentExtendControls\Ribbon\GraduationPredictReportControls\PrintConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentExtendControls\Ribbon\GraduationPredictReportControls\PrintConfigForm.Designer.cs">
+      <DependentUpon>PrintConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentExtendControls\Ribbon\GraduationPredictReportControls\StudentDomainResult.cs" />
+    <Compile Include="StudentExtendControls\Ribbon\GraduationPredictReportControls\StudentGraduationPredictData.cs" />
+    <Compile Include="StudentExtendControls\Ribbon\GraduationScoreCalculation.cs" />
+    <Compile Include="StudentExtendControls\Ribbon\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="StudentExtendControls\SemesterScoreItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentScore.cs" />
+    <Compile Include="StudentsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentsView.Designer.cs">
+      <DependentUpon>StudentsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectScoreCalculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectScoreCalculate.Designer.cs">
+      <DependentUpon>SubjectScoreCalculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectScoreCalculateByGradeyear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectScoreCalculateByGradeyear.Designer.cs">
+      <DependentUpon>SubjectScoreCalculateByGradeyear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UniqueSet.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="GraduateScoreCalculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraduateScoreCalculate.Designer.cs">
+      <DependentUpon>GraduateScoreCalculate.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CalculationTest.resx">
+      <DependentUpon>CalculationTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calculation\ErrorViewer.resx">
+      <DependentUpon>ErrorViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DomainTextScoreSumByGradeyear.resx">
+      <DependentUpon>DomainTextScoreSumByGradeyear.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DomainTextScoreSum.resx">
+      <DependentUpon>DomainTextScoreSum.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DuplicatedSubject.resx">
+      <DependentUpon>DuplicatedSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningDomainScoreCalculate.resx">
+      <DependentUpon>LearningDomainScoreCalculate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LearningDomainScoreCalculateByGradeyear.resx">
+      <DependentUpon>LearningDomainScoreCalculateByGradeyear.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DomainScoreCalculate.resx">
+      <DependentUpon>DomainScoreCalculate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DomainScoreCalculateByGradeyear.resx">
+      <DependentUpon>DomainScoreCalculateByGradeyear.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SemesterHistory\BatchSemesterHistory.resx">
+      <DependentUpon>BatchSemesterHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentExtendControls\CourseScoreItem.resx">
+      <DependentUpon>CourseScoreItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentExtendControls\CourseScoreItemControls\CreateForm.resx">
+      <DependentUpon>CreateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentExtendControls\CourseScoreItemControls\ScoreInputForm.resx">
+      <DependentUpon>ScoreInputForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentExtendControls\GraduationScoreItem.resx">
+      <DependentUpon>GraduationScoreItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentExtendControls\Ribbon\GraduationInspectWizard.resx">
+      <DependentUpon>GraduationInspectWizard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentExtendControls\Ribbon\GraduationPredictReportControls\PrintConfigForm.resx">
+      <DependentUpon>PrintConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentExtendControls\Ribbon\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentsView.resx">
+      <DependentUpon>StudentsView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectScoreCalculate.resx">
+      <DependentUpon>SubjectScoreCalculate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectScoreCalculateByGradeyear.resx">
+      <DependentUpon>SubjectScoreCalculateByGradeyear.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraduateScoreCalculate.resx">
+      <DependentUpon>GraduateScoreCalculate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calc_save_64.png" />
+    <None Include="Resources\功能變數.doc" />
+    <None Include="Resources\未達畢業標準通知單樣板.doc" />
+    <None Include="Resources\未達畢業標準學生名冊template.xls" />
+    <None Include="StudentExtendControls\Ribbon\Resources\未達畢業標準學生名冊template.xls" />
+    <None Include="StudentExtendControls\Ribbon\Resources\未達畢業標準通知單樣板.doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduation_write_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduation_zoom_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Library\Aspose.Cells.dll" />
+    <Content Include="Library\Aspose.Cells.xml" />
+    <Content Include="Library\DevComponents.DotNetBar2.dll" />
+    <Content Include="Library\DevComponents.DotNetBar2.xml" />
+    <Content Include="Library\FISCA.Authentication.dll" />
+    <Content Include="Library\FISCA.Authentication.pdb" />
+    <Content Include="Library\FISCA.Authentication.xml" />
+    <Content Include="Library\FISCA.Data.dll" />
+    <Content Include="Library\FISCA.Data.pdb" />
+    <Content Include="Library\FISCA.Data.xml" />
+    <Content Include="Library\FISCA.Deployment.Administration.dll" />
+    <Content Include="Library\FISCA.Deployment.Administration.pdb" />
+    <Content Include="Library\FISCA.Deployment.Administration.xml" />
+    <Content Include="Library\FISCA.Deployment.dll" />
+    <Content Include="Library\FISCA.Deployment.pdb" />
+    <Content Include="Library\FISCA.Deployment.xml" />
+    <Content Include="Library\FISCA.dll" />
+    <Content Include="Library\FISCA.DSAClient.dll" />
+    <Content Include="Library\FISCA.DSAClient.pdb" />
+    <Content Include="Library\FISCA.DSAClient.xml" />
+    <Content Include="Library\FISCA.DSAUtil.dll" />
+    <Content Include="Library\FISCA.DSAUtil.pdb" />
+    <Content Include="Library\FISCA.DSAUtil.xml" />
+    <Content Include="Library\FISCA.LogAgent.dll" />
+    <Content Include="Library\FISCA.LogAgent.pdb" />
+    <Content Include="Library\FISCA.LogAgent.xml" />
+    <Content Include="Library\FISCA.pdb" />
+    <Content Include="Library\FISCA.Permission.dll" />
+    <Content Include="Library\FISCA.Permission.pdb" />
+    <Content Include="Library\FISCA.Permission.xml" />
+    <Content Include="Library\FISCA.Presentation.dll" />
+    <Content Include="Library\FISCA.Presentation.pdb" />
+    <Content Include="Library\FISCA.Presentation.xml" />
+    <Content Include="Library\FISCA.xml" />
+    <Content Include="Library\Framework.dll" />
+    <Content Include="Library\Framework.pdb" />
+    <Content Include="Library\JHSchool.Affair.dll" />
+    <Content Include="Library\JHSchool.Affair.pdb" />
+    <Content Include="Library\JHSchool.Data.dll" />
+    <Content Include="Library\JHSchool.Data.pdb" />
+    <Content Include="Library\JHSchool.Data.xml" />
+    <Content Include="Library\JHSchool.dll" />
+    <Content Include="Library\JHSchool.Evaluation.dll" />
+    <Content Include="Library\JHSchool.Evaluation.pdb" />
+    <Content Include="Library\JHSchool.pdb" />
+    <Content Include="Library\K12.Data.dll" />
+    <Content Include="Library\K12.Data.pdb" />
+    <Content Include="Library\K12.Data.xml" />
+    <Content Include="Library\K12.Presentation.dll" />
+    <Content Include="Library\K12.Presentation.pdb" />
+    <Content Include="Library\K12.Presentation.xml" />
+    <Content Include="Resources\loading.gif" />
+    <Content Include="Resources\補考科目成績計算流程圖.png" />
+    <Content Include="Resources\補考科目成績計算流程文字.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
