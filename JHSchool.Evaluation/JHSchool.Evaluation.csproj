@@ -151,11 +151,6 @@
       <HintPath>library\JHSchool.Affair.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="JHSchool.Behavior, Version=1.0.14.3, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>library\JHSchool.Behavior.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="JHSchool.Data, Version=1.4.0.8, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>library\JHSchool.Data.dll</HintPath>
