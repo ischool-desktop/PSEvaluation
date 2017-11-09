@@ -1,0 +1,1126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{948FE24F-E461-4D7B-91D5-A4E8332A2AFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JHSchool.Evaluation</RootNamespace>
+    <AssemblyName>PSSchool.Evaluation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/JHSchool.Evaluation/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.BarCode, Version=2.3.2.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\Aspose.BarCode.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aspose.Cells, Version=4.3.0.0, Culture=neutral, PublicKeyToken=9a40d5a4b59e5256, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\Aspose.Cells.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aspose.Words, Version=4.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\Aspose.Words.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Campus.Configuration, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\Campus.Configuration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Campus.Report, Version=1.0.0.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\Campus.Report.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DataRationality, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\DataRationality.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="FISCA, Version=2.1.1.22, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\FISCA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Authentication, Version=1.9.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\FISCA.Authentication.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Data, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\FISCA.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAClient, Version=1.0.1.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\FISCA.DSAClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAUtil, Version=3.9.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\FISCA.DSAUtil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.LogAgent, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\FISCA.LogAgent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Presentation, Version=1.1.0.15, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\FISCA.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.UDT, Version=1.0.2.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\FISCA.UDT.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Framework, Version=1.0.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\Framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IntelliSchool.DSA.ClientFramework, Version=1.2.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\IntelliSchool.DSA.ClientFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool, Version=1.0.2.23, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\JHSchool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.Affair, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\JHSchool.Affair.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.Data, Version=1.4.0.8, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\JHSchool.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K12.Data, Version=1.9.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\K12.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K12.Presentation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\K12.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.API.PlugIn, Version=0.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\SmartSchool.API.PlugIn.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.Common.DotNetBar, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\SmartSchool.Common.DotNetBar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.Customization.PlugIn, Version=1.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\SmartSchool.Customization.PlugIn.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.ErrorReporting, Version=1.0.2.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\SmartSchool.ErrorReporting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AEInclude.cs" />
+    <Compile Include="AEIncludeRecord.cs" />
+    <Compile Include="AssessmentSetup.cs" />
+    <Compile Include="AssessmentSetupRecord.cs" />
+    <Compile Include="Calculation\ScoreCalculator.cs" />
+    <Compile Include="Calculation\SemesterData.cs" />
+    <Compile Include="ClassExtendControls\ClassBaseInfoItem_Extend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClassExtendControls\ClassBaseInfoItem_Extend.Designer.cs">
+      <DependentUpon>ClassBaseInfoItem_Extend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassExtendControls\Ribbon\CreateCoursesRelated\CreateClassCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassExtendControls\Ribbon\CreateCoursesRelated\CreateClassCourseForm.Designer.cs">
+      <DependentUpon>CreateClassCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassExtendControls\Ribbon\Score\SemsGoodStudentReport\DAL\ReportDAL.cs" />
+    <Compile Include="ClassExtendControls\Ribbon\Score\SemsGoodStudentReport\Data\ClassComparer.cs" />
+    <Compile Include="ClassExtendControls\Ribbon\Score\SemsGoodStudentReport\Data\ClassData.cs" />
+    <Compile Include="ClassExtendControls\Ribbon\Score\SemsGoodStudentReport\Data\ReportData.cs" />
+    <Compile Include="ClassExtendControls\Ribbon\Score\SemsGoodStudentReport\Data\StudentComparer.cs" />
+    <Compile Include="ClassExtendControls\Ribbon\Score\SemsGoodStudentReport\Data\StudentData.cs" />
+    <Compile Include="ClassExtendControls\Ribbon\Score\SemsGoodStudentReport\SemsGoodStudentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassExtendControls\Ribbon\Score\SemsGoodStudentReport\SemsGoodStudentReport.Designer.cs">
+      <DependentUpon>SemsGoodStudentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassExtendControls\Ribbon\StudinCourse\StuinCourse.cs">
+    </Compile>
+    <Compile Include="ClassExtendControls\Ribbon\StudinCourse\StudinCourse.cs">
+    </Compile>
+    <Compile Include="ClassExtendControls\Ribbon\StudinCourse\StudinCourse.Designer.cs">
+      <DependentUpon>StudinCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class_ExtendMethod.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\PeriodAbsenceSelectionFormNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\PeriodAbsenceSelectionFormNew.Designer.cs">
+      <DependentUpon>PeriodAbsenceSelectionFormNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\Talker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\Talker.Designer.cs">
+      <DependentUpon>Talker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorViewer.designer.cs">
+      <DependentUpon>ErrorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TempData.cs" />
+    <Compile Include="UIConfig.cs" />
+    <Compile Include="CourseExtendControls\NavViewNode.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\AddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\AddCourse.Designer.cs">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\SubjectCombinationConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\SubjectCombinationConfigForm.Designer.cs">
+      <DependentUpon>SubjectCombinationConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\SubjectCombinationRelated\PreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\SubjectCombinationRelated\PreviewForm.Designer.cs">
+      <DependentUpon>PreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\SubjectCombinationRelated\SubjectContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\SubjectCombinationRelated\SubjectContextMenuStrip.Designer.cs">
+      <DependentUpon>SubjectContextMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\TeacherCategoryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\TeacherCategoryView.Designer.cs">
+      <DependentUpon>TeacherCategoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Domain.cs" />
+    <Compile Include="Editor\GradScoreRecordEditor.cs" />
+    <Compile Include="Editor\ScoreCalcRuleRecordEditor.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\CourseScoreStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\CourseScoreStatusForm.Designer.cs">
+      <DependentUpon>CourseScoreStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\DomainListTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\DomainListTable.Designer.cs">
+      <DependentUpon>DomainListTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\EffortDegreeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\EffortDegreeTable.Designer.cs">
+      <DependentUpon>EffortDegreeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ProgramPlanRelated\DataGridViewExtendedControls.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleManager.Designer.cs">
+      <DependentUpon>ScoreCalcRuleManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\PeriodAbsencePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\PeriodAbsencePanel.Designer.cs">
+      <DependentUpon>PeriodAbsencePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\PeriodAbsenceSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\PeriodAbsenceSelectionForm.Designer.cs">
+      <DependentUpon>PeriodAbsenceSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\ScoreCalcRuleCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\ScoreCalcRuleCreator.Designer.cs">
+      <DependentUpon>ScoreCalcRuleCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreMappingTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ScoreMappingTable.Designer.cs">
+      <DependentUpon>ScoreMappingTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\SpecialEduDomainTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\SpecialEduDomainTable.Designer.cs">
+      <DependentUpon>SpecialEduDomainTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\SubjectListTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\SubjectListTable.Designer.cs">
+      <DependentUpon>SubjectListTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\TextMappingTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\TextMappingTable.Designer.cs">
+      <DependentUpon>TextMappingTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudentForm.Designer.cs">
+      <DependentUpon>TransferStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\DAL\TransferStudentDAL.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\Absence\AbsenceData.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\Absence\AbsenceItem.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\DailyBehavior\DailyBehaviorData.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\DailyBehavior\DailyBehaviorItem.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\DailyLifeRecommend\DailyLifeRecommendData.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\DailyLifeRecommend\DailyLifeRecommendItem.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\MeritDetail\MeritDetailData.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\MeritDetail\MeritDetailItem.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\MeritStatistic\MeritStatisticData.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\MeritStatistic\MeritStatisticItem.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\GroupActivity\GroupActivityData.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\GroupActivity\GroupActivityItem.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\PublicService\PublicServiceItem.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\PublicService\PublicServiceData.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\SchoolSpecial\SchoolSpecialData.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\SchoolSpecial\SchoolSpecialItem.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\SemesterHistory\SemesterHistory.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Data\TransferStudentData.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\IStep.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Step1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Step1.Designer.cs">
+      <DependentUpon>Step1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Step2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Step2.Designer.cs">
+      <DependentUpon>Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Step3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Step3.Designer.cs">
+      <DependentUpon>Step3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Step4.cs">
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\TransferStudent\Step4.Designer.cs">
+      <DependentUpon>Step4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feature\EditScoreCalcRule.cs" />
+    <Compile Include="Feature\QueryScoreCalcRule.cs" />
+    <Compile Include="GradScore.cs" />
+    <Compile Include="GradScoreRecord.cs" />
+    <Compile Include="ImportExport\Course\ExportCourseStudents.cs" />
+    <Compile Include="ImportExport\Course\ExportStudentV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Course\ExportStudentV2.designer.cs">
+      <DependentUpon>ExportStudentV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\Course\ImportCourseStudents.cs" />
+    <Compile Include="ImportExport\Course\ImportStudentV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Course\ImportStudentV2.designer.cs">
+      <DependentUpon>ImportStudentV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\ExportCourseScore.cs" />
+    <Compile Include="ImportExport\ExportGradScore.cs" />
+    <Compile Include="ImportExport\ExportSemesterHistory.cs" />
+    <Compile Include="ImportExport\ExportStudentV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\ExportStudentV2.designer.cs">
+      <DependentUpon>ExportStudentV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\ImportCourseScore.cs" />
+    <Compile Include="ImportExport\ImportGradScore.cs" />
+    <Compile Include="ImportExport\ImportSemesterHistory.cs" />
+    <Compile Include="ImportExport\ImportStudentV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\ImportStudentV2.designer.cs">
+      <DependentUpon>ImportStudentV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legacy\ErrorViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Legacy\ErrorViewer.Designer.cs">
+      <DependentUpon>ErrorViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapping\DegreeMapper.cs" />
+    <Compile Include="Mapping\PerformanceDegreeMapper.cs" />
+    <Compile Include="Mapping\SpecialEduDomainMapper.cs" />
+    <Compile Include="MoralScore.cs" />
+    <Compile Include="ClassExtendControls\Ribbon\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\BasicInfoItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\BasicInfoItem.designer.cs">
+      <DependentUpon>BasicInfoItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\ElectronicPaperItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\ElectronicPaperItem.designer.cs">
+      <DependentUpon>ElectronicPaperItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\CourseScoreInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\CourseScoreInputForm.Designer.cs">
+      <DependentUpon>CourseScoreInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScore.cs">
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScore.designer.cs">
+      <DependentUpon>EditCourseScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScoreControls\CellCollection.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScoreControls\DataGridViewHelper.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScoreControls\ICell.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScoreControls\IColumnHeader.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScoreControls\IDataProvider.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScoreControls\IExamCell.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScoreControls\IStandard.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScoreControls\IStudentCell.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScoreControls\RowCollection.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScoreControls\RowEntity.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScoreControls\StandardFactory.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\ExamManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\ExamManager.designer.cs">
+      <DependentUpon>ExamManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\Course.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\CourseDataLoader.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\CourseScoreCalculate.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\CourseScoreUpdater.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\CourseSummaryCalculate.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\ExamTemplate.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\Forms\CalculateProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\Forms\CalculateProgress.Designer.cs">
+      <DependentUpon>CalculateProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\Forms\CalculateResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\Forms\CalculateResult.Designer.cs">
+      <DependentUpon>CalculateResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\CalculateionWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\CalculateionWizard.Designer.cs">
+      <DependentUpon>CalculateionWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\IProgressUI.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\LackScoreExporter.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\SCAttend.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\SCETake.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\Student.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\CalculationWizard\TEInclude.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\AssessmentSetupManagerControls\Consts.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\AssessmentSetupManagerControls\Exam.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\AssessmentSetupManagerControls\ExamCollection.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\AssessmentSetupManagerControls\Template.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\AssessmentSetupManagerControls\TemplateCollection.cs" />
+    <Compile Include="CourseExtendControls\Ribbon\AssessmentSetupManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\AssessmentSetupManager.Designer.cs">
+      <DependentUpon>AssessmentSetupManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\AssessmentSetupManagerControls\AssessmentNameEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\AssessmentSetupManagerControls\AssessmentNameEditor.Designer.cs">
+      <DependentUpon>AssessmentNameEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScoreControls\DataGridViewItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\Ribbon\EditCourseScoreControls\DataGridViewItem.designer.cs">
+      <DependentUpon>DataGridViewItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\SCAttendItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\SCAttendItem.designer.cs">
+      <DependentUpon>SCAttendItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseExtendControls\ScoreCalcSetupItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CourseExtendControls\ScoreCalcSetupItem.designer.cs">
+      <DependentUpon>ScoreCalcSetupItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLScoreConfig.cs" />
+    <Compile Include="Editor\AEIncludeRecordEditor.cs" />
+    <Compile Include="Editor\MoralScoreRecordEditor.cs" />
+    <Compile Include="Editor\ExamRecordEditor.cs" />
+    <Compile Include="Editor\ProgramPlanRecordEditor.cs" />
+    <Compile Include="Editor\SCAttendRecordEditor.cs" />
+    <Compile Include="Editor\SCETakeRecordEditor.cs" />
+    <Compile Include="Editor\TCInstructRecordEditor.cs" />
+    <Compile Include="Exam.cs" />
+    <Compile Include="ExamRecord.cs" />
+    <Compile Include="Feature\EditAEInclude.cs" />
+    <Compile Include="Feature\EditMoralScore.cs" />
+    <Compile Include="Feature\EditExam.cs" />
+    <Compile Include="Feature\EditProgramPlan.cs" />
+    <Compile Include="Feature\EditSCAttend.cs" />
+    <Compile Include="Feature\EditSCETake.cs" />
+    <Compile Include="Feature\EditTCInstruct.cs" />
+    <Compile Include="Feature\Legacy\AddCourse.cs" />
+    <Compile Include="Feature\Legacy\EditExam.cs" />
+    <Compile Include="Feature\Legacy\EditTemplate.cs" />
+    <Compile Include="Feature\Legacy\QueryExam.cs" />
+    <Compile Include="Feature\Legacy\QueryTemplate.cs" />
+    <Compile Include="Feature\QueryAEInclude.cs" />
+    <Compile Include="Feature\QueryMoralScore.cs" />
+    <Compile Include="Feature\QueryExam.cs" />
+    <Compile Include="Feature\QueryProgramPlan.cs" />
+    <Compile Include="Feature\QuerySCAttend.cs" />
+    <Compile Include="Feature\QuerySCETake.cs" />
+    <Compile Include="Feature\QueryTCInstruct.cs" />
+    <Compile Include="ClassExtendControls\Ribbon\CreateCoursesByProgramPlan.cs" />
+    <Compile Include="ClassExtendControls\Ribbon\CreateCoursesDirectly.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\ProgramPlanRelated\GraduationPlanCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ProgramPlanRelated\GraduationPlanCreator.designer.cs">
+      <DependentUpon>GraduationPlanCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ProgramPlanRelated\GraduationPlanEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ProgramPlanRelated\GraduationPlanEditor.designer.cs">
+      <DependentUpon>GraduationPlanEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ProgramPlanRelated\IGraduationPlanEditor.cs" />
+    <Compile Include="EduAdminExtendControls\Ribbon\ProgramPlanManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EduAdminExtendControls\Ribbon\ProgramPlanManager.Designer.cs">
+      <DependentUpon>ProgramPlanManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassExtendControls\Ribbon\CreateCoursesRelated\SelectSemesterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassExtendControls\Ribbon\CreateCoursesRelated\SelectSemesterForm.designer.cs">
+      <DependentUpon>SelectSemesterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoralScoreRecord.cs" />
+    <Compile Include="PeriodCredit.cs" />
+    <Compile Include="ProgramPlan.cs" />
+    <Compile Include="ProgramPlanRecord.cs" />
+    <Compile Include="Editor\AssessmentSetupRecordEditor.cs" />
+    <Compile Include="Editor\SemesterScoreRecordEditor.cs" />
+    <Compile Include="Feature\EditAssessmentSetup.cs" />
+    <Compile Include="Feature\EditStudent.cs" />
+    <Compile Include="Feature\Legacy\EditCourse.cs" />
+    <Compile Include="Feature\Legacy\QueryCourse.cs" />
+    <Compile Include="Feature\QueryAssessmentSetup.cs" />
+    <Compile Include="Feature\QueryStudent.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ranking\AbstractReport.cs" />
+    <Compile Include="Ranking\CombineReport.cs" />
+    <Compile Include="Ranking\Rank.cs" />
+    <Compile Include="Ranking\RankDataCollector.cs" />
+    <Compile Include="Ranking\SeparateAllReport.cs" />
+    <Compile Include="Ranking\SeparateTopReport.cs" />
+    <Compile Include="RatingFramework\IScoreParser.cs" />
+    <Compile Include="RatingFramework\IStudent.cs" />
+    <Compile Include="RatingFramework\Place.cs" />
+    <Compile Include="RatingFramework\PlaceCollection.cs" />
+    <Compile Include="RatingFramework\PlaceOptions.cs" />
+    <Compile Include="RatingFramework\RatingScope.cs" />
+    <Compile Include="SCAttend.cs" />
+    <Compile Include="SCAttendRecord.cs" />
+    <Compile Include="SCETakeRecord.cs" />
+    <Compile Include="ScoreCalcRule.cs" />
+    <Compile Include="ScoreCalcRuleRecord.cs" />
+    <Compile Include="SemesterHistoryUtility.cs" />
+    <Compile Include="SemesterScore.cs" />
+    <Compile Include="SemesterScoreRecord.cs" />
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Data\ActivityRecordItem.cs" />
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\ActivityTypeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\ActivityTypeManager.Designer.cs">
+      <DependentUpon>ActivityTypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\DAL\ActivityRecordDAL.cs" />
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Data\MappingItem.cs" />
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\ClassLeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\ClassLeader.Designer.cs">
+      <DependentUpon>ClassLeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\GroupLeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\GroupLeader.Designer.cs">
+      <DependentUpon>GroupLeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\Racing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\Racing.Designer.cs">
+      <DependentUpon>Racing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\SchoolLeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\SchoolLeader.Designer.cs">
+      <DependentUpon>SchoolLeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\StudentActivityRecordItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\StudentActivityRecordItem.Designer.cs">
+      <DependentUpon>StudentActivityRecordItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StuAdminExtendControls\Ribbon\ActivityRecord\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StuAdminExtendControls\Ribbon\ScoreCalculateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Legacy\SwapAttendStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Legacy\SwapAttendStudents.designer.cs">
+      <DependentUpon>SwapAttendStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_ExtendMethods.cs" />
+    <Compile Include="Subject.cs" />
+    <Compile Include="SubjectSorter.cs" />
+    <Compile Include="TCInstruct.cs" />
+    <Compile Include="TCInstructRecord.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ClassExtendControls\ClassBaseInfoItem_Extend.resx">
+      <DependentUpon>ClassBaseInfoItem_Extend.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassExtendControls\Ribbon\CreateCoursesRelated\CreateClassCourseForm.resx">
+      <DependentUpon>CreateClassCourseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassExtendControls\Ribbon\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassExtendControls\Ribbon\Score\SemsGoodStudentReport\SemsGoodStudentReport.resx">
+      <DependentUpon>SemsGoodStudentReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassExtendControls\Ribbon\StudinCourse\StudinCourse.resx">
+      <DependentUpon>StudinCourse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\BasicInfoItem.resx">
+      <DependentUpon>BasicInfoItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\ElectronicPaperItem.resx">
+      <DependentUpon>ElectronicPaperItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\Ribbon\AddCourse.resx">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\Ribbon\CourseScoreInputForm.resx">
+      <DependentUpon>CourseScoreInputForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\Ribbon\EditCourseScore.resx">
+      <DependentUpon>EditCourseScore.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\Ribbon\ExamManager.resx">
+      <DependentUpon>ExamManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\Ribbon\CalculationWizard\Forms\CalculateProgress.resx">
+      <DependentUpon>CalculateProgress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\Ribbon\CalculationWizard\Forms\CalculateResult.resx">
+      <DependentUpon>CalculateResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\Ribbon\CalculateionWizard.resx">
+      <DependentUpon>CalculateionWizard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\Ribbon\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\Ribbon\AssessmentSetupManager.resx">
+      <DependentUpon>AssessmentSetupManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\Ribbon\AssessmentSetupManagerControls\AssessmentNameEditor.resx">
+      <DependentUpon>AssessmentNameEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\Ribbon\EditCourseScoreControls\DataGridViewItem.resx">
+      <DependentUpon>DataGridViewItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\Ribbon\SubjectCombinationConfigForm.resx">
+      <DependentUpon>SubjectCombinationConfigForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\Ribbon\SubjectCombinationRelated\PreviewForm.resx">
+      <DependentUpon>PreviewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\SCAttendItem.resx">
+      <DependentUpon>SCAttendItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\ScoreCalcSetupItem.resx">
+      <DependentUpon>ScoreCalcSetupItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseExtendControls\TeacherCategoryView.resx">
+      <DependentUpon>TeacherCategoryView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\CourseScoreStatusForm.resx">
+      <DependentUpon>CourseScoreStatusForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\DomainListTable.resx">
+      <DependentUpon>DomainListTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\EffortDegreeTable.resx">
+      <DependentUpon>EffortDegreeTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleManager.resx">
+      <DependentUpon>ScoreCalcRuleManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\PeriodAbsencePanel.resx">
+      <DependentUpon>PeriodAbsencePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\PeriodAbsenceSelectionFormNew.resx">
+      <DependentUpon>PeriodAbsenceSelectionFormNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\PeriodAbsenceSelectionForm.resx">
+      <DependentUpon>PeriodAbsenceSelectionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\ScoreCalcRuleCreator.resx">
+      <DependentUpon>ScoreCalcRuleCreator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\ScoreCalcRuleRelated\Talker.resx">
+      <DependentUpon>Talker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\ScoreMappingTable.resx">
+      <DependentUpon>ScoreMappingTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\SpecialEduDomainTable.resx">
+      <DependentUpon>SpecialEduDomainTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\SubjectListTable.resx">
+      <DependentUpon>SubjectListTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\TextMappingTable.resx">
+      <DependentUpon>TextMappingTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\TransferStudentForm.resx">
+      <DependentUpon>TransferStudentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\TransferStudent\Step1.resx">
+      <DependentUpon>Step1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\TransferStudent\Step2.resx">
+      <DependentUpon>Step2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\TransferStudent\Step3.resx">
+      <DependentUpon>Step3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\TransferStudent\Step4.resx">
+      <DependentUpon>Step4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorViewer.resx">
+      <DependentUpon>ErrorViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Course\ExportStudentV2.resx">
+      <DependentUpon>ExportStudentV2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Course\ImportStudentV2.resx">
+      <DependentUpon>ImportStudentV2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\ExportStudentV2.resx">
+      <DependentUpon>ExportStudentV2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\ImportStudentV2.resx">
+      <DependentUpon>ImportStudentV2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Legacy\ErrorViewer.resx">
+      <DependentUpon>ErrorViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\ProgramPlanRelated\GraduationPlanCreator.resx">
+      <DependentUpon>GraduationPlanCreator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\ProgramPlanRelated\GraduationPlanEditor.resx">
+      <DependentUpon>GraduationPlanEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EduAdminExtendControls\Ribbon\ProgramPlanManager.resx">
+      <DependentUpon>ProgramPlanManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassExtendControls\Ribbon\CreateCoursesRelated\SelectSemesterForm.resx">
+      <DependentUpon>SelectSemesterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\ActivityTypeManager.resx">
+      <DependentUpon>ActivityTypeManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\ClassLeader.resx">
+      <DependentUpon>ClassLeader.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\GroupLeader.resx">
+      <DependentUpon>GroupLeader.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\Racing.resx">
+      <DependentUpon>Racing.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\SchoolLeader.resx">
+      <DependentUpon>SchoolLeader.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\StudentActivityRecordItem.resx">
+      <DependentUpon>StudentActivityRecordItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StuAdminExtendControls\Ribbon\ActivityRecord\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StuAdminExtendControls\Ribbon\ScoreCalculateForm.resx">
+      <DependentUpon>ScoreCalculateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Legacy\SwapAttendStudents.resx">
+      <DependentUpon>SwapAttendStudents.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\功能變數.doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info3D.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClassExtendControls\Ribbon\Resources\btnProgramPlan.Image.png" />
+    <Content Include="ClassExtendControls\Ribbon\Resources\subject_64.png" />
+    <Content Include="CourseExtendControls\Ribbon\Resources\course_plan.png" />
+    <Content Include="CourseExtendControls\Ribbon\Resources\exam_write_64.png" />
+    <Content Include="CourseExtendControls\Ribbon\Resources\graduation_64.png" />
+    <Content Include="CourseExtendControls\Ribbon\Resources\paste_64.png" />
+    <Content Include="CourseExtendControls\Ribbon\Resources\shapes_64.png" />
+    <Content Include="CourseExtendControls\Ribbon\Resources\btnDeleteCourse.png" />
+    <Content Include="CourseExtendControls\Ribbon\Resources\對照表.png" />
+    <Content Include="CourseExtendControls\Ribbon\Resources\成績輸入.png" />
+    <Content Include="CourseExtendControls\Ribbon\Resources\成績輸入檢查.png" />
+    <Content Include="CourseExtendControls\Ribbon\Resources\btnAddCourse.png" />
+    <Content Include="CourseExtendControls\Ribbon\Resources\calcScore.png" />
+    <Content Include="CourseExtendControls\Ribbon\Resources\評量名稱管理.png" />
+    <Content Include="CourseExtendControls\Ribbon\Resources\評量設定.png" />
+    <None Include="Resources\預設努力程度對照表.xml" />
+    <None Include="Resources\預設等第對照表.xml" />
+    <None Include="Resources\CourseIcon.png" />
+    <None Include="Resources\college_64.png" />
+    <None Include="Resources\calc_save_64.png" />
+    <None Include="Resources\btnScores.Image.png" />
+    <Content Include="library\Aspose.BarCode.dll" />
+    <Content Include="library\Aspose.BarCode.xml" />
+    <Content Include="library\Aspose.Cells.dll" />
+    <Content Include="library\Aspose.Cells.xml" />
+    <Content Include="library\Aspose.Words.dll" />
+    <Content Include="library\Aspose.Words.xml" />
+    <Content Include="library\Campus.Configuration.dll" />
+    <Content Include="library\Campus.Configuration.pdb" />
+    <Content Include="library\Campus.Report.dll" />
+    <Content Include="library\Campus.Report.pdb" />
+    <Content Include="library\DataRationality.dll" />
+    <Content Include="library\DataRationality.pdb" />
+    <Content Include="library\DevComponents.DotNetBar2.dll" />
+    <Content Include="library\DevComponents.DotNetBar2.xml" />
+    <Content Include="library\FISCA.Authentication.dll" />
+    <Content Include="library\FISCA.Authentication.pdb" />
+    <Content Include="library\FISCA.Authentication.xml" />
+    <Content Include="library\FISCA.Data.dll" />
+    <Content Include="library\FISCA.Data.pdb" />
+    <Content Include="library\FISCA.Data.xml" />
+    <Content Include="library\FISCA.dll" />
+    <Content Include="library\FISCA.DSAClient.dll" />
+    <Content Include="library\FISCA.DSAClient.pdb" />
+    <Content Include="library\FISCA.DSAClient.xml" />
+    <Content Include="library\FISCA.DSAUtil.dll" />
+    <Content Include="library\FISCA.DSAUtil.pdb" />
+    <Content Include="library\FISCA.DSAUtil.xml" />
+    <Content Include="library\FISCA.LogAgent.dll" />
+    <Content Include="library\FISCA.LogAgent.pdb" />
+    <Content Include="library\FISCA.LogAgent.xml" />
+    <Content Include="library\FISCA.pdb" />
+    <Content Include="library\FISCA.Presentation.dll" />
+    <Content Include="library\FISCA.Presentation.pdb" />
+    <Content Include="library\FISCA.Presentation.xml" />
+    <Content Include="library\FISCA.UDT.dll" />
+    <Content Include="library\FISCA.UDT.pdb" />
+    <Content Include="library\FISCA.UDT.xml" />
+    <Content Include="library\FISCA.xml" />
+    <Content Include="library\Framework.dll" />
+    <Content Include="library\Framework.pdb" />
+    <Content Include="library\IntelliSchool.DSA.ClientFramework.dll" />
+    <Content Include="library\IntelliSchool.DSA.ClientFramework.xml" />
+    <Content Include="library\JHSchool.Affair.dll" />
+    <Content Include="library\JHSchool.Affair.pdb" />
+    <Content Include="library\JHSchool.Behavior.dll" />
+    <Content Include="library\JHSchool.Behavior.pdb" />
+    <Content Include="library\JHSchool.Data.dll" />
+    <Content Include="library\JHSchool.Data.pdb" />
+    <Content Include="library\JHSchool.Data.xml" />
+    <Content Include="library\JHSchool.dll" />
+    <Content Include="library\K12.Data.dll" />
+    <Content Include="library\K12.Data.pdb" />
+    <Content Include="library\K12.Data.xml" />
+    <Content Include="library\K12.Presentation.dll" />
+    <Content Include="library\K12.Presentation.pdb" />
+    <Content Include="library\K12.Presentation.xml" />
+    <Content Include="library\SmartSchool.API.PlugIn.dll" />
+    <Content Include="library\SmartSchool.API.PlugIn.pdb" />
+    <Content Include="library\SmartSchool.Common.DotNetBar.dll" />
+    <Content Include="library\SmartSchool.Common.DotNetBar.pdb" />
+    <Content Include="library\SmartSchool.Common.DotNetBar.xml" />
+    <Content Include="library\SmartSchool.Customization.PlugIn.dll" />
+    <Content Include="library\SmartSchool.Customization.PlugIn.xml" />
+    <Content Include="library\SmartSchool.ErrorReporting.dll" />
+    <Content Include="library\SmartSchool.ErrorReporting.pdb" />
+    <Content Include="library\SmartSchool.ErrorReporting.xml" />
+    <Content Include="Resources\course_plan.png" />
+    <None Include="Resources\DefaultDomainList.xml" />
+    <None Include="Resources\DefaultSubjectOrdinal.xml" />
+    <None Include="Resources\organigram_refresh_64.png" />
+    <None Include="Resources\meeting_refresh_64.png" />
+    <None Include="Resources\network_lock_64.png" />
+    <None Include="Resources\notepad_lock_64.png" />
+    <None Include="Resources\sandglass_unlock_64.png" />
+    <None Include="Resources\teacher_64.png" />
+    <None Include="Resources\graduated_write_64.png" />
+    <None Include="Resources\refresh_window_64.png" />
+    <None Include="Resources\預設成績計算規則Content.xml" />
+    <Content Include="StuAdminExtendControls\Ribbon\ActivityRecord\Forms\ImportTables.xml" />
+    <Content Include="StuAdminExtendControls\Ribbon\ActivityRecord\ImportTables.xml" />
+    <Content Include="StuAdminExtendControls\Ribbon\ActivityRecord\Package.xml" />
+    <None Include="ClassExtendControls\Ribbon\Resources\課程修課學生清單1.xls" />
+    <None Include="CourseExtendControls\Ribbon\Resources\btndeletecourse.image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CourseExtendControls\Ribbon\CourseScoreInputControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
