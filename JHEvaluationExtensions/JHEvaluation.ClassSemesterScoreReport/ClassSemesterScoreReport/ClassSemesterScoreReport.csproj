@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>JHEvaluation.ClassSemesterScoreReport</RootNamespace>
-    <AssemblyName>JHEvaluation.ClassSemesterScoreReport</AssemblyName>
+    <AssemblyName>PSEvaluation.ClassSemesterScoreReport</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -76,6 +76,7 @@
     <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>libary\DevComponents.DotNetBar2.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="FISCA, Version=2.1.3.13, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -117,11 +118,6 @@
       <HintPath>libary\JHSchool.Data.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="JHSchool.Evaluation, Version=1.0.3.26, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>libary\JHSchool.Evaluation.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="K12.Data, Version=1.9.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>libary\K12.Data.dll</HintPath>
@@ -130,6 +126,10 @@
     <Reference Include="K12.Presentation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>libary\K12.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PSSchool.Evaluation">
+      <HintPath>libary\PSSchool.Evaluation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />

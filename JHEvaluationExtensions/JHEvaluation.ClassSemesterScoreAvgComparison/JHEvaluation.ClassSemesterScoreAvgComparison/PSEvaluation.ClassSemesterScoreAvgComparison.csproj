@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>JHEvaluation.ClassSemesterScoreAvgComparison</RootNamespace>
-    <AssemblyName>JHEvaluation.ClassSemesterScoreAvgComparison</AssemblyName>
+    <AssemblyName>PSEvaluation.ClassSemesterScoreAvgComparison</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -98,11 +98,6 @@
       <HintPath>Library\JHSchool.Data.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="JHSchool.Evaluation, Version=1.0.0.8, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Library\JHSchool.Evaluation.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="K12.Data, Version=1.0.2.21, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Library\K12.Data.dll</HintPath>
@@ -111,6 +106,9 @@
     <Reference Include="K12.Presentation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <Private>False</Private>
       <HintPath>Library\K12.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="PSSchool.Evaluation">
+      <HintPath>Library\PSSchool.Evaluation.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
