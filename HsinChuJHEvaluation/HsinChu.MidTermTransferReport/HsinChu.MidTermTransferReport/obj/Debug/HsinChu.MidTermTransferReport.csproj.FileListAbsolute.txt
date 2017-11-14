@@ -1,0 +1,10 @@
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.MidTermTransferReport\HsinChu.MidTermTransferReport\bin\Debug\HsinChu.MidTermTransferReport.dll
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.MidTermTransferReport\HsinChu.MidTermTransferReport\bin\Debug\HsinChu.MidTermTransferReport.pdb
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.MidTermTransferReport\HsinChu.MidTermTransferReport\obj\Debug\HsinChu.MidTermTransferReport.csprojResolveAssemblyReference.cache
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.MidTermTransferReport\HsinChu.MidTermTransferReport\obj\Debug\HsinChu.MidTermTransferReport.PrintConfigForm.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.MidTermTransferReport\HsinChu.MidTermTransferReport\obj\Debug\HsinChu.MidTermTransferReport.SelectTypeForm.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.MidTermTransferReport\HsinChu.MidTermTransferReport\obj\Debug\HsinChu.MidTermTransferReport.MainForm.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.MidTermTransferReport\HsinChu.MidTermTransferReport\obj\Debug\HsinChu.MidTermTransferReport.Properties.Resources.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.MidTermTransferReport\HsinChu.MidTermTransferReport\obj\Debug\HsinChu.MidTermTransferReport.csproj.GenerateResource.Cache
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.MidTermTransferReport\HsinChu.MidTermTransferReport\obj\Debug\HsinChu.MidTermTransferReport.dll
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.MidTermTransferReport\HsinChu.MidTermTransferReport\obj\Debug\HsinChu.MidTermTransferReport.pdb

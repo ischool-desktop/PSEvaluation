@@ -1,0 +1,6 @@
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation.Data\HsinChu.JHEvaluation.Data\bin\Debug\HsinChu.PSEvaluation.Data.xml
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation.Data\HsinChu.JHEvaluation.Data\bin\Debug\HsinChu.PSEvaluation.Data.dll
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation.Data\HsinChu.JHEvaluation.Data\bin\Debug\HsinChu.PSEvaluation.Data.pdb
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation.Data\HsinChu.JHEvaluation.Data\obj\Debug\HsinChu.PSEvaluation.Data.csprojResolveAssemblyReference.cache
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation.Data\HsinChu.JHEvaluation.Data\obj\Debug\HsinChu.PSEvaluation.Data.dll
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation.Data\HsinChu.JHEvaluation.Data\obj\Debug\HsinChu.PSEvaluation.Data.pdb

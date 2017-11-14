@@ -30,3 +30,13 @@ C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.Cl
 C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.csproj.GenerateResource.Cache
 C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.dll
 C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.pdb
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\bin\Debug\HsinChu.ClassExamScoreReportV2.dll
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\bin\Debug\HsinChu.ClassExamScoreReportV2.pdb
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.csprojResolveAssemblyReference.cache
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.ConfigForm.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.MainForm.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.Prc.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.Properties.Resources.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.csproj.GenerateResource.Cache
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.dll
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreReportV2\HsinChu.ClassExamScoreReportV2\obj\Debug\HsinChu.ClassExamScoreReportV2.pdb

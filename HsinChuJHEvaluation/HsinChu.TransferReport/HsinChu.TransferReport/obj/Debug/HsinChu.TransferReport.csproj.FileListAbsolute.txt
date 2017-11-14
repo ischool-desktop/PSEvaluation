@@ -1,0 +1,12 @@
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.TransferReport\HsinChu.TransferReport\bin\Debug\HsinChu.TransferReport.dll
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.TransferReport\HsinChu.TransferReport\bin\Debug\HsinChu.TransferReport.pdb
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.TransferReport\HsinChu.TransferReport\obj\Debug\HsinChu.TransferReport.csprojResolveAssemblyReference.cache
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.TransferReport\HsinChu.TransferReport\obj\Debug\HsinChu.TransferReport.DomainPanel.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.TransferReport\HsinChu.TransferReport\obj\Debug\HsinChu.TransferReport.DomainSetupForm.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.TransferReport\HsinChu.TransferReport\obj\Debug\HsinChu.TransferReport.ConfigForm.PrintConfigForm.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.TransferReport\HsinChu.TransferReport\obj\Debug\HsinChu.TransferReport.Properties.Resources.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.TransferReport\HsinChu.TransferReport\obj\Debug\HsinChu.TransferReport.ConfigForm.SelectTypeForm.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.TransferReport\HsinChu.TransferReport\obj\Debug\HsinChu.TransferReport.TransferReportForm.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.TransferReport\HsinChu.TransferReport\obj\Debug\HsinChu.TransferReport.csproj.GenerateResource.Cache
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.TransferReport\HsinChu.TransferReport\obj\Debug\HsinChu.TransferReport.dll
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.TransferReport\HsinChu.TransferReport\obj\Debug\HsinChu.TransferReport.pdb
