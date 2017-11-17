@@ -112,9 +112,8 @@
       <HintPath>Library\Framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="HsinChu.JHEvaluation.Data, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Library\HsinChu.JHEvaluation.Data.dll</HintPath>
+    <Reference Include="HsinChu.PSEvaluation.Data">
+      <HintPath>Library\HsinChu.PSEvaluation.Data.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="JHSchool, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
