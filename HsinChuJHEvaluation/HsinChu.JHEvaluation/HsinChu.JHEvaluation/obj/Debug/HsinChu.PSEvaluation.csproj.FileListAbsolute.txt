@@ -16,7 +16,6 @@ C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.JH
 C:\Users\ED\Documents\ischool_github\JHEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.PSEvaluation.pdb
 C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\bin\Debug\HsinChu.PSEvaluation.dll
 C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\bin\Debug\HsinChu.PSEvaluation.pdb
-C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.PSEvaluation.csprojResolveAssemblyReference.cache
 C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.AssessmentSetupManager.resources
 C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.AssessmentSetupManagerControls.AssessmentNameEditor.resources
 C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.JHEvaluation.CourseExtendControls.Ribbon.CheckSaveForm.resources
