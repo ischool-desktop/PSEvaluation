@@ -40,7 +40,11 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
         // 缺曠 [studentID,List<Data>]
         Dictionary<string, List<K12.Data.AttendanceRecord>> ar_dict = new Dictionary<string, List<K12.Data.AttendanceRecord>>();
-        
+
+        //學期成績(領域、科目) [studentID,List<Data>]
+        Dictionary<string, List<JHSemesterScoreRecord>> jssr_dict = new Dictionary<string, List<JHSemesterScoreRecord>>();
+
+
 
         private string fbdPath = "";
 
@@ -59,17 +63,17 @@ namespace JHEvaluation.StudentScoreSummaryReport
             ConvertToPDF_Worker.WorkerReportsProgress = true;
             ConvertToPDF_Worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(ConvertToPDF_Worker_RunWorkerCompleted);
 
-            ConvertToPDF_Worker.ProgressChanged += delegate(object sender, ProgressChangedEventArgs e)
+            ConvertToPDF_Worker.ProgressChanged += delegate (object sender, ProgressChangedEventArgs e)
             {
                 FISCA.Presentation.MotherForm.SetStatusBarMessage(e.UserState.ToString(), e.ProgressPercentage);
             };
-                        
+
             // 是否列印PDF
             rtnPDF.Checked = Preference.ConvertToPDF;
 
             // 是否要單檔列印
             OneFileSave.Checked = Preference.OneFileSave;
-                    
+
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -78,7 +82,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
             Preference.ConvertToPDF = rtnPDF.Checked;
 
             Preference.OneFileSave = OneFileSave.Checked;
-            
+
             Preference.Save(); //儲存設定值。
 
             //關閉畫面控制項
@@ -87,7 +91,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
         }
 
         private void MasterWorker_DoWork(object sender, DoWorkEventArgs e)
-        {                                                        
+        {
             if (StudentIDs.Count <= 0)
             {
                 Feedback("", -1);  //把 Status bar Reset...
@@ -99,8 +103,11 @@ namespace JHEvaluation.StudentScoreSummaryReport
             //學生基本資料
             List<K12.Data.StudentRecord> sr_list = K12.Data.Student.SelectByIDs(StudentIDs);
 
-            //學期成績(包含領域、科目)
-            List<K12.Data.SemesterScoreRecord> ssr_list = K12.Data.SemesterScore.SelectByStudentIDs(StudentIDs);
+            //學期成績(包含領域、科目) (K12的被保護起來 Domain 看的到 抓不出來)
+            //List<K12.Data.SemesterScoreRecord> ssr_list = K12.Data.SemesterScore.SelectByStudentIDs(StudentIDs);
+
+            //學期成績(包含領域、科目) (改用 JHSemesterScoreRecord 才抓的到)
+            List<JHSemesterScoreRecord> ssr_list = JHSemesterScore.SelectByStudentIDs(StudentIDs);
 
             //缺曠
             List<K12.Data.AttendanceRecord> ar_list = K12.Data.Attendance.SelectByStudentIDs(StudentIDs);
@@ -142,7 +149,23 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 }
             }
 
-            
+
+
+
+            //整理學期成績(包含領域、科目) 紀錄
+            foreach (JHSemesterScoreRecord ssr in ssr_list)
+            {
+                if (!jssr_dict.ContainsKey(ssr.RefStudentID))
+                {
+                    jssr_dict.Add(ssr.RefStudentID, new List<JHSemesterScoreRecord>());
+                    jssr_dict[ssr.RefStudentID].Add(ssr);
+                }
+                else
+                {
+                    jssr_dict[ssr.RefStudentID].Add(ssr);
+                }
+            }
+
 
             //整理出缺勤紀錄
             foreach (K12.Data.AttendanceRecord ar in ar_list)
@@ -690,6 +713,53 @@ namespace JHEvaluation.StudentScoreSummaryReport
             absenceType_list.Add("缺席總");
 
 
+            //整理所有的領域_OO_成績
+            List<string> domainScoreType_list = new List<string>();
+
+            domainScoreType_list.Add("領域_語文_成績_");
+            domainScoreType_list.Add("領域_數學_成績_");
+            domainScoreType_list.Add("領域_生活課程_成績_");
+            domainScoreType_list.Add("領域_自然與生活科技_成績_");
+            domainScoreType_list.Add("領域_藝術與人文_成績_");
+            domainScoreType_list.Add("領域_社會_成績_");
+            domainScoreType_list.Add("領域_健康與體育_成績_");
+            domainScoreType_list.Add("領域_綜合活動_成績_");
+            domainScoreType_list.Add("領域_學習領域總成績_成績_");
+
+            //整理所有的領域_OO_等第
+            List<string> domainLevelType_list = new List<string>();
+
+            domainLevelType_list.Add("領域_語文_等第_");
+            domainLevelType_list.Add("領域_數學_等第_");
+            domainLevelType_list.Add("領域_生活課程_等第_");
+            domainLevelType_list.Add("領域_自然與生活科技_等第_");
+            domainLevelType_list.Add("領域_藝術與人文_等第_");
+            domainLevelType_list.Add("領域_社會_等第_");
+            domainLevelType_list.Add("領域_健康與體育_等第_");
+            domainLevelType_list.Add("領域_綜合活動_等第_");
+            domainLevelType_list.Add("領域_學習領域總成績_等第_");
+
+            //整理所有的科目_OO_成績
+            List<string> subjectScoreType_list = new List<string>();
+
+            subjectScoreType_list.Add("科目_國語_成績_");
+            subjectScoreType_list.Add("科目_英語_成績_");
+
+            //整理所有的科目_OO_等第
+            List<string> subjectLevelType_list = new List<string>();
+
+            subjectLevelType_list.Add("科目_國語_等第_");
+            subjectLevelType_list.Add("科目_英語_等第_");
+
+
+
+            Dictionary<string, decimal?> domainScore_dict = new Dictionary<string, decimal?>();
+            Dictionary<string, string> domainLevel_dict = new Dictionary<string, string>();
+
+            Dictionary<string, decimal?> subjectScore_dict = new Dictionary<string, decimal?>();
+            Dictionary<string, string> subjectLevel_dict = new Dictionary<string, string>();
+
+
             Dictionary<string, decimal> arStatistic_dict = new Dictionary<string, decimal>();
 
             Dictionary<string, decimal> arStatistic_dict_days = new Dictionary<string, decimal>();
@@ -700,7 +770,10 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 //把每一筆資料的字典都清乾淨，避免資料汙染
                 arStatistic_dict.Clear();
                 arStatistic_dict_days.Clear();
+                domainScore_dict.Clear();
+                domainLevel_dict.Clear();
 
+                // 建立缺曠 對照字典
                 foreach (string ab in absenceType_list)
                 {
                     for (int i = 1; i <= 12; i++)
@@ -709,6 +782,43 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     }
                 }
 
+                // 建立領域成績 對照字典
+                foreach (string dst in domainScoreType_list)
+                {
+                    for (int i = 1; i <= 12; i++)
+                    {
+                        domainScore_dict.Add(dst + i, null);
+                    }
+                }
+
+                // 建立領域等第 對照字典
+                foreach (string dlt in domainLevelType_list)
+                {
+                    for (int i = 1; i <= 12; i++)
+                    {
+                        domainLevel_dict.Add(dlt + i, null);
+                    }
+                }
+
+                // 建立科目成績 對照字典
+                foreach (string sst in subjectScoreType_list)
+                {
+                    for (int i = 1; i <= 12; i++)
+                    {
+                        subjectScore_dict.Add(sst + i, null);
+                    }
+                }
+
+                // 建立科目等第 對照字典
+                foreach (string slt in subjectLevelType_list)
+                {
+                    for (int i = 1; i <= 12; i++)
+                    {
+                        subjectLevel_dict.Add(slt + i, null);
+                    }
+                }
+
+
                 int schoolyear_grade1 = 0;
                 int schoolyear_grade2 = 0;
                 int schoolyear_grade3 = 0;
@@ -716,7 +826,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 int schoolyear_grade5 = 0;
                 int schoolyear_grade6 = 0;
 
-                
+
 
 
                 DataRow row = table.NewRow();
@@ -736,7 +846,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
                 //學期歷程
                 if (shr_dict.ContainsKey(stuID))
-                {                    
+                {
                     foreach (var item in shr_dict[stuID].SemesterHistoryItems)
                     {
                         if (item.GradeYear == 1)
@@ -750,7 +860,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
                             if (item.Semester == 1)
                             {
-                                row["應出席日數_1"] = item.SchoolDayCount; 
+                                row["應出席日數_1"] = item.SchoolDayCount;
                             }
                             else
                             {
@@ -855,7 +965,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                             }
                         }
                     }
-                                                           
+
                 }
 
                 //學年度與年級的對照字典
@@ -884,13 +994,13 @@ namespace JHEvaluation.StudentScoreSummaryReport
                                     {
                                         if (arStatistic_dict.ContainsKey(detail.AbsenceType + "日數_" + (grade * 2 - 1)))
                                         {
-                                            
+
                                             //加一節，整學期節次與日數的關係，再最後再結算
                                             arStatistic_dict[detail.AbsenceType + "日數_" + (grade * 2 - 1)] += 1;
 
                                             // 不管是啥缺席，缺席總日數都加一節
                                             arStatistic_dict["缺席總日數_" + (grade * 2 - 1)] += 1;
-                                            
+
                                         }
                                     }
                                 }
@@ -900,7 +1010,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                                     {
                                         if (arStatistic_dict.ContainsKey(detail.AbsenceType + "日數_" + grade * 2))
                                         {
-                                            
+
                                             //加一節，整學期節次與日數的關係，再最後再結算
                                             arStatistic_dict[detail.AbsenceType + "日數_" + grade * 2] += 1;
 
@@ -923,21 +1033,165 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     foreach (string key in arStatistic_dict_days.Keys)
                     {
                         //康橋一日有九節，多一節缺曠 = 多1/9 日缺曠，先暫時寫死九節設定，日後要去學務作業每日節次抓取
-                        row[key] = Math.Round(arStatistic_dict_days[key] / 9, 2);                                             
+                        row[key] = Math.Round(arStatistic_dict_days[key] / 9, 2);
                     }
                 }
 
 
+
+
+                // 學期成績(包含領域、科目)
+                if (jssr_dict.ContainsKey(stuID))
+                {
+                    for (int grade = 1; grade <= 6; grade++)
+                    {
+                        foreach (JHSemesterScoreRecord jssr in jssr_dict[stuID])
+                        {
+                            if (jssr.SchoolYear == schoolyear_grade_dict[grade])
+                            {
+                                if (jssr.Semester == 1)
+                                {
+                                    //領域
+                                    foreach (var domainscore in jssr.Domains)
+                                    {
+                                        //紀錄成績
+                                        if (domainScore_dict.ContainsKey("領域_" + domainscore.Value.Domain + "_成績_" + (grade * 2 - 1)))
+                                        {
+                                            domainScore_dict["領域_" + domainscore.Value.Domain + "_成績_" + (grade * 2 - 1)] = domainscore.Value.Score;
+                                        }
+
+                                        //換算等第
+                                        if (domainLevel_dict.ContainsKey("領域_" + domainscore.Value.Domain + "_等第_" + (grade * 2 - 1)))
+                                        {
+                                            domainLevel_dict["領域_" + domainscore.Value.Domain + "_等第_" + (grade * 2 - 1)] = ScoreTolevel(domainscore.Value.Score);
+                                        }
+                                    }
+
+                                    //科目
+                                    foreach (var subjectscore in jssr.Subjects)
+                                    {
+                                        //紀錄成績
+                                        if (subjectScore_dict.ContainsKey("科目_" + subjectscore.Value.Subject + "_成績_" + (grade * 2 - 1)))
+                                        {
+                                            subjectScore_dict["科目_" + subjectscore.Value.Subject + "_成績_" + (grade * 2 - 1)] = subjectscore.Value.Score;
+                                        }
+
+                                        //換算等第
+                                        if (subjectLevel_dict.ContainsKey("科目_" + subjectscore.Value.Subject + "_等第_" + (grade * 2 - 1)))
+                                        {
+                                            subjectLevel_dict["科目_" + subjectscore.Value.Subject + "_等第_" + (grade * 2 - 1)] = ScoreTolevel(subjectscore.Value.Score);
+                                        }
+                                    }
+
+                                    //學期學習領域(七大)成績
+                                    //紀錄成績
+                                    if (domainScore_dict.ContainsKey("領域_學習領域總成績_成績_" + (grade * 2 - 1)))
+                                    {
+                                        domainScore_dict["領域_學習領域總成績_成績_" + (grade * 2 - 1)] = jssr.LearnDomainScore;
+                                    }
+
+                                    //換算等第
+                                    if (domainLevel_dict.ContainsKey("領域_學習領域總成績_等第_" + (grade * 2 - 1)))
+                                    {
+                                        domainLevel_dict["領域_學習領域總成績_等第_" + (grade * 2 - 1)] = ScoreTolevel(jssr.LearnDomainScore);
+                                    }
+
+
+                                }
+                                else
+                                {
+                                    //領域
+                                    foreach (var domainscore in jssr.Domains)
+                                    {
+                                        if (domainScore_dict.ContainsKey("領域_" + domainscore.Value.Domain + "_成績_" + (grade * 2)))
+                                        {
+                                            domainScore_dict["領域_" + domainscore.Value.Domain + "_成績_" + (grade * 2)] = domainscore.Value.Score;
+                                        }
+
+                                        //換算等第
+                                        if (domainLevel_dict.ContainsKey("領域_" + domainscore.Value.Domain + "_等第_" + (grade * 2)))
+                                        {
+                                            domainLevel_dict["領域_" + domainscore.Value.Domain + "_等第_" + (grade * 2)] = ScoreTolevel(domainscore.Value.Score);
+                                        }
+                                    }
+
+                                    //科目
+                                    foreach (var subjectscore in jssr.Subjects)
+                                    {
+                                        //紀錄成績
+                                        if (subjectScore_dict.ContainsKey("科目_" + subjectscore.Value.Subject + "_成績_" + (grade * 2)))
+                                        {
+                                            subjectScore_dict["科目_" + subjectscore.Value.Subject + "_成績_" + (grade * 2)] = subjectscore.Value.Score;
+                                        }
+
+                                        //換算等第
+                                        if (subjectLevel_dict.ContainsKey("科目_" + subjectscore.Value.Subject + "_等第_" + (grade * 2)))
+                                        {
+                                            subjectLevel_dict["科目_" + subjectscore.Value.Subject + "_等第_" + (grade * 2)] = ScoreTolevel(subjectscore.Value.Score);
+                                        }
+                                    }
+
+                                    //學期學習領域(七大)成績
+                                    //紀錄成績
+                                    if (domainScore_dict.ContainsKey("領域_學習領域總成績_成績_" + (grade * 2)))
+                                    {
+                                        domainScore_dict["領域_學習領域總成績_成績_" + (grade * 2)] = jssr.LearnDomainScore;
+                                    }
+
+                                    //換算等第
+                                    if (domainLevel_dict.ContainsKey("領域_學習領域總成績_等第_" + (grade * 2)))
+                                    {
+                                        domainLevel_dict["領域_學習領域總成績_等第_" + (grade * 2)] = ScoreTolevel(jssr.LearnDomainScore);
+                                    }
+
+
+                                }
+                            }
+                        }
+
+                    }
+
+
+
+                    // 填領域分數
+                    foreach (string key in domainScore_dict.Keys)
+                    {
+                        row[key] = domainScore_dict[key];
+                    }
+
+                    // 填領域等第
+                    foreach (string key in domainLevel_dict.Keys)
+                    {
+                        row[key] = domainLevel_dict[key];
+                    }
+
+                    // 填科目分數
+                    foreach (string key in subjectScore_dict.Keys)
+                    {
+                        row[key] = subjectScore_dict[key];
+                    }
+
+                    // 填科目等第
+                    foreach (string key in subjectLevel_dict.Keys)
+                    {
+                        row[key] = subjectLevel_dict[key];
+                    }
+
+
+                }
+
+
+
                 table.Rows.Add(row);
 
-                
+
             }
 
 
 
             document = Preference.Template.ToDocument();
 
-            
+
 
             document.MailMerge.Execute(table);
 
@@ -946,6 +1200,40 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
             Feedback("列印完成", -1);
         }
+
+        private string ScoreTolevel(decimal? d)
+        {
+            string level = "";
+
+            if (d > 90)
+            {
+                level = "優";
+            }
+            else if (d > 80 && d < 90)
+            {
+                level = "甲";
+            }
+            else if (d > 70 && d < 80)
+            {
+                level = "乙";
+            }
+            else if (d > 60 && d < 70)
+            {
+                level = "丙";
+            }
+            else if (d < 60)
+            {
+                level = "丁";
+            }
+            else
+            {
+                level = "";
+            }
+
+            return level;
+
+        }
+
 
         private void MasterWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
