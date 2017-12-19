@@ -69,6 +69,12 @@ namespace JHEvaluation.StudentScoreSummaryReport
             chk2Down.Checked = false;
             chk3Up.Checked = false;
             chk3Down.Checked = false;
+            chk4Up.Checked = false; //2017/11/23 穎驊新增 四~六年級 選項
+            chk4Down.Checked = false;
+            chk5Up.Checked = false;
+            chk5Down.Checked = false;
+            chk6Up.Checked = false;
+            chk6Down.Checked = false;
             foreach (int each in Preference.PrintSemesters)
             {
                 if (each == 1) chk1Up.Checked = true;
@@ -77,6 +83,12 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 if (each == 4) chk2Down.Checked = true;
                 if (each == 5) chk3Up.Checked = true;
                 if (each == 6) chk3Down.Checked = true;
+                if (each == 7) chk4Up.Checked = true; //2017/11/23 穎驊新增 四~六年級 選項
+                if (each == 8) chk4Down.Checked = true;
+                if (each == 9) chk5Up.Checked = true;
+                if (each == 10) chk5Down.Checked = true;
+                if (each == 11) chk6Up.Checked = true;
+                if (each == 12) chk6Down.Checked = true;
             }
 
             intRankStart.Enabled = chkRankFilter.Checked;
@@ -118,6 +130,12 @@ namespace JHEvaluation.StudentScoreSummaryReport
             if (chk2Down.Checked) Preference.PrintSemesters.Add(4);
             if (chk3Up.Checked) Preference.PrintSemesters.Add(5);
             if (chk3Down.Checked) Preference.PrintSemesters.Add(6);
+            if (chk4Up.Checked) Preference.PrintSemesters.Add(7); //2017/11/23 穎驊新增 四~六年級 選項
+            if (chk4Down.Checked) Preference.PrintSemesters.Add(8);
+            if (chk5Up.Checked) Preference.PrintSemesters.Add(9);
+            if (chk5Down.Checked) Preference.PrintSemesters.Add(10);
+            if (chk6Up.Checked) Preference.PrintSemesters.Add(11);
+            if (chk6Down.Checked) Preference.PrintSemesters.Add(12);
 
             Preference.Save(); //儲存設定值。
 

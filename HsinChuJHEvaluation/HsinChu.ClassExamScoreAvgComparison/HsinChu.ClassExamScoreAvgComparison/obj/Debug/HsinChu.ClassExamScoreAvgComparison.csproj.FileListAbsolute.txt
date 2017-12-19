@@ -24,3 +24,4 @@ C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.Cl
 C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreAvgComparison\HsinChu.ClassExamScoreAvgComparison\obj\Debug\HsinChu.ClassExamScoreAvgComparison.csproj.GenerateResource.Cache
 C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreAvgComparison\HsinChu.ClassExamScoreAvgComparison\obj\Debug\HsinChu.ClassExamScoreAvgComparison.dll
 C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreAvgComparison\HsinChu.ClassExamScoreAvgComparison\obj\Debug\HsinChu.ClassExamScoreAvgComparison.pdb
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.ClassExamScoreAvgComparison\HsinChu.ClassExamScoreAvgComparison\obj\Debug\HsinChu.ClassExamScoreAvgComparison.csprojResolveAssemblyReference.cache

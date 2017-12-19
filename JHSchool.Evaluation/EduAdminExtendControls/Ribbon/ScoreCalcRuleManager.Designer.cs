@@ -1378,6 +1378,7 @@
             this.groupPanel8.Controls.Add(this.numTimes4);
             this.groupPanel8.Controls.Add(this.labelX16);
             this.groupPanel8.DrawTitleBox = false;
+            this.groupPanel8.Enabled = false;
             this.groupPanel8.Location = new System.Drawing.Point(3, 827);
             this.groupPanel8.Name = "groupPanel8";
             this.groupPanel8.Size = new System.Drawing.Size(553, 72);
@@ -1411,6 +1412,7 @@
             this.groupPanel8.StyleMouseOver.Class = "";
             this.groupPanel8.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel8.TabIndex = 10;
+            this.groupPanel8.Visible = false;
             // 
             // labelX79
             // 
@@ -2081,6 +2083,7 @@
             this.groupPanel2.Controls.Add(this.gpDaily3);
             this.groupPanel2.Controls.Add(this.gpDaily3b);
             this.groupPanel2.DrawTitleBox = false;
+            this.groupPanel2.Enabled = false;
             this.groupPanel2.Location = new System.Drawing.Point(3, 357);
             this.groupPanel2.Name = "groupPanel2";
             this.groupPanel2.Size = new System.Drawing.Size(553, 464);
@@ -2114,6 +2117,7 @@
             this.groupPanel2.StyleMouseOver.Class = "";
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 10;
+            this.groupPanel2.Visible = false;
             // 
             // chkDaily3c
             // 

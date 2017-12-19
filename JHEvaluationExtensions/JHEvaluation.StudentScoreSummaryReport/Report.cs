@@ -299,12 +299,12 @@ namespace JHEvaluation.StudentScoreSummaryReport
                                 {
                                     // 因為會有相同科目分屬不同領域，在判斷上需要加入領域判斷
                                     string strDomain = semsscore.Subject[header.Subject].Domain;
-                               
+
                                     if (header.Domain == strDomain)
                                     {
                                         score = semsscore.Subject[header.Subject].Value;
                                         weight = semsscore.Subject[header.Subject].Weight;
-                                    }                  
+                                    }
 
                                     //score = semsscore.Subject[header.Subject].Value;
                                     //weight = semsscore.Subject[header.Subject].Weight;
@@ -377,8 +377,12 @@ namespace JHEvaluation.StudentScoreSummaryReport
                                 avgScore = student.CalculationRule.ParseSubjectScore(avgScore.Value);
                         }
 
-                        row.Cells[20].Write(builder, (double)avgScore + "");
-                        row.Cells[21].Write(builder, Util.GetDegree(avgScore.Value));
+                        //row.Cells[20].Write(builder, (double)avgScore + "");
+                        //row.Cells[21].Write(builder, Util.GetDegree(avgScore.Value));
+
+                        // 2017/11/23 穎驊修正，加入四~六年級 填表位置修正
+                        row.Cells[38].Write(builder, (double)avgScore + "");
+                        row.Cells[39].Write(builder, Util.GetDegree(avgScore.Value));
                     }
 
                     if (RatingRow != null)
@@ -603,15 +607,15 @@ namespace JHEvaluation.StudentScoreSummaryReport
                             {
                                 if (semsscore.Subject.Contains(header.Subject))
                                 {
-                                      // 因為會有相同科目分屬不同領域，在判斷上需要加入領域判斷
-                                    string strDomain=semsscore.Subject[header.Subject].Domain;
-                                    if(string.IsNullOrEmpty(strDomain))
-                                        strDomain="彈性課程";                                      
-                                        if (header.Domain == strDomain)
-                                        {
-                                            score = semsscore.Subject[header.Subject].Value;
-                                            weight = semsscore.Subject[header.Subject].Weight;
-                                        }                                    
+                                    // 因為會有相同科目分屬不同領域，在判斷上需要加入領域判斷
+                                    string strDomain = semsscore.Subject[header.Subject].Domain;
+                                    if (string.IsNullOrEmpty(strDomain))
+                                        strDomain = "彈性課程";
+                                    if (header.Domain == strDomain)
+                                    {
+                                        score = semsscore.Subject[header.Subject].Value;
+                                        weight = semsscore.Subject[header.Subject].Weight;
+                                    }
                                 }
                             }
 
@@ -681,8 +685,12 @@ namespace JHEvaluation.StudentScoreSummaryReport
                                 avgScore = student.CalculationRule.ParseSubjectScore(avgScore.Value);
                         }
 
-                        row.Cells[20].Write(builder, (double)avgScore + "");
-                        row.Cells[21].Write(builder, Util.GetDegree(avgScore.Value));
+                        //row.Cells[20].Write(builder, (double)avgScore + "");
+                        //row.Cells[21].Write(builder, Util.GetDegree(avgScore.Value));
+
+                        // 2017/11/23 穎驊修正，加入四~六年級 填表位置修正
+                        row.Cells[38].Write(builder, (double)avgScore + "");
+                        row.Cells[39].Write(builder, Util.GetDegree(avgScore.Value));
                     }
                     if (RatingRow != null)
                     {

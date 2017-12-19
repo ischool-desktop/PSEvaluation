@@ -1,0 +1,10 @@
+C:\Users\ED\Documents\ischool_github\PSEvaluation\JHHsinChuScoreReports\HsinChuExamScore_JH\HsinChuExamScore_JH\bin\Debug\HsinChuExamScore_PS.dll
+C:\Users\ED\Documents\ischool_github\PSEvaluation\JHHsinChuScoreReports\HsinChuExamScore_JH\HsinChuExamScore_JH\bin\Debug\HsinChuExamScore_PS.pdb
+C:\Users\ED\Documents\ischool_github\PSEvaluation\JHHsinChuScoreReports\HsinChuExamScore_JH\HsinChuExamScore_JH\obj\Debug\HsinChuExamScore_PS.csprojResolveAssemblyReference.cache
+C:\Users\ED\Documents\ischool_github\PSEvaluation\JHHsinChuScoreReports\HsinChuExamScore_JH\HsinChuExamScore_JH\obj\Debug\HsinChuExamScore_JH.CloneConfigure.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\JHHsinChuScoreReports\HsinChuExamScore_JH\HsinChuExamScore_JH\obj\Debug\HsinChuExamScore_JH.NewConfigure.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\JHHsinChuScoreReports\HsinChuExamScore_JH\HsinChuExamScore_JH\obj\Debug\HsinChuExamScore_JH.PrintForm.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\JHHsinChuScoreReports\HsinChuExamScore_JH\HsinChuExamScore_JH\obj\Debug\HsinChuExamScore_JH.Properties.Resources.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\JHHsinChuScoreReports\HsinChuExamScore_JH\HsinChuExamScore_JH\obj\Debug\HsinChuExamScore_PS.csproj.GenerateResource.Cache
+C:\Users\ED\Documents\ischool_github\PSEvaluation\JHHsinChuScoreReports\HsinChuExamScore_JH\HsinChuExamScore_JH\obj\Debug\HsinChuExamScore_PS.dll
+C:\Users\ED\Documents\ischool_github\PSEvaluation\JHHsinChuScoreReports\HsinChuExamScore_JH\HsinChuExamScore_JH\obj\Debug\HsinChuExamScore_PS.pdb

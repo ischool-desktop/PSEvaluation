@@ -201,36 +201,70 @@ namespace JHEvaluation.ScoreCalculation
                     if (semesters.Contains(6))
                         result.Add(semester);
                 }
-                else if (semester.GradeYear == 7 && semester.Semester == 1)
+                else if (semester.GradeYear == 4 && semester.Semester == 1)
                 {
-                    if (semesters.Contains(1))
+                    if (semesters.Contains(7))
                         result.Add(semester);
                 }
-                else if (semester.GradeYear == 7 && semester.Semester == 2)
+                else if (semester.GradeYear == 4 && semester.Semester == 2)
                 {
-                    if (semesters.Contains(2))
+                    if (semesters.Contains(8))
                         result.Add(semester);
                 }
-                else if (semester.GradeYear == 8 && semester.Semester == 1)
+                else if (semester.GradeYear == 5 && semester.Semester == 1)
                 {
-                    if (semesters.Contains(3))
+                    if (semesters.Contains(9))
                         result.Add(semester);
                 }
-                else if (semester.GradeYear == 8 && semester.Semester == 2)
+                else if (semester.GradeYear == 5 && semester.Semester == 2)
                 {
-                    if (semesters.Contains(4))
+                    if (semesters.Contains(10))
                         result.Add(semester);
                 }
-                else if (semester.GradeYear == 9 && semester.Semester == 1)
+                else if (semester.GradeYear == 6 && semester.Semester == 1)
                 {
-                    if (semesters.Contains(5))
+                    if (semesters.Contains(11))
                         result.Add(semester);
                 }
-                else if (semester.GradeYear == 9 && semester.Semester == 2)
+                else if (semester.GradeYear == 6 && semester.Semester == 2)
                 {
-                    if (semesters.Contains(6))
+                    if (semesters.Contains(12))
                         result.Add(semester);
                 }
+
+                //2017/12/11 穎驊註解，因應康橋新竹國小需要支援六年制，調整了以上判讀學生年級、學期的邏輯，
+                //並將原本 判斷七年級 == 一年級、八年級 == 二年級、九年級 == 三年級的邏輯註解掉。
+
+                //else if (semester.GradeYear == 7 && semester.Semester == 1)
+                //{
+                //    if (semesters.Contains(1))
+                //        result.Add(semester);
+                //}
+                //else if (semester.GradeYear == 7 && semester.Semester == 2)
+                //{
+                //    if (semesters.Contains(2))
+                //        result.Add(semester);
+                //}
+                //else if (semester.GradeYear == 8 && semester.Semester == 1)
+                //{
+                //    if (semesters.Contains(3))
+                //        result.Add(semester);
+                //}
+                //else if (semester.GradeYear == 8 && semester.Semester == 2)
+                //{
+                //    if (semesters.Contains(4))
+                //        result.Add(semester);
+                //}
+                //else if (semester.GradeYear == 9 && semester.Semester == 1)
+                //{
+                //    if (semesters.Contains(5))
+                //        result.Add(semester);
+                //}
+                //else if (semester.GradeYear == 9 && semester.Semester == 2)
+                //{
+                //    if (semesters.Contains(6))
+                //        result.Add(semester);
+                //}
             }
 
             return result;

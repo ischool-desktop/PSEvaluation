@@ -29,3 +29,4 @@ C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JH
 C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.PSEvaluation.csproj.GenerateResource.Cache
 C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.PSEvaluation.dll
 C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.PSEvaluation.pdb
+C:\Users\ED\Documents\ischool_github\PSEvaluation\HsinChuJHEvaluation\HsinChu.JHEvaluation\HsinChu.JHEvaluation\obj\Debug\HsinChu.PSEvaluation.csprojResolveAssemblyReference.cache

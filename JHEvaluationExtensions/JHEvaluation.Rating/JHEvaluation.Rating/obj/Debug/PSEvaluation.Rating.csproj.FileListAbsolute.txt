@@ -8,3 +8,4 @@ C:\Users\ED\Documents\ischool_github\PSEvaluation\JHEvaluationExtensions\JHEvalu
 C:\Users\ED\Documents\ischool_github\PSEvaluation\JHEvaluationExtensions\JHEvaluation.Rating\JHEvaluation.Rating\bin\debug\PSEvaluation.Rating.pdb
 C:\Users\ED\Documents\ischool_github\PSEvaluation\JHEvaluationExtensions\JHEvaluation.Rating\JHEvaluation.Rating\obj\Debug\PSEvaluation.Rating.dll
 C:\Users\ED\Documents\ischool_github\PSEvaluation\JHEvaluationExtensions\JHEvaluation.Rating\JHEvaluation.Rating\obj\Debug\PSEvaluation.Rating.pdb
+C:\Users\ED\Documents\ischool_github\PSEvaluation\JHEvaluationExtensions\JHEvaluation.Rating\JHEvaluation.Rating\obj\Debug\PSEvaluation.Rating.csprojResolveAssemblyReference.cache

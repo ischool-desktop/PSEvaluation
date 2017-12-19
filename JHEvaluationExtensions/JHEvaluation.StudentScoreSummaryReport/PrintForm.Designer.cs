@@ -62,6 +62,12 @@
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.OneFileSave = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.chk6Down = new System.Windows.Forms.CheckBox();
+            this.chk6Up = new System.Windows.Forms.CheckBox();
+            this.chk5Down = new System.Windows.Forms.CheckBox();
+            this.chk5Up = new System.Windows.Forms.CheckBox();
+            this.chk4Down = new System.Windows.Forms.CheckBox();
+            this.chk4Up = new System.Windows.Forms.CheckBox();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intRankEnd)).BeginInit();
@@ -481,6 +487,12 @@
             this.groupPanel3.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel3.Controls.Add(this.chk6Down);
+            this.groupPanel3.Controls.Add(this.chk6Up);
+            this.groupPanel3.Controls.Add(this.chk5Down);
+            this.groupPanel3.Controls.Add(this.chk5Up);
+            this.groupPanel3.Controls.Add(this.chk4Down);
+            this.groupPanel3.Controls.Add(this.chk4Up);
             this.groupPanel3.Controls.Add(this.chk3Down);
             this.groupPanel3.Controls.Add(this.chk3Up);
             this.groupPanel3.Controls.Add(this.chk2Down);
@@ -530,7 +542,7 @@
             this.chk3Down.AutoSize = true;
             this.chk3Down.Checked = true;
             this.chk3Down.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk3Down.Location = new System.Drawing.Point(230, 24);
+            this.chk3Down.Location = new System.Drawing.Point(108, 24);
             this.chk3Down.Name = "chk3Down";
             this.chk3Down.Size = new System.Drawing.Size(53, 21);
             this.chk3Down.TabIndex = 27;
@@ -542,7 +554,7 @@
             this.chk3Up.AutoSize = true;
             this.chk3Up.Checked = true;
             this.chk3Up.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk3Up.Location = new System.Drawing.Point(230, -2);
+            this.chk3Up.Location = new System.Drawing.Point(108, -3);
             this.chk3Up.Name = "chk3Up";
             this.chk3Up.Size = new System.Drawing.Size(53, 21);
             this.chk3Up.TabIndex = 26;
@@ -554,7 +566,7 @@
             this.chk2Down.AutoSize = true;
             this.chk2Down.Checked = true;
             this.chk2Down.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk2Down.Location = new System.Drawing.Point(135, 24);
+            this.chk2Down.Location = new System.Drawing.Point(60, 24);
             this.chk2Down.Name = "chk2Down";
             this.chk2Down.Size = new System.Drawing.Size(53, 21);
             this.chk2Down.TabIndex = 22;
@@ -566,7 +578,7 @@
             this.chk2Up.AutoSize = true;
             this.chk2Up.Checked = true;
             this.chk2Up.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk2Up.Location = new System.Drawing.Point(135, -2);
+            this.chk2Up.Location = new System.Drawing.Point(60, -3);
             this.chk2Up.Name = "chk2Up";
             this.chk2Up.Size = new System.Drawing.Size(53, 21);
             this.chk2Up.TabIndex = 25;
@@ -578,7 +590,7 @@
             this.chk1Down.AutoSize = true;
             this.chk1Down.Checked = true;
             this.chk1Down.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk1Down.Location = new System.Drawing.Point(40, 24);
+            this.chk1Down.Location = new System.Drawing.Point(4, 24);
             this.chk1Down.Name = "chk1Down";
             this.chk1Down.Size = new System.Drawing.Size(53, 21);
             this.chk1Down.TabIndex = 24;
@@ -590,7 +602,7 @@
             this.chk1Up.AutoSize = true;
             this.chk1Up.Checked = true;
             this.chk1Up.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk1Up.Location = new System.Drawing.Point(40, -2);
+            this.chk1Up.Location = new System.Drawing.Point(4, -3);
             this.chk1Up.Name = "chk1Up";
             this.chk1Up.Size = new System.Drawing.Size(53, 21);
             this.chk1Up.TabIndex = 23;
@@ -666,6 +678,78 @@
             this.OneFileSave.TabIndex = 0;
             this.OneFileSave.Text = "使用單檔列印(檔名：學號_身分證_班級_座號_姓名)";
             this.OneFileSave.TextColor = System.Drawing.Color.Black;
+            // 
+            // chk6Down
+            // 
+            this.chk6Down.AutoSize = true;
+            this.chk6Down.Checked = true;
+            this.chk6Down.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk6Down.Location = new System.Drawing.Point(267, 24);
+            this.chk6Down.Name = "chk6Down";
+            this.chk6Down.Size = new System.Drawing.Size(53, 21);
+            this.chk6Down.TabIndex = 33;
+            this.chk6Down.Text = "六下";
+            this.chk6Down.UseVisualStyleBackColor = true;
+            // 
+            // chk6Up
+            // 
+            this.chk6Up.AutoSize = true;
+            this.chk6Up.Checked = true;
+            this.chk6Up.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk6Up.Location = new System.Drawing.Point(267, -3);
+            this.chk6Up.Name = "chk6Up";
+            this.chk6Up.Size = new System.Drawing.Size(53, 21);
+            this.chk6Up.TabIndex = 32;
+            this.chk6Up.Text = "六上";
+            this.chk6Up.UseVisualStyleBackColor = true;
+            // 
+            // chk5Down
+            // 
+            this.chk5Down.AutoSize = true;
+            this.chk5Down.Checked = true;
+            this.chk5Down.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk5Down.Location = new System.Drawing.Point(210, 24);
+            this.chk5Down.Name = "chk5Down";
+            this.chk5Down.Size = new System.Drawing.Size(53, 21);
+            this.chk5Down.TabIndex = 28;
+            this.chk5Down.Text = "五下";
+            this.chk5Down.UseVisualStyleBackColor = true;
+            // 
+            // chk5Up
+            // 
+            this.chk5Up.AutoSize = true;
+            this.chk5Up.Checked = true;
+            this.chk5Up.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk5Up.Location = new System.Drawing.Point(210, -3);
+            this.chk5Up.Name = "chk5Up";
+            this.chk5Up.Size = new System.Drawing.Size(53, 21);
+            this.chk5Up.TabIndex = 31;
+            this.chk5Up.Text = "五上";
+            this.chk5Up.UseVisualStyleBackColor = true;
+            // 
+            // chk4Down
+            // 
+            this.chk4Down.AutoSize = true;
+            this.chk4Down.Checked = true;
+            this.chk4Down.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk4Down.Location = new System.Drawing.Point(160, 24);
+            this.chk4Down.Name = "chk4Down";
+            this.chk4Down.Size = new System.Drawing.Size(53, 21);
+            this.chk4Down.TabIndex = 30;
+            this.chk4Down.Text = "四下";
+            this.chk4Down.UseVisualStyleBackColor = true;
+            // 
+            // chk4Up
+            // 
+            this.chk4Up.AutoSize = true;
+            this.chk4Up.Checked = true;
+            this.chk4Up.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk4Up.Location = new System.Drawing.Point(160, -3);
+            this.chk4Up.Name = "chk4Up";
+            this.chk4Up.Size = new System.Drawing.Size(53, 21);
+            this.chk4Up.TabIndex = 29;
+            this.chk4Up.Text = "四上";
+            this.chk4Up.UseVisualStyleBackColor = true;
             // 
             // PrintForm
             // 
@@ -744,5 +828,11 @@
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel4;
         private System.Windows.Forms.Panel panel4;
         private DevComponents.DotNetBar.Controls.CheckBoxX OneFileSave;
+        private System.Windows.Forms.CheckBox chk6Down;
+        private System.Windows.Forms.CheckBox chk6Up;
+        private System.Windows.Forms.CheckBox chk5Down;
+        private System.Windows.Forms.CheckBox chk5Up;
+        private System.Windows.Forms.CheckBox chk4Down;
+        private System.Windows.Forms.CheckBox chk4Up;
     }
 }
