@@ -15,9 +15,9 @@ using System.Data;
 
 namespace JHEvaluation.StudentScoreSummaryReport
 {
-    public partial class PrintForm_StudentReport : BaseForm, IStatusReporter
+    public partial class PrintForm_StudentScoreCertificattion : BaseForm, IStatusReporter
     {
-        internal const string ConfigName = "StudentReport";
+        internal const string ConfigName = "StudentScoreSummaryReport";
 
         private List<string> StudentIDs { get; set; }
 
@@ -59,12 +59,12 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
         private DoWorkEventArgs e_For_ConvertToPDF_Worker;
 
-        public PrintForm_StudentReport(List<string> studentIds)
+        public PrintForm_StudentScoreCertificattion(List<string> studentIds)
         {
             InitializeComponent();
 
             StudentIDs = studentIds;
-            Preference = new ReportPreference(ConfigName, Prc.康橋國小學籍表_樣板_);
+            Preference = new ReportPreference(ConfigName, Prc.學生在校成績證明書);
             MasterWorker.DoWork += new DoWorkEventHandler(MasterWorker_DoWork);
             MasterWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(MasterWorker_RunWorkerCompleted);
             MasterWorker.WorkerReportsProgress = true;
@@ -1468,7 +1468,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
             if (!OneFileSave.Checked)
             {
-                Util.Save(doc, "學籍表", Preference.ConvertToPDF);
+                Util.Save(doc, "學生在校成績證明書", Preference.ConvertToPDF);
             }
             else
             {
@@ -1600,9 +1600,9 @@ namespace JHEvaluation.StudentScoreSummaryReport
         // 日後有時間再改新寫法
         private void lnkTemplate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ReportTemplate defaultTemplate = new ReportTemplate(Prc.康橋國小學籍表_樣板_, TemplateType.Word);
+            ReportTemplate defaultTemplate = new ReportTemplate(Prc.學生在校成績證明書, TemplateType.Word);
             TemplateSettingForm form = new TemplateSettingForm(Preference.Template, defaultTemplate);
-            form.DefaultFileName = "學籍表(樣版).doc";
+            form.DefaultFileName = "在校成績證明書(樣版).doc";
 
             if (form.ShowDialog() == DialogResult.OK)
             {
@@ -1617,11 +1617,11 @@ namespace JHEvaluation.StudentScoreSummaryReport
             //宣告產生的報表
             Aspose.Words.Document document = new Aspose.Words.Document();
 
-            document= new Aspose.Words.Document(new System.IO.MemoryStream(Properties.Resources.康橋新竹國小學籍表功能變數));
+            document= new Aspose.Words.Document(new System.IO.MemoryStream(Properties.Resources.康橋新竹國小在校成績證明書功能變數));
 
             System.Windows.Forms.SaveFileDialog sd = new System.Windows.Forms.SaveFileDialog();
             sd.Title = "另存新檔";
-            sd.FileName = "學籍表合併欄位總表" + ".doc";
+            sd.FileName = "在校成績證明書合併欄位總表" + ".doc";
             sd.Filter = "Word檔案 (*.doc)|*.doc|所有檔案 (*.*)|*.*";
             if (sd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {

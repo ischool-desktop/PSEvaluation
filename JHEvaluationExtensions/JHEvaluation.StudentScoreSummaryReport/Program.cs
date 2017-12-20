@@ -93,7 +93,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
             mb.Click += delegate
             {
                 //new PrintForm(K12.Presentation.NLDPanels.Student.SelectedSource).ShowDialog();
-                CreateFieldTemplate();
+                new PrintForm_StudentScoreCertificattion(K12.Presentation.NLDPanels.Student.SelectedSource).ShowDialog();                
             };
 
             MenuButton mb2 = NLDPanels.Student.RibbonBarItems["資料統計"]["報表"]["成績相關報表"]["在校成績證明書(英文版)"];
@@ -139,6 +139,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
         {
             #region 產生欄位表
             Aspose.Words.Document doc = new Aspose.Words.Document(new System.IO.MemoryStream(Properties.Resources.Template));
+            //Aspose.Words.Document doc = new Aspose.Words.Document();
             Aspose.Words.DocumentBuilder builder = new Aspose.Words.DocumentBuilder(doc);
             int maxNum = 30;
 

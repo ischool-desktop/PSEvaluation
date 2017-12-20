@@ -10,3 +10,4 @@ C:\Users\ED\Documents\ischool_github\PSEvaluation\JHEvaluationExtensions\JHEvalu
 C:\Users\ED\Documents\ischool_github\PSEvaluation\JHEvaluationExtensions\JHEvaluation.StudentScoreSummaryReport\obj\Debug\PSEvaluation.StudentScoreSummaryReport.pdb
 C:\Users\ED\Documents\ischool_github\PSEvaluation\JHEvaluationExtensions\JHEvaluation.StudentScoreSummaryReport\obj\Debug\JHEvaluation.StudentScoreSummaryReport.Properties.Resources.resources
 C:\Users\ED\Documents\ischool_github\PSEvaluation\JHEvaluationExtensions\JHEvaluation.StudentScoreSummaryReport\obj\Debug\JHEvaluation.StudentScoreSummaryReport.PrintForm_StudentReport.resources
+C:\Users\ED\Documents\ischool_github\PSEvaluation\JHEvaluationExtensions\JHEvaluation.StudentScoreSummaryReport\obj\Debug\JHEvaluation.StudentScoreSummaryReport.PrintForm_StudentScoreCertificattion.resources

@@ -1,6 +1,6 @@
 ﻿namespace JHEvaluation.StudentScoreSummaryReport
 {
-    partial class PrintForm_StudentReport
+    partial class PrintForm_StudentScoreCertificattion
     {
         /// <summary>
         /// Required designer variable.
@@ -251,7 +251,7 @@
             this.linkLabel1.Text = "檢視合併欄位總表";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // PrintForm_StudentReport
+            // PrintForm_StudentScoreCertificattion
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(374, 184);
@@ -265,9 +265,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximumSize = new System.Drawing.Size(390, 223);
             this.MinimumSize = new System.Drawing.Size(390, 223);
-            this.Name = "PrintForm_StudentReport";
+            this.Name = "PrintForm_StudentScoreCertificattion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "學籍表列印設定";
+            this.Text = "學生在校成績證明書列印設定";
             this.gpFormat.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
