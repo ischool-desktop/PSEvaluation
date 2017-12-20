@@ -83,6 +83,16 @@ namespace JHEvaluation.StudentScoreSummaryReport.Properties {
         /// <summary>
         ///   查詢類型 System.Byte[] 的當地語系化資源。
         /// </summary>
+        internal static byte[] 康橋新竹國小在校成績證明書_英文版_功能變數 {
+            get {
+                object obj = ResourceManager.GetObject("康橋新竹國小在校成績證明書_英文版_功能變數", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Byte[] 的當地語系化資源。
+        /// </summary>
         internal static byte[] 康橋新竹國小在校成績證明書功能變數 {
             get {
                 object obj = ResourceManager.GetObject("康橋新竹國小在校成績證明書功能變數", resourceCulture);

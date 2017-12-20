@@ -188,6 +188,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Prc.resx</DependentUpon>
     </Compile>
+    <Compile Include="PrintForm_StudentScoreCertificattion_English.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForm_StudentScoreCertificattion_English.Designer.cs">
+      <DependentUpon>PrintForm_StudentScoreCertificattion_English.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintForm_StudentScoreCertificattion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,10 @@
       <LastGenOutput>Prc.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrintForm_StudentScoreCertificattion_English.resx">
+      <DependentUpon>PrintForm_StudentScoreCertificattion_English.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrintForm_StudentScoreCertificattion.resx">
       <DependentUpon>PrintForm_StudentScoreCertificattion.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -263,9 +273,10 @@
   <ItemGroup>
     <None Include="Aspose.Total.lic" />
     <None Include="Resources\Template.doc" />
-    <None Include="Resources\學生在校成績證明書.doc" />
     <None Include="Resources\學生在校成績證明書%28英文%29.doc" />
+    <None Include="Resources\學生在校成績證明書.doc" />
     <None Include="Resources\康橋國小學籍表%28樣板%29.doc" />
+    <None Include="Resources\康橋新竹國小在校成績證明書%28英文版%29功能變數.doc" />
     <None Include="Resources\康橋新竹國小在校成績證明書功能變數.doc" />
     <None Include="Resources\康橋新竹國小學籍表功能變數.doc" />
   </ItemGroup>

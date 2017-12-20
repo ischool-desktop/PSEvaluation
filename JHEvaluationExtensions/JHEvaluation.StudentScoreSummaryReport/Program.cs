@@ -100,7 +100,9 @@ namespace JHEvaluation.StudentScoreSummaryReport
             mb2.Enable = false;
             mb2.Click += delegate
             {
-                new PrintFormEnglish(K12.Presentation.NLDPanels.Student.SelectedSource).ShowDialog();
+                //new PrintFormEnglish(K12.Presentation.NLDPanels.Student.SelectedSource).ShowDialog();
+
+                new PrintForm_StudentScoreCertificattion_English(K12.Presentation.NLDPanels.Student.SelectedSource).ShowDialog();
             };
 
            
