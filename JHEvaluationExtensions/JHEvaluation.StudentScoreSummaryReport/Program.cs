@@ -93,7 +93,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
             mb.Click += delegate
             {
                 //new PrintForm(K12.Presentation.NLDPanels.Student.SelectedSource).ShowDialog();
-                                
+                CreateFieldTemplate();
             };
 
             MenuButton mb2 = NLDPanels.Student.RibbonBarItems["資料統計"]["報表"]["成績相關報表"]["在校成績證明書(英文版)"];
@@ -349,7 +349,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
             List<string> daily_list = new List<string>();
 
-            daily_list.Add("日常生活表現及具體建議功能");
+            daily_list.Add("日常生活表現及具體建議");
            
 
 
@@ -359,7 +359,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 for (int s = 1; s <= 12; s++)
                 {
                     builder.InsertCell();
-                    builder.InsertField("MERGEFIELD " + daily_list[i - 1] + "_" + s + " \\* MERGEFORMAT ", "«日常生活表現及具體建議" + s + "»");
+                    builder.InsertField("MERGEFIELD " + daily_list[i - 1] + "_" + s + " \\* MERGEFORMAT ", "«日常生活表現及具體建議_" + s + "»");
                 }
 
                 builder.EndRow();
@@ -408,7 +408,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 for (int s = 1; s <= 12; s++)
                 {
                     builder.InsertCell();
-                    builder.InsertField("MERGEFIELD " + specialPerform_list[i - 1] + "_" + s + " \\* MERGEFORMAT ", "«校內外特殊表現" + s + "»");
+                    builder.InsertField("MERGEFIELD " + specialPerform_list[i - 1] + "_" + s + " \\* MERGEFORMAT ", "«校內外特殊表現_" + s + "»");
                 }
 
                 builder.EndRow();

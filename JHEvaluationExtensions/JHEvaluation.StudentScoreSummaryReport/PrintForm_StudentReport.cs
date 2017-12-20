@@ -44,7 +44,16 @@ namespace JHEvaluation.StudentScoreSummaryReport
         //學期成績(領域、科目) [studentID,List<Data>]
         Dictionary<string, List<JHSemesterScoreRecord>> jssr_dict = new Dictionary<string, List<JHSemesterScoreRecord>>();
 
+        //畢業分數 [studentID,Data]
+        Dictionary<string, K12.Data.GradScoreRecord> gsr_dict = new Dictionary<string, K12.Data.GradScoreRecord>();
 
+        // 異動 [studentID,List<Data>]
+        Dictionary<string, List<K12.Data.UpdateRecordRecord>> urr_dict = new Dictionary<string, List<K12.Data.UpdateRecordRecord>>();
+
+        // 日常生活表現、校內外特殊表現 [studentID,List<Data>]
+        Dictionary<string, List<K12.Data.MoralScoreRecord>> msr_dict = new Dictionary<string, List<K12.Data.MoralScoreRecord>>();
+
+        
 
         private string fbdPath = "";
 
@@ -116,9 +125,9 @@ namespace JHEvaluation.StudentScoreSummaryReport
             //List<K12.Data.UpdateRecordBatchRecord> urbr_list = K12.Data.UpdateRecordBatch.SelectByIDs(StudentIDs);
 
             //學生異動
-            List<K12.Data.UpdateRecordRecord> urr_list = K12.Data.UpdateRecord.SelectByIDs(StudentIDs);
+            List<K12.Data.UpdateRecordRecord> urr_list = K12.Data.UpdateRecord.SelectByStudentIDs(StudentIDs);
 
-            //畢業分數
+            //畢業分數                                                   此處SelectByIDs 確實是SelectByStudentIDs
             List<K12.Data.GradScoreRecord> gsr_list = K12.Data.GradScore.SelectByIDs<K12.Data.GradScoreRecord>(StudentIDs);
 
             //學期歷程
@@ -126,8 +135,6 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
             //日常生活表現、校內外特殊表現
             List<K12.Data.MoralScoreRecord> msr_list = K12.Data.MoralScore.SelectByStudentIDs(StudentIDs);
-
-
 
 
             //整理學生基本資料
@@ -138,8 +145,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     sr_dict.Add(sr.ID, sr);
                 }
             }
-
-
+           
             //整理學期歷程
             foreach (K12.Data.SemesterHistoryRecord shr in shr_list)
             {
@@ -148,9 +154,6 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     shr_dict.Add(shr.RefStudentID, shr);
                 }
             }
-
-
-
 
             //整理學期成績(包含領域、科目) 紀錄
             foreach (JHSemesterScoreRecord ssr in ssr_list)
@@ -166,7 +169,6 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 }
             }
 
-
             //整理出缺勤紀錄
             foreach (K12.Data.AttendanceRecord ar in ar_list)
             {
@@ -178,6 +180,44 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 else
                 {
                     ar_dict[ar.RefStudentID].Add(ar);
+                }
+            }
+
+            //整理畢業分數
+            foreach (K12.Data.GradScoreRecord gsr in gsr_list)
+            {
+                if (!gsr_dict.ContainsKey(gsr.RefStudentID))
+                {
+                    gsr_dict.Add(gsr.RefStudentID, gsr);
+                }
+            }
+
+
+            //整理出異動紀錄
+            foreach (K12.Data.MoralScoreRecord msr in msr_list)
+            {
+                if (!msr_dict.ContainsKey(msr.RefStudentID))
+                {
+                    msr_dict.Add(msr.RefStudentID, new List<K12.Data.MoralScoreRecord>());
+                    msr_dict[msr.RefStudentID].Add(msr);
+                }
+                else
+                {
+                    msr_dict[msr.RefStudentID].Add(msr);
+                }
+            }
+
+            //整理出日常生活表現、校內外特殊表現
+            foreach (K12.Data.UpdateRecordRecord urr in urr_list)
+            {
+                if (!urr_dict.ContainsKey(urr.StudentID))
+                {
+                    urr_dict.Add(urr.StudentID, new List<K12.Data.UpdateRecordRecord>());
+                    urr_dict[urr.StudentID].Add(urr);
+                }
+                else
+                {
+                    urr_dict[urr.StudentID].Add(urr);
                 }
             }
 
@@ -661,18 +701,18 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
             #region 日常生活表現及具體建議
             //日常生活表現及具體建議
-            table.Columns.Add("日常生活表現及具體建議功能_1");
-            table.Columns.Add("日常生活表現及具體建議功能_2");
-            table.Columns.Add("日常生活表現及具體建議功能_3");
-            table.Columns.Add("日常生活表現及具體建議功能_4");
-            table.Columns.Add("日常生活表現及具體建議功能_5");
-            table.Columns.Add("日常生活表現及具體建議功能_6");
-            table.Columns.Add("日常生活表現及具體建議功能_7");
-            table.Columns.Add("日常生活表現及具體建議功能_8");
-            table.Columns.Add("日常生活表現及具體建議功能_9");
-            table.Columns.Add("日常生活表現及具體建議功能_10");
-            table.Columns.Add("日常生活表現及具體建議功能_11");
-            table.Columns.Add("日常生活表現及具體建議功能_12");
+            table.Columns.Add("日常生活表現及具體建議_1");
+            table.Columns.Add("日常生活表現及具體建議_2");
+            table.Columns.Add("日常生活表現及具體建議_3");
+            table.Columns.Add("日常生活表現及具體建議_4");
+            table.Columns.Add("日常生活表現及具體建議_5");
+            table.Columns.Add("日常生活表現及具體建議_6");
+            table.Columns.Add("日常生活表現及具體建議_7");
+            table.Columns.Add("日常生活表現及具體建議_8");
+            table.Columns.Add("日常生活表現及具體建議_9");
+            table.Columns.Add("日常生活表現及具體建議_10");
+            table.Columns.Add("日常生活表現及具體建議_11");
+            table.Columns.Add("日常生活表現及具體建議_12");
 
 
             #endregion
@@ -702,6 +742,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
             e_For_ConvertToPDF_Worker = e;
 
 
+            #region 整理所有的假別
             //整理所有的假別
             List<string> absenceType_list = new List<string>();
 
@@ -711,8 +752,9 @@ namespace JHEvaluation.StudentScoreSummaryReport
             absenceType_list.Add("喪假");
             absenceType_list.Add("曠課");
             absenceType_list.Add("缺席總");
+            #endregion
 
-
+            #region 整理所有的領域_OO_成績
             //整理所有的領域_OO_成績
             List<string> domainScoreType_list = new List<string>();
 
@@ -725,7 +767,9 @@ namespace JHEvaluation.StudentScoreSummaryReport
             domainScoreType_list.Add("領域_健康與體育_成績_");
             domainScoreType_list.Add("領域_綜合活動_成績_");
             domainScoreType_list.Add("領域_學習領域總成績_成績_");
+            #endregion
 
+            #region 整理所有的領域_OO_等第
             //整理所有的領域_OO_等第
             List<string> domainLevelType_list = new List<string>();
 
@@ -738,18 +782,23 @@ namespace JHEvaluation.StudentScoreSummaryReport
             domainLevelType_list.Add("領域_健康與體育_等第_");
             domainLevelType_list.Add("領域_綜合活動_等第_");
             domainLevelType_list.Add("領域_學習領域總成績_等第_");
+            #endregion
 
+            #region 整理所有的科目_OO_成績
             //整理所有的科目_OO_成績
             List<string> subjectScoreType_list = new List<string>();
 
             subjectScoreType_list.Add("科目_國語_成績_");
             subjectScoreType_list.Add("科目_英語_成績_");
+            #endregion
 
+            #region 整理所有的科目_OO_等第
             //整理所有的科目_OO_等第
             List<string> subjectLevelType_list = new List<string>();
 
             subjectLevelType_list.Add("科目_國語_等第_");
-            subjectLevelType_list.Add("科目_英語_等第_");
+            subjectLevelType_list.Add("科目_英語_等第_"); 
+            #endregion
 
 
 
@@ -761,8 +810,9 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
 
             Dictionary<string, decimal> arStatistic_dict = new Dictionary<string, decimal>();
-
             Dictionary<string, decimal> arStatistic_dict_days = new Dictionary<string, decimal>();
+
+            Dictionary<string, string> textScore_dict = new Dictionary<string, string>();
 
             foreach (string stuID in StudentIDs)
             {
@@ -772,6 +822,9 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 arStatistic_dict_days.Clear();
                 domainScore_dict.Clear();
                 domainLevel_dict.Clear();
+                subjectScore_dict.Clear();
+                subjectLevel_dict.Clear();
+                textScore_dict.Clear();
 
                 // 建立缺曠 對照字典
                 foreach (string ab in absenceType_list)
@@ -818,6 +871,13 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     }
                 }
 
+                for (int i = 1; i <= 12; i++)
+                {
+                    textScore_dict.Add("日常生活表現及具體建議_" + i, null);
+                    textScore_dict.Add("校內外特殊表現_" + i, null);
+                }
+
+                
 
                 int schoolyear_grade1 = 0;
                 int schoolyear_grade2 = 0;
@@ -834,9 +894,16 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 //學生基本資料
                 if (sr_dict.ContainsKey(stuID))
                 {
+
+                    DateTime birthday = new DateTime();
+                    
                     row["學生姓名"] = sr_dict[stuID].Name;
                     row["學生性別"] = sr_dict[stuID].Gender;
-                    row["出生日期"] = sr_dict[stuID].Birthday;
+
+                    birthday = (DateTime)sr_dict[stuID].Birthday;
+                    // 轉換出生時間 成 2005/09/06 的格式
+                    row["出生日期"] = birthday.ToString("yyyy/MM/dd");
+
                     row["入學年月"] = "";
                     row["學生身分證字號"] = sr_dict[stuID].IDNumber;
                     row["學號"] = sr_dict[stuID].StudentNumber;
@@ -978,7 +1045,6 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 schoolyear_grade_dict.Add(5, schoolyear_grade5);
                 schoolyear_grade_dict.Add(6, schoolyear_grade6);
 
-
                 //出缺勤
                 if (ar_dict.ContainsKey(stuID))
                 {
@@ -1036,8 +1102,6 @@ namespace JHEvaluation.StudentScoreSummaryReport
                         row[key] = Math.Round(arStatistic_dict_days[key] / 9, 2);
                     }
                 }
-
-
 
 
                 // 學期成績(包含領域、科目)
@@ -1151,8 +1215,6 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
                     }
 
-
-
                     // 填領域分數
                     foreach (string key in domainScore_dict.Keys)
                     {
@@ -1180,18 +1242,95 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
                 }
 
+                //畢業分數
+                if (gsr_dict.ContainsKey(stuID))
+                {                    
+                    row["畢業總成績_平均"] = gsr_dict[stuID].LearnDomainScore;
+                    row["畢業總成績_等第"] = ScoreTolevel(gsr_dict[stuID].LearnDomainScore);
 
+                    // 60 分 就可以 准予畢業
+                    row["准予畢業"] = gsr_dict[stuID].LearnDomainScore>60? "■" : "□";
+                    row["發給修業證書"] = gsr_dict[stuID].LearnDomainScore > 60 ? "□" : "■";
+                }
 
+                // 異動資料
+                if (urr_dict.ContainsKey(stuID))
+                {
+                    foreach (K12.Data.UpdateRecordRecord urr in urr_dict[stuID])
+                    {
+                        // 新生異動為1 ，且理論上 一個人 會有1筆新生異動
+                        if (urr.UpdateCode == "1")
+                        {
+                            DateTime enterday = new DateTime();
+
+                            enterday = DateTime.Parse(urr.UpdateDate);
+                            // 轉換入學時間 成 2005/09/06 的格式
+                            row["入學年月"] = enterday.ToString("yyyy/MM");
+                        }
+
+                        // 2017/12/20 穎驊註解 ，此些項目還暫時無法填， 需要與康橋在確認需求後才能動手
+                        //row["異動紀錄1_日期"] = "";
+                        //row["異動紀錄1_校名"] = "";
+                        //row["異動紀錄1_學號"] = "";
+                        //row["異動紀錄2_日期"] = "";
+                        //row["異動紀錄2_校名"] = "";
+                        //row["異動紀錄2_學號"] = "";
+                        //row["異動紀錄3_日期"] = "";
+                        //row["異動紀錄3_校名"] = "";
+                        //row["異動紀錄3_學號"] = "";
+                        //row["異動紀錄4_日期"] = "";
+                        //row["異動紀錄4_校名"] = "";
+                        //row["異動紀錄4_學號"] = "";
+
+                    }
+                }
+
+                // 日常生活表現、校內外特殊表現
+                if (msr_dict.ContainsKey(stuID))
+                {
+                    for (int grade = 1; grade <= 6; grade++)
+                    {
+                        foreach (var msr in msr_dict[stuID])
+                        {
+                            if (msr.SchoolYear == schoolyear_grade_dict[grade])
+                            {
+                                if (msr.Semester == 1)
+                                {
+                                    if (textScore_dict.ContainsKey("日常生活表現及具體建議_" + (grade * 2 - 1)))
+                                    {
+                                        textScore_dict["日常生活表現及具體建議_" + (grade * 2 - 1)] = msr.TextScore.SelectSingleNode("DailyLifeRecommend").Attributes["Description"].Value;
+                                    }
+                                    if (textScore_dict.ContainsKey("校內外特殊表現_" + (grade * 2 - 1)))
+                                    {
+                                        textScore_dict["校內外特殊表現_" + (grade * 2 - 1)] = msr.TextScore.SelectSingleNode("OtherRecommend").Attributes["Description"].Value;
+                                    }
+                                }
+                                else
+                                {
+                                    if (textScore_dict.ContainsKey("日常生活表現及具體建議_" + (grade * 2 )))
+                                    {
+                                        textScore_dict["日常生活表現及具體建議_" + (grade * 2 )] = msr.TextScore.SelectSingleNode("DailyLifeRecommend").Attributes["Description"].Value;
+                                    }
+                                    if (textScore_dict.ContainsKey("校內外特殊表現_" + (grade * 2 )))
+                                    {
+                                        textScore_dict["校內外特殊表現_" + (grade * 2 )] = msr.TextScore.SelectSingleNode("OtherRecommend").Attributes["Description"].Value;
+                                    }
+                                }
+                            }
+                        }
+                    }                   
+                    //填值
+                    foreach (string key in textScore_dict.Keys)
+                    {           
+                        row[key] = textScore_dict[key];
+                    }
+                }
+                
                 table.Rows.Add(row);
-
-
             }
 
 
-
             document = Preference.Template.ToDocument();
-
-
 
             document.MailMerge.Execute(table);
 
