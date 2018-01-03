@@ -58,6 +58,16 @@ namespace JHEvaluation.ScoreCalculation.BigFunction
             validTemplate.Add(((gradeYear) << 24) + (2), false); //二下
             validTemplate.Add(((++gradeYear) << 24) + (1), false); //三上
             validTemplate.Add(((gradeYear) << 24) + (2), false); //三下
+            // 2018/1/3 穎驊註解 ，因應康橋國小專案，新增了 四上~六下的學期歷程，
+            //另外特別說明一下它舊程式碼的邏輯，它為了確保 年級+學期 的int ket不重覆， 將 年級都 乘上2的24次方 再加上學期，
+            //此寫法可能會造成閱讀程式碼的誤解，特別將之註解說明，
+            validTemplate.Add(((++gradeYear) << 24) + (1), false); //四上
+            validTemplate.Add(((gradeYear) << 24) + (2), false); //四下
+            validTemplate.Add(((++gradeYear) << 24) + (1), false); //五上
+            validTemplate.Add(((gradeYear) << 24) + (2), false); //五下
+            validTemplate.Add(((++gradeYear) << 24) + (1), false); //六上
+            validTemplate.Add(((gradeYear) << 24) + (2), false); //六下
+
             return validTemplate;
         }
     }

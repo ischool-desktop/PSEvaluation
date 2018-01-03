@@ -61,7 +61,7 @@ namespace JHEvaluation.ScoreCalculation
             noValid = Students.ValidSixSemesterDomainScore(); //驗證學期成績是否完整。
 
             if (noValid.Count > 0)
-                throw new CalculationException(noValid, "下列學生並沒有完整的六學期成績，無法計算畢業成績。");
+                throw new CalculationException(noValid, "下列學生並沒有完整的十二學期成績，無法計算畢業成績。");
 
             Students.ReadGraduateScore(this); //讀取畢業成績。
             Students.CalculateGraduateScore(); //計算畢業成績。
