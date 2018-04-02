@@ -12,6 +12,9 @@ using Campus.Report;
 using JHSchool.Behavior.BusinessLogic;
 using System.IO;
 using System.Data;
+using Microsoft.International.Formatters;
+using System.Globalization;
+
 
 namespace JHEvaluation.StudentScoreSummaryReport
 {
@@ -53,7 +56,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
         // 日常生活表現、校內外特殊表現 [studentID,List<Data>]
         Dictionary<string, List<K12.Data.MoralScoreRecord>> msr_dict = new Dictionary<string, List<K12.Data.MoralScoreRecord>>();
 
-        
+
 
         private string fbdPath = "";
 
@@ -226,7 +229,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 {
                     urr_dict[urr.StudentID].Add(urr);
                 }
-            } 
+            }
             #endregion
 
             #region 建立合併欄位總表
@@ -742,7 +745,11 @@ namespace JHEvaluation.StudentScoreSummaryReport
             table.Columns.Add("校內外特殊表現_12");
 
 
-            #endregion 
+            #endregion
+
+            #region 匯出日期
+            table.Columns.Add("匯出日期"); 
+            #endregion
 
             #endregion
 
@@ -805,7 +812,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
             List<string> subjectLevelType_list = new List<string>();
 
             subjectLevelType_list.Add("科目_國語_等第_");
-            subjectLevelType_list.Add("科目_英語_等第_"); 
+            subjectLevelType_list.Add("科目_英語_等第_");
             #endregion
 
             // 領域分數、等第 的對照
@@ -823,7 +830,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
             //文字評量(日常生活表現及具體建議、校內外特殊表現)的對照
             Dictionary<string, string> textScore_dict = new Dictionary<string, string>();
 
-            int student_counter= 1;
+            int student_counter = 1;
 
             foreach (string stuID in StudentIDs)
             {
@@ -913,7 +920,15 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
                     birthday = (DateTime)sr_dict[stuID].Birthday;
                     // 轉換出生時間 成 2005/09/06 的格式
-                    row["出生日期"] = birthday.ToString("yyyy/MM/dd");
+                    //row["出生日期"] = birthday.ToString("yyyy/MM/dd");
+
+
+                    // 轉換出生時間 成 民國 九十五年一月十九日 的格式
+                    row["出生日期"] = @"民國" + EastAsiaNumericFormatter.FormatWithCulture("Ln", (birthday.Year - 1911), null, new CultureInfo("zh-tw")) + "年"
+                       +EastAsiaNumericFormatter.FormatWithCulture("Ln", (birthday.Month), null, new CultureInfo("zh-tw")) + "月" 
+                        + EastAsiaNumericFormatter.FormatWithCulture("Ln", (birthday.Month), null, new CultureInfo("zh-tw")) + "日";
+
+
 
                     row["入學年月"] = "";
                     row["學生身分證字號"] = sr_dict[stuID].IDNumber;
@@ -1235,7 +1250,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     // 填領域等第
                     foreach (string key in domainLevel_dict.Keys)
                     {
-                        row[key] = domainLevel_dict[key];
+                        row[key] = string.IsNullOrEmpty(domainLevel_dict[key])? "-" : domainLevel_dict[key];
                     }
 
                     // 填科目分數
@@ -1247,7 +1262,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     // 填科目等第
                     foreach (string key in subjectLevel_dict.Keys)
                     {
-                        row[key] = subjectLevel_dict[key];
+                        row[key] =  string.IsNullOrEmpty(subjectLevel_dict[key]) ?  "-" : subjectLevel_dict[key];
                     }
 
 
@@ -1362,6 +1377,8 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     }
                 }
 
+                row["匯出日期"] = "中華民國" +(DateTime.Today.Year -1911)+"年" + (DateTime.Today.Month) +"月" + (DateTime.Today.Day) +"日";
+
                 table.Rows.Add(row);
 
                 //回報進度
@@ -1444,14 +1461,14 @@ namespace JHEvaluation.StudentScoreSummaryReport
                         MotherForm.SetStatusBarMessage("正在轉換PDF格式... 請耐心等候");
                     }
                     Util.DisableControls(this);
-                    ConvertToPDF_Worker.RunWorkerAsync();                    
+                    ConvertToPDF_Worker.RunWorkerAsync();
                 }
             }
-            else 
+            else
             {
                 MsgBox.Show(e.Error.Message);
             }
-            
+
             if (Preference.ConvertToPDF)
             {
                 MotherForm.SetStatusBarMessage("正在轉換PDF格式", 0);
@@ -1482,7 +1499,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     Document document = new Document();
                     document.Sections.Clear();
                     document.Sections.Add(document.ImportNode(section, true));
-                                        
+
                     fileName = PrintStudents[i].StudentNumber;
 
                     fileName = PrintStudents[i].StudentNumber;
@@ -1595,7 +1612,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
         }
 
         #endregion
-     
+
         //2017/12/19 穎驊特別註解，這邊先採用舊寫法提供使用者設定樣板， 僅能上傳、下載舊版的.doc 格式，若傳.docx 會錯誤
         // 日後有時間再改新寫法
         private void lnkTemplate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -1617,7 +1634,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
             //宣告產生的報表
             Aspose.Words.Document document = new Aspose.Words.Document();
 
-            document= new Aspose.Words.Document(new System.IO.MemoryStream(Properties.Resources.康橋新竹國小在校成績證明書功能變數));
+            document = new Aspose.Words.Document(new System.IO.MemoryStream(Properties.Resources.康橋新竹國小在校成績證明書功能變數));
 
             System.Windows.Forms.SaveFileDialog sd = new System.Windows.Forms.SaveFileDialog();
             sd.Title = "另存新檔";

@@ -135,6 +135,10 @@
       <HintPath>Library\Framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="InternationalNumericFormatter">
+      <HintPath>Library\InternationalNumericFormatter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="JHSchool, Version=1.0.2.20, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Library\JHSchool.dll</HintPath>

@@ -728,6 +728,10 @@ namespace JHEvaluation.StudentScoreSummaryReport
 
             #endregion
 
+            #region 匯出日期
+            table.Columns.Add("匯出日期"); 
+            #endregion
+
             #region 校內外特殊表現
             //校內外特殊表現
             table.Columns.Add("校內外特殊表現_1");
@@ -1241,7 +1245,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     // 填領域等第
                     foreach (string key in domainLevel_dict.Keys)
                     {
-                        row[key] = domainLevel_dict[key];
+                        row[key] = string.IsNullOrEmpty(domainLevel_dict[key]) ? "-" : domainLevel_dict[key];
                     }
 
                     // 填科目分數
@@ -1253,7 +1257,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     // 填科目等第
                     foreach (string key in subjectLevel_dict.Keys)
                     {
-                        row[key] = subjectLevel_dict[key];
+                        row[key] = string.IsNullOrEmpty( subjectLevel_dict[key]) ? "-" : subjectLevel_dict[key];
                     }
 
 
@@ -1369,6 +1373,8 @@ namespace JHEvaluation.StudentScoreSummaryReport
                         row[key] = textScore_dict[key];
                     }
                 }
+
+                row["匯出日期"] = DateTime.Today.ToString("MMMM dd,yyyy", new CultureInfo("en-US")); ;
 
                 table.Rows.Add(row);
 
