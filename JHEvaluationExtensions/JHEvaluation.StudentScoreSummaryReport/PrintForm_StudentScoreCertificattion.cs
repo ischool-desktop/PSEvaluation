@@ -926,7 +926,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     // 轉換出生時間 成 民國 九十五年一月十九日 的格式
                     row["出生日期"] = @"民國" + EastAsiaNumericFormatter.FormatWithCulture("Ln", (birthday.Year - 1911), null, new CultureInfo("zh-tw")) + "年"
                        +EastAsiaNumericFormatter.FormatWithCulture("Ln", (birthday.Month), null, new CultureInfo("zh-tw")) + "月" 
-                        + EastAsiaNumericFormatter.FormatWithCulture("Ln", (birthday.Month), null, new CultureInfo("zh-tw")) + "日";
+                        + EastAsiaNumericFormatter.FormatWithCulture("Ln", (birthday.Day), null, new CultureInfo("zh-tw")) + "日";
 
 
 
