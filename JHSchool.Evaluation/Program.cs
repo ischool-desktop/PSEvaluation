@@ -465,15 +465,16 @@ namespace JHSchool.Evaluation
             group.Click += delegate
             {
                 if (Course.Instance.SelectedList.Count > 0)
-                    new JHSchool.Evaluation.Legacy.SwapAttendStudents().ShowDialog();
+                    new JHSchool.Evaluation.Legacy.SwapAttendStudents(Course.Instance.SelectedList.Count).ShowDialog();
             };
 
-            //課程超過7項,則"分組上課"不能點擊
-            Course.Instance.SelectedListChanged += delegate
-            {
-                //分組上課不能超過七個課程。
-                group.Enable = (Course.Instance.SelectedList.Count <= 7) && User.Acl["JHSchool.Course.Ribbon0060"].Executable;
-            };
+            // 2018/8/15 穎驊 優化 分班功能，取消上限
+            ////課程超過7項,則"分組上課"不能點擊
+            //Course.Instance.SelectedListChanged += delegate
+            //{
+            //    //分組上課不能超過七個課程。
+            //    group.Enable = (Course.Instance.SelectedList.Count <= 7) && User.Acl["JHSchool.Course.Ribbon0060"].Executable;
+            //};
 
             RibbonBarItem scores = Course.Instance.RibbonBarItems["教務"];
             //scores["成績輸入"].Size = RibbonBarButton.MenuButtonSize.Medium;

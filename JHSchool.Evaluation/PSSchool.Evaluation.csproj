@@ -261,6 +261,12 @@
     <Compile Include="ErrorViewer.designer.cs">
       <DependentUpon>ErrorViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Legacy\SwapAttendStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Legacy\SwapAttendStudents.designer.cs">
+      <DependentUpon>SwapAttendStudents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -716,12 +722,6 @@
     <Compile Include="StuAdminExtendControls\Ribbon\ScoreCalculateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Legacy\SwapAttendStudents.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Legacy\SwapAttendStudents.designer.cs">
-      <DependentUpon>SwapAttendStudents.cs</DependentUpon>
-    </Compile>
     <Compile Include="Student_ExtendMethods.cs" />
     <Compile Include="Subject.cs" />
     <Compile Include="SubjectSorter.cs" />
@@ -934,6 +934,10 @@
       <DependentUpon>SelectSemesterForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Legacy\SwapAttendStudents.resx">
+      <DependentUpon>SwapAttendStudents.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -970,10 +974,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StuAdminExtendControls\Ribbon\ScoreCalculateForm.resx">
       <DependentUpon>ScoreCalculateForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Legacy\SwapAttendStudents.resx">
-      <DependentUpon>SwapAttendStudents.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

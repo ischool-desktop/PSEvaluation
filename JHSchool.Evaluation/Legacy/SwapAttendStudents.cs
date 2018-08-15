@@ -12,6 +12,11 @@ using System.Xml;
 using FISCA.DSAUtil;
 using DevComponents.DotNetBar.Rendering;
 using JHSchool;
+using JHSchool.Evaluation.Legacy;
+using Aspose.Cells;
+using FISCA.Presentation;
+using System.Windows.Forms;
+using FISCA.Presentation.Controls;
 using JHSchool.Evaluation.Feature.Legacy;
 
 namespace JHSchool.Evaluation.Legacy
@@ -25,12 +30,25 @@ namespace JHSchool.Evaluation.Legacy
         //AccessHelper _AccessHelper = new AccessHelper();
         private Dictionary<DataGridViewRow, int> _RowIndex = new Dictionary<DataGridViewRow, int>();
 
-        public SwapAttendStudents()
+        public SwapAttendStudents(int selectCourseCount)
         {
             InitializeComponent();
             this.pictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             List<string> list = new List<string>();
-            Color[] colors = new Color[] { Color.Red, Color.Yellow, Color.Blue, Color.PowderBlue, Color.Orange, Color.Green, Color.Purple };
+
+            //2018/8/15 穎驊註記， 舊寫法， 上限只能給七個課程互調，給了七種顏色，更正為下列依每一次選擇的課程數不同隨機產生顏色
+            //Color[] colors = new Color[] { Color.Red, Color.Yellow, Color.Blue, Color.PowderBlue, Color.Orange, Color.Green, Color.Purple};
+
+            List<Color> colorsList = new List<Color>();
+            for (int runs = 0; runs < selectCourseCount; runs++)
+            {
+                Random r = new Random(runs); // 每一輪的種子都不同
+                colorsList.Add(Color.FromArgb(r.Next(0,256), r.Next(0, 256), r.Next(0, 256)));
+            }
+
+            Color[] colors = colorsList.ToArray();
+
+                        
             if (GlobalManager.Renderer is Office2007Renderer)
             {
                 (GlobalManager.Renderer as Office2007Renderer).ColorTableChanged += delegate { this.dataGridViewX1.AlternatingRowsDefaultCellStyle.BackColor = (GlobalManager.Renderer as Office2007Renderer).ColorTable.RibbonBar.MouseOver.TopBackground.End; };
@@ -70,8 +88,8 @@ namespace JHSchool.Evaluation.Legacy
             foreach (DataGridViewRow row in dataGridViewX1.SelectedRows)
             {
                 ((AttInfo)row.Tag).CourseID = "" + item1.Tag;
-                ((DataGridViewColorBallTextCell)row.Cells[7]).Color = _CourseColor["" + item1.Tag];
-                ((DataGridViewColorBallTextCell)row.Cells[7]).Value = _CourseName["" + item1.Tag];
+                ((DataGridViewColorBallTextCell)row.Cells[8]).Color = _CourseColor["" + item1.Tag];
+                ((DataGridViewColorBallTextCell)row.Cells[8]).Value = _CourseName["" + item1.Tag];
             }
             CountStudents();
         }
@@ -110,16 +128,16 @@ namespace JHSchool.Evaluation.Legacy
         private void bkw_DoWork(object sender, DoWorkEventArgs e)
         {
             string[] list = (string[])e.Argument;
-            
+
             DSResponse rsp = QueryCourse.GetSCAttend(list);
-            foreach ( XmlElement each in rsp.GetContent().GetElements("Student") )
+            foreach (XmlElement each in rsp.GetContent().GetElements("Student"))
             {
-                string attendID=each.GetAttribute("ID");
+                string attendID = each.GetAttribute("ID");
                 string studentID = each.SelectSingleNode("RefStudentID").InnerText;
                 string courseID = each.SelectSingleNode("RefCourseID").InnerText;
 
                 AttInfo attInfo = new AttInfo(attendID, courseID, studentID);
-                if ( !_StudentAttenCourses.ContainsKey(studentID) )
+                if (!_StudentAttenCourses.ContainsKey(studentID))
                     _StudentAttenCourses.Add(studentID, new List<AttInfo>());
                 _StudentAttenCourses[studentID].Add(attInfo);
 
@@ -133,14 +151,14 @@ namespace JHSchool.Evaluation.Legacy
             List<StudentRecord> students = Student.Instance.GetStudents(new List<string>(_StudentAttenCourses.Keys).ToArray());
             foreach (StudentRecord studentRec in students)
             {
-                int newRowIndex = dataGridViewX1.Rows.Add(studentRec.StudentNumber, studentRec.Name, studentRec.Gender, "", studentRec.Class == null ? "" : studentRec.Class.Name, studentRec.SeatNo,
+                int newRowIndex = dataGridViewX1.Rows.Add(studentRec.StudentNumber, studentRec.Name, studentRec.Gender, "", studentRec.Class == null ? "" : studentRec.Class.Name, studentRec.SeatNo,"",
                      _StudentAttenCourses[studentRec.ID].Count == 1 ? _CourseName[_StudentAttenCourses[studentRec.ID][0].CourseID] : "多重修課",
                      _StudentAttenCourses[studentRec.ID].Count == 1 ? _CourseName[_StudentAttenCourses[studentRec.ID][0].CourseID] : "多重修課");
                 if (_StudentAttenCourses[studentRec.ID].Count == 1)
                 {
                     dataGridViewX1.Rows[newRowIndex].Tag = _StudentAttenCourses[studentRec.ID][0];
-                    ((DataGridViewColorBallTextCell)dataGridViewX1.Rows[newRowIndex].Cells[6]).Color = _CourseColor[_StudentAttenCourses[studentRec.ID][0].CourseID];
                     ((DataGridViewColorBallTextCell)dataGridViewX1.Rows[newRowIndex].Cells[7]).Color = _CourseColor[_StudentAttenCourses[studentRec.ID][0].CourseID];
+                    ((DataGridViewColorBallTextCell)dataGridViewX1.Rows[newRowIndex].Cells[8]).Color = _CourseColor[_StudentAttenCourses[studentRec.ID][0].CourseID];
                 }
                 else
                 {
@@ -248,6 +266,222 @@ namespace JHSchool.Evaluation.Legacy
                 e.SortResult = (_RowIndex[dataGridViewX1.Rows[e.RowIndex1]]).CompareTo(_RowIndex[dataGridViewX1.Rows[e.RowIndex2]]);
             e.Handled = true;
         }
+
+        //匯入 學生排序資料
+        private void ImportSeqBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog od = new OpenFileDialog();
+            //od.Filter = "Excel檔案(*.xlsx)|*.xlsx|Excel檔案(*.xls)|*.xls"; //Aspose.Cells_201402 寫法 日後換參考
+
+            od.Filter = "Excel檔案(*.xls)|*.xls";
+
+            if (od.ShowDialog() != DialogResult.OK) return;
+
+            //Workbook book = new Workbook(od.FileName); //Aspose.Cells_201402 寫法 日後換參考
+            Workbook book = new Workbook();
+            book.Open(od.FileName);
+            Worksheet ws = book.Worksheets[0];
+
+            int index = 0;
+            Dictionary<string, int> colmap = new Dictionary<string, int>();
+            Dictionary<int, int> map = new Dictionary<int, int>();
+
+            // 驗證欄位
+            List<string> fields = new List<string>();
+
+            fields.Add("學號");
+            fields.Add("分班排序");
+
+            Dictionary<string, IColumnValidator> validators = new Dictionary<string, IColumnValidator>();
+
+            #region 檢查標題是否正確
+            for (int i = 0; i <= ws.Cells.MaxDataColumn; i++)
+            {
+                Cell cell = ws.Cells[index, i];
+                string value = "" + cell.Value;
+
+                int dgvColIndex;
+                if (fields.Contains(value) && TryGetColumnIndex(dataGridViewX1, value, out dgvColIndex))
+                {
+                    colmap.Add(value, i);
+                    map.Add(i, dgvColIndex);
+                    fields.Remove(value);
+                }
+            }
+
+            if (fields.Count > 0)
+            {
+                StringBuilder builder = new StringBuilder("");
+                builder.AppendLine("匯入資料有誤。");
+                builder.Append("缺少欄位：");
+                foreach (var f in fields)
+                    builder.Append(f + "、");
+                string msg = builder.ToString();
+                if (msg.EndsWith("、")) msg = msg.Substring(0, msg.Length - 1);
+                MessageBox.Show(msg);
+                return;
+            }
+            #endregion
+
+            #region 檢查欄位是否有效
+            bool valid = true;
+            foreach (string header in validators.Keys)
+            {
+                if (!colmap.ContainsKey(header)) continue;
+
+                int colIndex = colmap[header];
+                IColumnValidator validator = validators[header];
+                for (int i = 1; i <= ws.Cells.MaxDataRow; i++)
+                {
+                    Cell cell = ws.Cells[i, colIndex];
+                    if (!validator.IsValid("" + cell.Value))
+                    {                        
+                        valid &= false;
+                    }
+                }
+            }
+            if (!valid)
+            {
+                MsgBox.Show("資料有誤。");
+                return;
+            }
+            #endregion
+
+            #region 填入 DataGridView
+            if (MsgBox.Show("匯入動作會將會新增排序資料，請問是否要繼續？", MessageBoxButtons.YesNo) != DialogResult.Yes)
+            {
+                return;
+            }
+
+            dataGridViewX1.SuspendLayout();
+            //dataGridViewX1.Rows.Clear();
+
+            Dictionary<string, string> stuNumberSeqDict = new Dictionary<string, string>();
+
+            for (int i = 1; i <= ws.Cells.MaxDataRow; i++)
+            {
+                // 舊寫法，全面置換 UI 介面
+                //DataGridViewRow row = new DataGridViewRow();
+                //row.CreateCells(dataGridViewX1);
+                //foreach (int colIndex in map.Keys)
+                //{
+                //    Cell cell = ws.Cells[i, colIndex];
+                //    row.Cells[map[colIndex]].Value = "" + cell.Value;
+                //}
+                //dataGridViewX1.Rows.Add(row);
+                if (!stuNumberSeqDict.ContainsKey("" + ws.Cells[i, 0].Value))
+                {
+                    stuNumberSeqDict.Add("" + ws.Cells[i, colmap["學號"]].Value, "" + ws.Cells[i, colmap["分班排序"]].Value);
+                }                                
+            }
+
+            foreach (DataGridViewRow row in dataGridViewX1.Rows)
+            {
+                row.Cells[6].Value = stuNumberSeqDict.ContainsKey("" + row.Cells[0].Value) ? stuNumberSeqDict["" + row.Cells[0].Value] : "";
+            }
+
+            dataGridViewX1.ResumeLayout();
+            #endregion
+
+            MsgBox.Show("匯入完成，可以點擊排序後重新指定分班。");
+
+        }
+
+
+        // 匯出畫面 dgv
+        private void ExportResultBtn_Click(object sender, EventArgs e)
+        {
+            Workbook book = new Workbook();
+            book.Worksheets.Clear();
+            Worksheet ws = book.Worksheets[book.Worksheets.Add()];
+            ws.Name = "課程重新分班檢查";
+
+            int index = 0;
+            Dictionary<string, int> map = new Dictionary<string, int>();
+
+            #region 建立標題
+            for (int i = 0; i < dataGridViewX1.Columns.Count; i++)
+            {
+                DataGridViewColumn col = dataGridViewX1.Columns[i];
+                ws.Cells[index, i].PutValue(col.HeaderText);
+                map.Add(col.HeaderText, i);
+            }
+            index++;
+            #endregion
+
+            #region 填入內容
+            foreach (DataGridViewRow row in dataGridViewX1.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    int column = map[cell.OwningColumn.HeaderText];
+                    ws.Cells[index, column].PutValue("" + cell.Value);
+                }
+                index++;
+            }
+            #endregion
+
+            SaveFileDialog sd = new SaveFileDialog();
+            sd.FileName = "課程重新分班檢查";
+            //sd.Filter = "Excel檔案(*.xlsx)|*.xlsx";
+            sd.Filter = " Excel檔案(*.xls) | *.xls";
+            if (sd.ShowDialog() == DialogResult.OK)
+            {
+                DialogResult result = new DialogResult();
+
+                try
+                {
+                    //book.Save(sd.FileName, SaveFormat.Xlsx); //Aspose.Cells_201402 寫法 日後換參考
+
+                    book.Save(sd.FileName, FileFormatType.Excel2003);
+
+                    result = MsgBox.Show("檔案儲存完成，是否開啟檔案?", "是否開啟", MessageBoxButtons.YesNo);
+                }
+                catch (Exception ex)
+                {
+                    MsgBox.Show("儲存失敗。" + ex.Message);
+                }
+
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        System.Diagnostics.Process.Start(sd.FileName);
+                    }
+                    catch (Exception ex)
+                    {
+                        MsgBox.Show("開啟檔案發生失敗:" + ex.Message, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+
+
+            }
+        }
+
+        private static bool TryGetColumnIndex(DataGridView dgv, string headerText, out int colIndex)
+        {
+            foreach (DataGridViewColumn col in dgv.Columns)
+            {
+                if (col.HeaderText == headerText)
+                {
+                    colIndex = col.Index;
+                    return true;
+                }
+            }
+            colIndex = 0;
+            return false;
+        }
+
+        internal interface IColumnValidator
+        {
+            bool IsValid(string input);
+            string GetErrorMessage();
+        }
+
+
     }
     class AttInfo
     {
