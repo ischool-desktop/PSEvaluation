@@ -279,7 +279,19 @@ namespace JHSchool.Evaluation.Legacy
 
             //Workbook book = new Workbook(od.FileName); //Aspose.Cells_201402 寫法 日後換參考
             Workbook book = new Workbook();
-            book.Open(od.FileName);
+
+            try
+            {
+                book.Open(od.FileName);
+            }
+            catch (Exception ex)
+            {
+                MsgBox.Show("開啟失敗。" + ex.Message);
+
+                return;
+            }
+
+
             Worksheet ws = book.Worksheets[0];
 
             int index = 0;
