@@ -434,6 +434,8 @@ namespace JHSchool.Evaluation.Legacy
                 index++;
             }
             #endregion
+            
+            ws.Cells.DeleteColumn(3); // 刪除科別欄位 ，國小、國中不需此欄位
 
             SaveFileDialog sd = new SaveFileDialog();
             sd.FileName = "課程重新分班檢查";
