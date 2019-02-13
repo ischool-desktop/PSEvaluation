@@ -34,6 +34,15 @@ namespace JHEvaluation.StudentScoreSummaryReport
         // 學生基本資料 [studentID,Data]
         Dictionary<string, K12.Data.StudentRecord> sr_dict = new Dictionary<string, K12.Data.StudentRecord>();
 
+        // 學生家長基本資料 [studentID,Data]
+        Dictionary<string, K12.Data.ParentRecord> spr_dict = new Dictionary<string, K12.Data.ParentRecord>();
+
+        // //學生聯繫資料(住址) [studentID,Data]
+        Dictionary<string, K12.Data.AddressRecord> sar_dict = new Dictionary<string, K12.Data.AddressRecord>();
+
+        // 學生聯繫資料(電話) [studentID,Data]
+        Dictionary<string, K12.Data.PhoneRecord> sphr_dict = new Dictionary<string, K12.Data.PhoneRecord>();
+
         // 學期歷程 [studentID,Data]
         Dictionary<string, K12.Data.SemesterHistoryRecord> shr_dict = new Dictionary<string, K12.Data.SemesterHistoryRecord>();
 
@@ -53,7 +62,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
         // 日常生活表現、校內外特殊表現 [studentID,List<Data>]
         Dictionary<string, List<K12.Data.MoralScoreRecord>> msr_dict = new Dictionary<string, List<K12.Data.MoralScoreRecord>>();
 
-        
+
 
         private string fbdPath = "";
 
@@ -118,6 +127,15 @@ namespace JHEvaluation.StudentScoreSummaryReport
             //學生基本資料
             List<K12.Data.StudentRecord> sr_list = K12.Data.Student.SelectByIDs(StudentIDs);
 
+            //學生聯繫資料(住址)
+            List<K12.Data.AddressRecord> sar_list = K12.Data.Address.SelectByStudentIDs(StudentIDs);
+
+            //學生聯繫資料(電話)
+            List<K12.Data.PhoneRecord> sphr_list = K12.Data.Phone.SelectByStudentIDs(StudentIDs);
+
+            //學生家長基本資料
+            List<K12.Data.ParentRecord> spr_list = K12.Data.Parent.SelectByStudentIDs(StudentIDs);
+
             //學期成績(包含領域、科目) (K12的被保護起來 Domain 看的到 抓不出來)
             //List<K12.Data.SemesterScoreRecord> ssr_list = K12.Data.SemesterScore.SelectByStudentIDs(StudentIDs);
 
@@ -127,9 +145,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
             //缺曠
             List<K12.Data.AttendanceRecord> ar_list = K12.Data.Attendance.SelectByStudentIDs(StudentIDs);
 
-            //不太確定這是哪一種異動
-            //List<K12.Data.UpdateRecordBatchRecord> urbr_list = K12.Data.UpdateRecordBatch.SelectByIDs(StudentIDs);
-
+           
             //學生異動
             List<K12.Data.UpdateRecordRecord> urr_list = K12.Data.UpdateRecord.SelectByStudentIDs(StudentIDs);
 
@@ -152,6 +168,34 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     sr_dict.Add(sr.ID, sr);
                 }
             }
+
+            //整理學家長生基本資料
+            foreach (K12.Data.ParentRecord spr in spr_list)
+            {
+                if (!spr_dict.ContainsKey(spr.RefStudentID))
+                {
+                    spr_dict.Add(spr.RefStudentID, spr);
+                }
+            }
+
+            //整理學生聯繫資料(住址)
+            foreach (K12.Data.AddressRecord sar in sar_list)
+            {
+                if (!sar_dict.ContainsKey(sar.RefStudentID))
+                {
+                    sar_dict.Add(sar.RefStudentID, sar);
+                }
+            }
+
+            //整理學生聯繫資料(電話)
+            foreach (K12.Data.PhoneRecord sphr in sphr_list)
+            {
+                if (!sphr_dict.ContainsKey(sphr.RefStudentID))
+                {
+                    sphr_dict.Add(sphr.RefStudentID, sphr);
+                }
+            }
+
 
             //整理學期歷程
             foreach (K12.Data.SemesterHistoryRecord shr in shr_list)
@@ -226,7 +270,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 {
                     urr_dict[urr.StudentID].Add(urr);
                 }
-            } 
+            }
             #endregion
 
             #region 建立合併欄位總表
@@ -242,22 +286,43 @@ namespace JHEvaluation.StudentScoreSummaryReport
             table.Columns.Add("入學年月");
             table.Columns.Add("學生身分證字號");
             table.Columns.Add("學號");
+            table.Columns.Add("戶籍地址");
+            table.Columns.Add("戶籍電話");
+            table.Columns.Add("聯絡地址");
+            table.Columns.Add("聯絡電話");
             #endregion
 
             #region 異動紀錄
+            // 2019/02/13  穎驊依據 康橋怡芬需求 由偉庭統一需求後
+            // 新增以下 異動紀錄資料欄位
             //異動紀錄
             table.Columns.Add("異動紀錄1_日期");
             table.Columns.Add("異動紀錄1_校名");
-            table.Columns.Add("異動紀錄1_學號");
+            table.Columns.Add("異動紀錄1_類別");
+            table.Columns.Add("異動紀錄1_核准日期");
             table.Columns.Add("異動紀錄2_日期");
             table.Columns.Add("異動紀錄2_校名");
-            table.Columns.Add("異動紀錄2_學號");
+            table.Columns.Add("異動紀錄2_類別");
+            table.Columns.Add("異動紀錄2_核准日期");
             table.Columns.Add("異動紀錄3_日期");
             table.Columns.Add("異動紀錄3_校名");
-            table.Columns.Add("異動紀錄3_學號");
+            table.Columns.Add("異動紀錄3_類別");
+            table.Columns.Add("異動紀錄3_核准日期");
             table.Columns.Add("異動紀錄4_日期");
             table.Columns.Add("異動紀錄4_校名");
-            table.Columns.Add("異動紀錄4_學號");
+            table.Columns.Add("異動紀錄4_類別");
+            table.Columns.Add("異動紀錄4_核准日期");
+
+            #endregion
+
+            #region 家長資料
+            table.Columns.Add("監護人姓名");
+            table.Columns.Add("監護人關係");
+            table.Columns.Add("監護人行動電話");
+            table.Columns.Add("父親姓名");            
+            table.Columns.Add("父親行動電話");
+            table.Columns.Add("母親姓名");            
+            table.Columns.Add("母親行動電話");
             #endregion
 
             #region 班級座號資料
@@ -805,7 +870,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
             List<string> subjectLevelType_list = new List<string>();
 
             subjectLevelType_list.Add("科目_國語_等第_");
-            subjectLevelType_list.Add("科目_英語_等第_"); 
+            subjectLevelType_list.Add("科目_英語_等第_");
             #endregion
 
             // 領域分數、等第 的對照
@@ -823,7 +888,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
             //文字評量(日常生活表現及具體建議、校內外特殊表現)的對照
             Dictionary<string, string> textScore_dict = new Dictionary<string, string>();
 
-            int student_counter= 1;
+            int student_counter = 1;
 
             foreach (string stuID in StudentIDs)
             {
@@ -904,7 +969,6 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 //學生基本資料
                 if (sr_dict.ContainsKey(stuID))
                 {
-
                     DateTime birthday = new DateTime();
 
                     row["學生姓名"] = sr_dict[stuID].Name;
@@ -920,6 +984,32 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     row["學號"] = sr_dict[stuID].StudentNumber;
 
                     PrintStudents.Add(sr_dict[stuID]);
+                }
+
+                //學生家長基本資料
+                if (spr_dict.ContainsKey(stuID))
+                {
+                    row["監護人姓名"] = spr_dict[stuID].CustodianName;
+                    row["監護人關係"] = spr_dict[stuID].CustodianRelationship;
+                    row["監護人行動電話"] = spr_dict[stuID].CustodianPhone;
+                    row["父親姓名"] = spr_dict[stuID].FatherName;
+                    row["父親行動電話"] = spr_dict[stuID].FatherPhone;
+                    row["母親姓名"] = spr_dict[stuID].MotherName; ;
+                    row["母親行動電話"] = spr_dict[stuID].MotherPhone;
+                }
+
+                //學生聯繫資料(住址)
+                if (sar_dict.ContainsKey(stuID))
+                {
+                    row["戶籍地址"] = sar_dict[stuID].PermanentAddress;
+                    row["聯絡地址"] = sar_dict[stuID].MailingAddress;
+                }
+
+                //學生聯繫資料(電話)
+                if (sphr_dict.ContainsKey(stuID))
+                {
+                    row["戶籍電話"] = sphr_dict[stuID].Permanent;
+                    row["聯絡電話"] = sphr_dict[stuID].Contact;
                 }
 
                 //學期歷程
@@ -1267,6 +1357,8 @@ namespace JHEvaluation.StudentScoreSummaryReport
                 // 異動資料
                 if (urr_dict.ContainsKey(stuID))
                 {
+                    int updateRecordCount = 1;
+
                     foreach (K12.Data.UpdateRecordRecord urr in urr_dict[stuID])
                     {
                         // 新生異動為1 ，且理論上 一個人 會有1筆新生異動
@@ -1279,20 +1371,15 @@ namespace JHEvaluation.StudentScoreSummaryReport
                             row["入學年月"] = enterday.ToString("yyyy/MM");
                         }
 
-                        // 2017/12/20 穎驊註解 ，此些項目還暫時無法填， 需要與康橋在確認需求後才能動手
-                        //row["異動紀錄1_日期"] = "";
-                        //row["異動紀錄1_校名"] = "";
-                        //row["異動紀錄1_學號"] = "";
-                        //row["異動紀錄2_日期"] = "";
-                        //row["異動紀錄2_校名"] = "";
-                        //row["異動紀錄2_學號"] = "";
-                        //row["異動紀錄3_日期"] = "";
-                        //row["異動紀錄3_校名"] = "";
-                        //row["異動紀錄3_學號"] = "";
-                        //row["異動紀錄4_日期"] = "";
-                        //row["異動紀錄4_校名"] = "";
-                        //row["異動紀錄4_學號"] = "";
-
+                        //  當異動為 轉入 (3) 、轉出(4)時 要依序顯示在 報表上
+                        if (urr.UpdateCode == "3" || urr.UpdateCode == "4")
+                        {
+                            row["異動紀錄" + updateRecordCount + "_日期"] = urr.UpdateDate;
+                            row["異動紀錄" + updateRecordCount + "_校名"] = urr.Attributes["ImportExportSchool"]; // 取得異動校名的方法
+                            row["異動紀錄" + updateRecordCount + "_類別"] = urr.UpdateCode =="3"? "轉入" : "轉出";
+                            row["異動紀錄" + updateRecordCount + "_核准日期"] = urr.ADDate;                            
+                            updateRecordCount++;
+                        }
                     }
                 }
 
@@ -1444,14 +1531,14 @@ namespace JHEvaluation.StudentScoreSummaryReport
                         MotherForm.SetStatusBarMessage("正在轉換PDF格式... 請耐心等候");
                     }
                     Util.DisableControls(this);
-                    ConvertToPDF_Worker.RunWorkerAsync();                    
+                    ConvertToPDF_Worker.RunWorkerAsync();
                 }
             }
-            else 
+            else
             {
                 MsgBox.Show(e.Error.Message);
             }
-            
+
             if (Preference.ConvertToPDF)
             {
                 MotherForm.SetStatusBarMessage("正在轉換PDF格式", 0);
@@ -1482,7 +1569,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
                     Document document = new Document();
                     document.Sections.Clear();
                     document.Sections.Add(document.ImportNode(section, true));
-                                        
+
                     fileName = PrintStudents[i].StudentNumber;
 
                     fileName = PrintStudents[i].StudentNumber;
@@ -1595,7 +1682,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
         }
 
         #endregion
-     
+
         //2017/12/19 穎驊特別註解，這邊先採用舊寫法提供使用者設定樣板， 僅能上傳、下載舊版的.doc 格式，若傳.docx 會錯誤
         // 日後有時間再改新寫法
         private void lnkTemplate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -1617,7 +1704,7 @@ namespace JHEvaluation.StudentScoreSummaryReport
             //宣告產生的報表
             Aspose.Words.Document document = new Aspose.Words.Document();
 
-            document= new Aspose.Words.Document(new System.IO.MemoryStream(Properties.Resources.康橋新竹國小學籍表功能變數));
+            document = new Aspose.Words.Document(new System.IO.MemoryStream(Properties.Resources.康橋新竹國小學籍表功能變數));
 
             System.Windows.Forms.SaveFileDialog sd = new System.Windows.Forms.SaveFileDialog();
             sd.Title = "另存新檔";
